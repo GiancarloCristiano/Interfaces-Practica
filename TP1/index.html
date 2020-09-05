@@ -1,68 +1,97 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>TPE1</title>
-  </head>
-  <body>
-    <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Trabajo Práctico Entregable 1</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+</head>
 
-        <div>
-            <input class="input1" type="file" style="display: none;">
-            <canvas class="canvas1" width="600" height="800"></canvas>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Trabajo Práctico Entregable 1</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="shadow-sm p-3 mb-5 bg-white rounded">
+            <div>
+                <div class="btn-toolbar mb-4" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-secondary" id="btn-gray" onclick="document.querySelector('.gray').click();">Escala de Grises</button>
+                        <button type="button" class="btn btn-light" id="btn-binary" onclick="document.querySelector('.binary').click();">Binario</button>
+                        <button type="button" class="btn btn-warning" id="btn-sepia" onclick="document.querySelector('.sepia').click();">Sepia</button>
+                        <button type="button" class="btn btn-dark" id="btn-negative" onclick="document.querySelector('.negative').click();">Negativo</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                        <button type="button" class="btn btn-light" id="btn-saturation">+10 Brillo</button>
+                        <button type="button" class="btn btn-dark" id="btn-saturation">-10 Brillo</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" class="btn btn-danger" id="btn-saturation">Saturación</button>
+                        <button type="button" class="btn btn-secondary" id="btn-saturation">Desenfoque</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <input class="input1" type="file" style="display: none;">
+                <canvas class="canvas1" width="600" height="800"></canvas>
+            </div>
         </div>
+    
         <div>
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <div class="btn-group mr-2" role="group" aria-label="First group">
-              <button type="button" class="btn btn-light" id="btn-load" onclick="document.querySelector('.input1').click();">Cargar imagen</button>
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-light" id="btn-load"
+                        onclick="document.querySelector('.input1').click();">Cargar imagen</button>
+                </div>
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
+                    <a href="#" type="button" class="btn btn-primary" id="btn-download"
+                        download="my-file-name.png">Descargar imagen</a>
+                </div>
+                <div class="btn-group" role="group" aria-label="Third group">
+                    <button type="button" class="btn btn-danger" id="btn-clear">Limpiar canvas</button>
+                </div>
             </div>
-            <div class="btn-group mr-2" role="group" aria-label="Second group">
-                <a href="#" type="button" class="btn btn-primary" id="btn-download" download="my-file-name.png">Descargar imagen</a>
-            </div>
-            <div class="btn-group" role="group" aria-label="Third group">
-              <button type="button" class="btn btn-danger" id="btn-clear">Reestablecer canvas</button>
-            </div>
-          </div>
-          <!--   <div class="canvas__container">
-                <canvas id="cnvs" class="canvas__canvas"></canvas>
-                <img src="" id="mirror" class="canvas__mirror" />
-              </div> -->
-               <!-- <a href="#" class="button" id="btn-download" download="my-file-name.png">Download</a> -->
         </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

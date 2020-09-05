@@ -2,7 +2,7 @@
 
 //BLOQUE PARA CARGAR LA IMAGEN
 //get component references
-let canvas = document.querySelector('.canvas1');
+let canvas = document.querySelector('#canvas1');
 let input = document.querySelector('.input1');
 
 // clear canvas
@@ -67,7 +67,5 @@ download.addEventListener('click', function (e) {
 
 let borrar = document.querySelector('#btn-clear');
 borrar.addEventListener('click', function (e) {
-    context.fillStyle = "#F0F0F0"; // canvas background color
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    //context.clearRect(0, 0, canvas.width, canvas.height);
+    context.clearRect(0, 0, canvas.width, canvas.height);
 });

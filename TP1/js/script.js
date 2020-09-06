@@ -1,8 +1,6 @@
-
-
 //BLOQUE PARA CARGAR LA IMAGEN
 //get component references
-let canvas = document.querySelector('#canvas1');
+var canvas = document.querySelector('#canvas');
 let input = document.querySelector('.input1');
 
 // clear canvas
@@ -23,11 +21,14 @@ input.onchange = e => {
 
     // here we tell the reader what to do when it's done reading...
     reader.onload = readerEvent => {
+        if (file.type.match('image.*')) {
+        
         let content = readerEvent.target.result; // this is the content!
 
         let image = new Image();
 
         image.src = content;
+        
 
         image.onload = function () {
             let imageAspectRatio = (1.0 * this.height) / this.width;
@@ -51,9 +52,15 @@ input.onchange = e => {
                     }
                 }
             }*/
+ 
             
             // draw the modified image
             context.putImageData(imageData, 0, 0);
+            setOrigin(imageData);
+            
+        }
+        } else {
+        alert('El archivo seleccionado no es una imagen.');
         }
     }
 }//FIN CARGAR IMAGEN

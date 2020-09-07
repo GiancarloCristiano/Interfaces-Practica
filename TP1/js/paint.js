@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
     //EventListeners
     pencil.addEventListener("click", enablePencil);
     eraser.addEventListener("click", enableEraser);
-    bucket.addEventListener("click", canvasBackground);
+    bucket.addEventListener("click", enableBucket);
 
     //funciones
     function startPosition(e) {
@@ -54,9 +54,15 @@ window.addEventListener("load", () => {
    
     
     // clear canvas
-    function canvasBackground() {
-    ctx.fillStyle = document.querySelector("#color-picker").value; // canvas background color
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    function enableBucket(){
+        ctx.strokeStyle = document.querySelector("#color-picker").value;
+        canvas.addEventListener("click", canvasFill);
+    }
+
+    function canvasFill() {
+        ctx.fillStyle = document.querySelector("#color-picker").value; // canvas background color
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
     
+
 });

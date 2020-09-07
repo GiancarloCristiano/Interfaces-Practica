@@ -3,6 +3,7 @@ document.querySelector("#btn-origin").addEventListener("click", function(){
     setOrigin(canvasImg1);
 });
 
+
 document.querySelector("#btn-sepia").addEventListener("click", function(){
     event.preventDefault();
     setOrigin(canvasImg1);
@@ -65,7 +66,7 @@ download.addEventListener('click', function (e) {
     download.href = dataURL;
 });//FIN DESCARGAR IMAGEN
 
-let borrar = document.querySelector('#btn-clear');
-borrar.addEventListener('click', function (e) {
+let blanco = document.querySelector('#btn-clear');
+blanco.addEventListener('click', function (e) {
     context.clearRect(0, 0, canvas.width, canvas.height);
 });

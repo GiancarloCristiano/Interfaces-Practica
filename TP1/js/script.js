@@ -64,15 +64,3 @@ input.onchange = e => {
         }
     }
 }//FIN CARGAR IMAGEN
-
-//DESCARGAR IMAGEN
-let download = document.querySelector('#btn-download');
-download.addEventListener('click', function (e) {
-    let dataURL = canvas.toDataURL('image/png');
-    download.href = dataURL;
-});//FIN DESCARGAR IMAGEN
-
-let borrar = document.querySelector('#btn-clear');
-borrar.addEventListener('click', function (e) {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-});

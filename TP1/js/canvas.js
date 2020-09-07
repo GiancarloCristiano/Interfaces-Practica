@@ -1,5 +1,3 @@
-const opaco=255;
-
 class Canvas {
 
   constructor(c){
@@ -14,7 +12,7 @@ class Canvas {
     imageData.data[index+0]=r;
     imageData.data[index+1]=g;
     imageData.data[index+2]=b;
-    imageData.data[index+3]=opaco;
+    imageData.data[index+3]=255;
   }
 
   setPixelColor(imageData, x, y, color){
@@ -22,7 +20,7 @@ class Canvas {
     imageData.data[i+0]=color;
     imageData.data[i+1]=color;
     imageData.data[i+2]=color;
-    imageData.data[i+3]=opaco;
+    imageData.data[i+3]=255;
   }
 
   getRed(imageData,x,y){

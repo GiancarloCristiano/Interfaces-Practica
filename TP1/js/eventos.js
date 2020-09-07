@@ -1,14 +1,7 @@
-//imagen1
 document.querySelector("#btn-origin").addEventListener("click", function(){
     event.preventDefault();
     setOrigin(canvasImg1);
 });
-
-/*document.getElementById("filtroG1").addEventListener("click", function(){
-    event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtro(FGRIS);
-});*/
 
 document.querySelector("#btn-sepia").addEventListener("click", function(){
     event.preventDefault();
@@ -37,13 +30,11 @@ document.querySelector("#btn-negative").addEventListener("click", function(){
 
 document.querySelector("#btn-brightness").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
     canvasImg1.filtroBrillo();
 });
 
 document.querySelector("#btn-darkness").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
     canvasImg1.filtroOscuro();
 });
 
@@ -51,4 +42,23 @@ document.querySelector("#btn-saturation").addEventListener("click", function(){
     event.preventDefault();
     setOrigin(canvasImg1);
     canvasImg1.filtroSaturacion();
+});
+
+document.querySelector("#btn-blur").addEventListener("click", function(){
+    event.preventDefault();
+    setOrigin(canvasImg1);
+    canvasImg1.filtroBlur ();
+});
+
+
+//DESCARGAR IMAGEN
+let download = document.querySelector('#btn-download');
+download.addEventListener('click', function (e) {
+    let dataURL = canvas.toDataURL('image/png');
+    download.href = dataURL;
+});//FIN DESCARGAR IMAGEN
+
+let borrar = document.querySelector('#btn-clear');
+borrar.addEventListener('click', function (e) {
+    context.clearRect(0, 0, canvas.width, canvas.height);
 });

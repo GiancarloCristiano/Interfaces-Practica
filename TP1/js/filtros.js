@@ -89,6 +89,30 @@ class CanvasImg extends Canvas {
     this.ctx.putImageData(this.imageData, 0, 0);
   }
 
+
+  filtroSobel(A){
+	Gx = [-1, 0, 1, -2, 0, 2, -1, 0, 1];
+	Gy = [-1, -2, -1, 0, 0, 0, 1, 2, 1];
+	
+	rows = size(A, 1);
+	columns = size(A, 2);
+	mag = zeros(A);
+
+	for (let x = 1; x < this.width-2; x++){
+		for (let y = 1; y < this.height-2; y++){
+			//let S1 = sum(sum(Gx.*A(i:i+2,j:j+2)));
+			//let S2 = sum(sum(Gy.*A(i:i+2,j:j+2)));
+
+			//mag(i+1, j+1) = sqrt(S1.^2+S2.^2);
+    }
+  }
+	
+	threshold = 70; //%varies for application [0 255]
+	output_image = max(mag, threshold);
+	output_image(output_image == round(threshold)) = 0;
+	return output_image;
+  }
+
   
   filtroSaturacion() {
     for (let x = 0; x < this.width; x++) {
@@ -261,6 +285,7 @@ class CanvasImg extends Canvas {
 
     }, false);
   }
+
 
 
 

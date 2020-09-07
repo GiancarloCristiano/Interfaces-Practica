@@ -51,6 +51,13 @@ document.querySelector("#btn-blur").addEventListener("click", function(){
 });
 
 
+document.querySelector("#btn-sobel").addEventListener("click", function(){
+    event.preventDefault();
+    setOrigin(canvasImg1);
+    canvasImg1.filtroSobel();
+});
+
+
 //DESCARGAR IMAGEN
 let download = document.querySelector('#btn-download');
 download.addEventListener('click', function (e) {

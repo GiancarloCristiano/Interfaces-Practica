@@ -47,7 +47,7 @@ document.querySelector("#btn-saturation").addEventListener("click", function(){
 document.querySelector("#btn-blur").addEventListener("click", function(){
     event.preventDefault();
     setOrigin(canvasImg1);
-    canvasImg1.filtroBlur ();
+    canvasImg1.filtroConvolute();
 });
 
 

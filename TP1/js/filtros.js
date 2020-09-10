@@ -48,9 +48,9 @@ class CanvasImg extends Canvas {
   filtroSepia() {
     for (let x = 0; x < this.width; x++) {
       for (let y = 0; y < this.height; y++) {
-        let red = super.getRed(this.imageData, x, y) * 0.3;
-        let green = super.getGreen(this.imageData, x, y) * 0.5;
-        let blue = super.getBlue(this.imageData, x, y) * 0.2;
+        let red = super.getRed(this.imageData, x, y) * 0.33;
+        let green = super.getGreen(this.imageData, x, y) * 0.33;
+        let blue = super.getBlue(this.imageData, x, y) * 0.33;
         let color = red + green + blue;
         this.setPixel(
           this.imageData,

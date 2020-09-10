@@ -5,6 +5,7 @@ class CanvasImg extends Canvas {
     this.imageData;
   }
 
+  
   filtroGris() {
     for (let i = 0; i < this.imageData.data.length; i += 4) {
       let red = this.imageData.data[i];
@@ -289,19 +290,7 @@ class CanvasImg extends Canvas {
 
 
 
-
-
-
-
-
-
-
-
-
-
-  /*
-  fatality
-  filtroBrillo(){
+    filtroFatality(){
     for(let i=0; i<this.imageData.data.length; i+=4){
       let red = this.imageData.data[i]+10;
       let green = this.imageData.data[i+1]+10;
@@ -310,5 +299,9 @@ class CanvasImg extends Canvas {
 
     }
     this.ctx.putImageData(this.imageData,0,0);
-  }*/
+  }
+
+
+
+  
 }

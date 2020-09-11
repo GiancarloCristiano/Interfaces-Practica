@@ -2,31 +2,30 @@
 window.addEventListener("load", () => {
     let canvas = document.querySelector("#canvas");
     let ctx = canvas.getContext("2d");
-    let painting = false;
+    let pintado = false;
+    let borrado = false;
     let pencil = document.querySelector("#btn-pencil");
     let eraser = document.querySelector("#btn-eraser");
-    let bucket = document.querySelector("#btn-fill");
-    let erase = false;
+    let balde = document.querySelector("#btn-fill");
 
     //EventListeners
-    pencil.addEventListener("click", enablePencil);
-    eraser.addEventListener("click", enableEraser);
-    bucket.addEventListener("click", enableBucket);
+    pencil.addEventListener("click", habilitarLapiz);
+    eraser.addEventListener("click", habilitarGoma);
+    balde.addEventListener("click", habilitarRelleno);
 
     //funciones
     function startPosition(e) {
-        painting = true;
-        //draw(e);
+        pintado = true;
     }
 
     function finishPosition() {
-        painting = false;
+        pintado = false;
         ctx.beginPath();
     }
 
-    function draw(e) {
-        if (!painting) return;
-        if (!erase) ctx.strokeStyle = document.querySelector("#color-picker").value;
+    function dibujar(e) {
+        if (!pintado) return;
+        if (!borrado) ctx.strokeStyle = document.querySelector("#color-picker").value;
         ctx.lineWidth = document.querySelector("#range-size").value;
         ctx.lineTo(e.clientX - this.offsetLeft, e.clientY - this.offsetTop);
         ctx.stroke();
@@ -34,27 +33,26 @@ window.addEventListener("load", () => {
         ctx.moveTo(e.clientX - this.offsetLeft, e.clientY - this.offsetTop);
     }
 
-    function enablePencil() {
+    function habilitarLapiz() {
         ctx.strokeStyle = document.querySelector("#color-picker").value;
         ctx.lineCap = "round";
-        erase = false;
+        borrado = false;
         canvas.addEventListener("mousedown", startPosition);
         canvas.addEventListener("mouseup", finishPosition);
-        canvas.addEventListener("mousemove", draw);
+        canvas.addEventListener("mousemove", dibujar);
     }
 
-    function enableEraser() {
+    function habilitarGoma() {
         ctx.strokeStyle = "white";
         ctx.lineCap = "round";
-        erase = true;
+        borrado = true;
         canvas.addEventListener("mousedown", startPosition);
         canvas.addEventListener("mouseup", finishPosition);
-        canvas.addEventListener("mousemove", draw);
+        canvas.addEventListener("mousemove", dibujar);
     }
    
     
-    // clear canvas
-    function enableBucket(){
+    function habilitarRelleno(){
         ctx.strokeStyle = document.querySelector("#color-picker").value;
         canvas.addEventListener("click", canvasFill);
     }

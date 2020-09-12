@@ -45,18 +45,18 @@ document.querySelector("#btn-saturation").addEventListener("click", function(){
     canvasImg1.filtroSaturacion();
 });
 
-document.querySelector("#btn-blur").addEventListener("click", function(){
+/document.querySelector("#btn-blur").addEventListener("click", function(){
     event.preventDefault();
     setOrigin(canvasImg1);
-    filtroBlur();
+    canvasImg1.filtroBlur();
 });
 
 
-document.querySelector("#btn-sobel").addEventListener("click", function(){
+/* document.querySelector("#btn-sobel").addEventListener("click", function(){
     event.preventDefault();
     setOrigin(canvasImg1);
     canvasImg1.detectarBordes();
-}); 
+});  */
 
 document.querySelector("#btn-fatal").addEventListener("click", function(){
     event.preventDefault();

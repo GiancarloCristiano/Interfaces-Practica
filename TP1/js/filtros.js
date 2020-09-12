@@ -57,9 +57,9 @@ class CanvasImg extends Canvas {
           this.imageData,
           x,
           y,
-          color + 44.3,
-          color + 25.8,
-          color + 0.7
+          color + 60,
+          color + 30,
+          color 
         );
       }
     }
@@ -132,10 +132,68 @@ class CanvasImg extends Canvas {
     this.ctx.putImageData(this.imageData, 0, 0);
   }
   
+ 
 
+  filtroBlur(){
+    let matReference = [1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36,
+      1/36, 1/36, 1/36 ];
+      var opaque = false;
+      var side = Math.round(Math.sqrt(matReference.length));
+      var halfSide = Math.floor(side/2);
+      var src = this.imageData.data;
+      var sw = this.imageData.width;
+      var sh = this.imageData.height;
+      // pad output by the convolution matrix
+      var w = sw;
+      var h = sh;
+      
+      // go through the destination image pixels
+      var alphaFac = opaque ? 1 : 0;
+      for (var y=0; y<h; y++) {
+          for (var x=0; x<w; x++) {
+          var sy = y;
+          var sx = x;
+          // calculate the weighed sum of the source image pixels that
+          // fall under the convolution matrix
+          var r=0, g=0, b=0, a=0;
+          for (var cy=0; cy<side; cy++) {
+              for (var cx=0; cx<side; cx++) {
+              var scy = sy + cy - halfSide;
+              var scx = sx + cx - halfSide;
+              if (scy >= 0 && scy < sh && scx >= 0 && scx < sw) {
+                  var srcOff = (scy*sw+scx)*4;
+                  var wt = matReference[cy*side+cx];
+                  r += src[srcOff] * wt;
+                  g += src[srcOff+1] * wt;
+                  b += src[srcOff+2] * wt;
+                  a += src[srcOff+3] * wt;
+              }
+              }
+          }
+          this.setPixel(this.imageData,r,g,b);
+          }
+      }
+      this.ctx.putImageData(this.imageData, 0, 0);
+  };
+}
 
+  let Filters = {}
+  Filters.tmpCanvas = document.createElement('canvas');
+  Filters.tmpCtx = Filters.tmpCanvas.getContext('2d');
 
-
-
-
+  Filters.createImageData = function(w,h) {
+      return this.tmpCtx.createImageData(w,h);
   }
+
+
+  

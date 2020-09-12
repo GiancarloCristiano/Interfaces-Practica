@@ -39,29 +39,22 @@ document.querySelector("#btn-darkness").addEventListener("click", function(){
     canvasImg1.filtroOscuro();
 });
 
+document.querySelector("#btn-blood").addEventListener("click", function(){
+    event.preventDefault();
+    setOrigin(canvasImg1);
+    canvasImg1.filtroSangrado();
+});
+
 document.querySelector("#btn-saturation").addEventListener("click", function(){
     event.preventDefault();
     setOrigin(canvasImg1);
     canvasImg1.filtroSaturacion();
 });
 
-/document.querySelector("#btn-blur").addEventListener("click", function(){
+document.querySelector("#btn-soft").addEventListener("click", function(){
     event.preventDefault();
     setOrigin(canvasImg1);
-    canvasImg1.filtroBlur();
-});
-
-
-/* document.querySelector("#btn-sobel").addEventListener("click", function(){
-    event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.detectarBordes();
-});  */
-
-document.querySelector("#btn-fatal").addEventListener("click", function(){
-    event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroFatality();
+    canvasImg1.filtroSuave();
 });
 
 

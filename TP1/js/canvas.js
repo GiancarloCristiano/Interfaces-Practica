@@ -15,6 +15,7 @@ class Canvas {
     imageData.data[index+3]=255;
   }
 
+
   setPixelColor(imageData, x, y, color){
     var i = (x+y*imageData.width)*4;
     imageData.data[i+0]=color;

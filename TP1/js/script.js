@@ -2,6 +2,7 @@
 //get component references
 var canvas = document.querySelector('#canvas');
 let input = document.querySelector('.input1');
+var imagenNueva = false;
 
 // clear canvas
 var context = canvas.getContext('2d');
@@ -30,7 +31,9 @@ input.onchange = e => {
                 // get imageData from content of canvas
                 let imageData = context.getImageData(0, 0, imageScaledWidth, imageScaledHeight);
                 // draw the modified image
-                context.putImageData(imageData, 0, 0);           
+                context.putImageData(imageData, 0, 0);
+                setOrigin(imageData);
+                imagenNueva = true;         
             }
         } else {
             alert('El archivo seleccionado no es una imagen.');

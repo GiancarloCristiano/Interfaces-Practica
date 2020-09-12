@@ -27,4 +27,36 @@ function setOrigin(canvasImg){
     canvasImg.imageData=canvasImg.ctx.getImageData(0,0,canvasImg.width,canvasImg.height);
 }
 
+if (imagenNueva){
+    guardarImagenOriginal();
+    /* let canvas1 = document.getElementById("canvas");
+    let bup = new CanvasImg(canvas1);
+    bup.origin=this;
+    bup.imageData = bup.ctx.getImageData(0,0,bup.width,bup.height);
+    setOrigin (bup); */
+    imagenNueva = false;
+}
 
+
+function guardarImagenOriginal(){
+    imagenOriginal = []
+    for(let i = 0; i<canvas.width; i++){
+        for(let j = 0; j<canvas.height; j++){
+            imagenOriginal[imagenOriginal.length] = getRed(i,j)
+            imagenOriginal[imagenOriginal.length] = getGreen(i,j)
+            imagenOriginal[imagenOriginal.length] = getBlue(i,j)
+            imagenOriginal[imagenOriginal.length] = getAlpha(i,j)
+        }
+    }
+}
+
+function restablecerImagen(){
+    let pos = 0;
+    for(let i = 0; i<canvas.width; i++){
+        for(let j = 0; j<canvas.height; j++){
+            setPixel(imageData,i,j,imagenOriginal[pos],imagenOriginal[pos+1],imagenOriginal[pos+2],imagenOriginal[pos+3])
+            pos +=4
+        }
+    }
+    ctx.putImageData(imageData,0,0)
+}

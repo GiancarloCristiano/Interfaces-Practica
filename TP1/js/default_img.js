@@ -15,10 +15,8 @@ img1.onload = function () {
 }
 
 function myDrawImageMethod(img,canvasImg){
-    canvasImg.canvas.width=img.naturalWidth;
-    canvasImg.canvas.height=img.naturalHeight;
-    canvasImg.width=canvasImg.canvas.width;
-    canvasImg.height=canvasImg.canvas.height;
+    canvasImg.width=canvas.width;
+    canvasImg.height=canvas.height;
     canvasImg.ctx.drawImage(img, 0,0);
 }
 
@@ -27,36 +25,33 @@ function setOrigin(canvasImg){
     canvasImg.imageData=canvasImg.ctx.getImageData(0,0,canvasImg.width,canvasImg.height);
 }
 
-if (imagenNueva){
-    guardarImagenOriginal();
-    /* let canvas1 = document.getElementById("canvas");
-    let bup = new CanvasImg(canvas1);
-    bup.origin=this;
-    bup.imageData = bup.ctx.getImageData(0,0,bup.width,bup.height);
-    setOrigin (bup); */
-    imagenNueva = false;
-}
+/* 
+if (imagenNueva)
+    setImagenCargada();
 
 
-function guardarImagenOriginal(){
-    imagenOriginal = []
-    for(let i = 0; i<canvas.width; i++){
-        for(let j = 0; j<canvas.height; j++){
-            imagenOriginal[imagenOriginal.length] = getRed(i,j)
-            imagenOriginal[imagenOriginal.length] = getGreen(i,j)
-            imagenOriginal[imagenOriginal.length] = getBlue(i,j)
-            imagenOriginal[imagenOriginal.length] = getAlpha(i,j)
-        }
+function setImagenCargada(){ */
+    let canvas2 = document.getElementById("canvas");
+    let canvasImg2 = new CanvasImg2(canvas2);
+    var img2 = new Image();
+    let content2 = canvas.getContext('2d');
+    img2.crossOrigin = "Anonymous";
+    img2.src=content2;
+
+    if (imagenNueva){
+        myDrawImageMethod2(this,canvasImg2);
+        canvasImg2.origin=this;
+        canvasImg2.imageData=canvasImg2.ctx.getImageData(0,0,canvasImg2.width,canvasImg2.height);
     }
-}
-
-function restablecerImagen(){
-    let pos = 0;
-    for(let i = 0; i<canvas.width; i++){
-        for(let j = 0; j<canvas.height; j++){
-            setPixel(imageData,i,j,imagenOriginal[pos],imagenOriginal[pos+1],imagenOriginal[pos+2],imagenOriginal[pos+3])
-            pos +=4
-        }
+    
+    function myDrawImageMethod2(img2,canvasImg2){
+        canvasImg2.width=canvas.width;
+        canvasImg2.height=canvas.height;
+        canvasImg2.ctx.drawImage(img2, 0,0);
     }
-    ctx.putImageData(imageData,0,0)
-}
+    
+    function setOrigin2(canvasImg2){
+        myDrawImageMethod2(canvasImg2.origin,canvasImg2);
+        canvasImg2.imageData=canvasImg2.ctx.getImageData(0,0,canvasImg2.width,canvasImg2.height);
+    }
+

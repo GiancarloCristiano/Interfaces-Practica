@@ -1,61 +1,105 @@
 document.querySelector("#btn-origin").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
+    if (!imagenNueva)
+        setOrigin(canvasImg1);
+    else
+        setOrigin2(canvasImg2);
 });
 
 
 document.querySelector("#btn-sepia").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroSepia();
+    if (!imagenNueva){
+        setOrigin(canvasImg1);
+        canvasImg1.filtroSepia();
+    }else{
+        setOrigin2(canvasImg2);
+        canvasImg2.filtroSepia();
+    }
 });
 
 
 document.querySelector("#btn-gray").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroGris();
+    if (!imagenNueva){
+        setOrigin(canvasImg1);
+        canvasImg1.filtroGris();
+    }else{
+        setOrigin2(canvasImg2);
+        canvasImg2.filtroGris();
+    }
 });
 
 document.querySelector("#btn-binary").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroBinario();
+    if (!imagenNueva){
+        setOrigin(canvasImg1);
+        canvasImg1.filtroBinario();
+    }else{
+        setOrigin2(canvasImg2);
+        canvasImg2.filtroBinario();
+    }
 });
 
 document.querySelector("#btn-negative").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroNegativo();
+    if (!imagenNueva){
+        setOrigin(canvasImg1);
+        canvasImg1.filtroNegativo();
+    }else{
+        setOrigin2(canvasImg2);
+        canvasImg2.filtroNegativo();
+    }
 });
 
 document.querySelector("#btn-brightness").addEventListener("click", function(){
     event.preventDefault();
-    canvasImg1.filtroBrillo();
+    if (!imagenNueva)
+        canvasImg1.filtroBrillo();
+    else
+        canvasImg2.filtroBrillo();
 });
 
 document.querySelector("#btn-darkness").addEventListener("click", function(){
     event.preventDefault();
-    canvasImg1.filtroOscuro();
+    if (!imagenNueva)
+        canvasImg1.filtroOscuro();
+    else
+        canvasImg2.filtroOscuro();
 });
 
 
 document.querySelector("#btn-saturation").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroSaturacion();
+    if (!imagenNueva){
+        setOrigin(canvasImg1);
+        canvasImg1.filtroSaturacion();
+    }else{
+        setOrigin2(canvasImg2);
+        canvasImg2.filtroSaturacion();
+    }
 });
 
 document.querySelector("#btn-soft").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroSuave();
+    if (!imagenNueva){
+        setOrigin(canvasImg1);
+        canvasImg1.filtroSuave();
+    }else{
+        setOrigin2(canvasImg2);
+        canvasImg2.filtroSuave();
+    }
 });
 
 document.querySelector("#btn-blur").addEventListener("click", function(){
     event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroBlur();
+    if (!imagenNueva){
+        setOrigin(canvasImg1);
+        canvasImg1.filtroBlur();
+    }else{
+        setOrigin2(canvasImg2);
+        canvasImg2.filtroBlur();
+    }
 });
 
 /* document.querySelector("#btn-blood").addEventListener("click", function(){

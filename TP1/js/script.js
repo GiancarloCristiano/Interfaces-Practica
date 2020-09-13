@@ -5,7 +5,7 @@ let input = document.querySelector('.input1');
 var imagenNueva = false;
 
 // clear canvas
-var context = canvas.getContext('2d');
+let context = canvas.getContext('2d');
 context.fillStyle = "#F0F0F0"; // canvas background color
 context.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -32,7 +32,6 @@ input.onchange = e => {
                 let imageData = context.getImageData(0, 0, imageScaledWidth, imageScaledHeight);
                 // draw the modified image
                 context.putImageData(imageData, 0, 0);
-                setOrigin(imageData);
                 imagenNueva = true;         
             }
         } else {

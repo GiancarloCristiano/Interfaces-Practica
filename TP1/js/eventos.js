@@ -39,11 +39,6 @@ document.querySelector("#btn-darkness").addEventListener("click", function(){
     canvasImg1.filtroOscuro();
 });
 
-document.querySelector("#btn-blood").addEventListener("click", function(){
-    event.preventDefault();
-    setOrigin(canvasImg1);
-    canvasImg1.filtroSangrado();
-});
 
 document.querySelector("#btn-saturation").addEventListener("click", function(){
     event.preventDefault();
@@ -57,6 +52,29 @@ document.querySelector("#btn-soft").addEventListener("click", function(){
     canvasImg1.filtroSuave();
 });
 
+document.querySelector("#btn-blur").addEventListener("click", function(){
+    event.preventDefault();
+    setOrigin(canvasImg1);
+    canvasImg1.filtroBlur();
+});
+
+/* document.querySelector("#btn-blood").addEventListener("click", function(){
+    event.preventDefault();
+    setOrigin(canvasImg1);
+    canvasImg1.filtroSangrado();
+});
+
+document.querySelector("#btn-focus").addEventListener("click", function(){
+    event.preventDefault();
+    setOrigin(canvasImg1);
+    canvasImg1.filtroEnfoque();
+});
+ 
+document.querySelector("#btn-sobel").addEventListener("click", function(){
+    event.preventDefault();
+    setOrigin(canvasImg1);
+    canvasImg1.filtroSobel();
+}); */
 
 
 //DESCARGAR IMAGEN

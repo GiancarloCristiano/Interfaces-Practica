@@ -90,17 +90,6 @@ class CanvasImg extends Canvas {
     this.ctx.putImageData(this.imageData, 0, 0);
   }
 
-  filtroSangrado(){
-    for(let i=0; i<this.imageData.data.length; i+=4){
-      let red = this.imageData.data[i]+10;
-      let green = this.imageData.data[i+1]+10;
-      let blue = this.imageData.data[i+2]+10;
-      this.setPixel(this.imageData,red,green,blue);
-
-    }
-    this.ctx.putImageData(this.imageData,0,0);
-  }
-
 
   filtroSaturacion() {
     for (let x = 0; x < this.width; x++) {
@@ -133,12 +122,84 @@ class CanvasImg extends Canvas {
   }
   
  
-
   filtroSuave(){
     let red = 0.0;
     let green = 0.0;
     let blue = 0.0;
     let mat = [[1/9, 1/9, 1/9], [1/9, 1/9, 1/9], [1/9, 1/9, 1/9]];
+    for (let x = 0; x < this.imageData.width; x++) {
+      for (let y = 1; y < this.imageData.height-1; y++) {
+
+        red = this.getRed(this.imageData, x-1, y-1) * mat[0][0] +  this.getRed(this.imageData,x, y-1) * mat[0][1] +  this.getRed(this.imageData,x+1, y-1) * mat[0][2]
+        + this.getRed(this.imageData,x-1, y) * mat[1][0] +  this.getRed(this.imageData,x, y) * mat[1][1] +  this.getRed(this.imageData,x+1, y) * mat[1][2]
+        + this.getRed(this.imageData,x-1, y+1) * mat[2][0] +  this.getRed(this.imageData,x, y+1) * mat[2][1] +  this.getRed(this.imageData,x+1, y+1) * mat[2][2];
+      
+        green = this.getGreen(this.imageData,x-1, y-1) * mat[0][0] +  this.getGreen(this.imageData,x, y-1) * mat[0][1] +  this.getGreen(this.imageData,x+1, y-1) * mat[0][2] 
+        +   this.getGreen(this.imageData,x-1, y) * mat[1][0] +  this.getGreen(this.imageData,x, y) * mat[1][1] +  this.getGreen(this.imageData,x+1, y) * mat[1][2]
+        +   this.getGreen(this.imageData,x-1, y+1) * mat[2][0] +  this.getGreen(this.imageData,x, y+1) * mat[2][1] +  this.getGreen(this.imageData,x+1, y+1) * mat[2][2];
+      
+        blue = this.getBlue(this.imageData,x-1, y-1) * mat[0][0] +  this.getBlue(this.imageData,x, y-1) * mat[0][1] +  this.getBlue(this.imageData,x+1, y-1) * mat[0][2] 
+        +   this.getBlue(this.imageData,x-1, y) * mat[1][0] +  this.getBlue(this.imageData,x, y) * mat[1][1] +  this.getBlue(this.imageData,x+1, y+1) * mat[1][2] 
+        +   this.getBlue(this.imageData,x-1, y+1) * mat[2][0] +  this.getBlue(this.imageData,x, y+1) * mat[2][1] +  this.getBlue(this.imageData,x+1, y+1) * mat[2][2];
+      
+        this.setPixel(this.imageData, x, y, red, green, blue);
+      }
+  }
+
+  this.ctx.putImageData(this.imageData, 0, 0);
+  } 
+
+
+  filtroBlur(){
+    let red = 0.0;
+    let green = 0.0;
+    let blue = 0.0;
+    let mat = 1/25;
+    for (let x = 0; x < this.imageData.width; x++) {
+      for (let y = 2; y < this.imageData.height-2; y++) {
+        red = this.getRed(this.imageData, x-2, y-2) * mat + this.getRed(this.imageData, x-1, y-2) * mat +  this.getRed(this.imageData,x, y-2) * mat +  this.getRed(this.imageData,x+1, y-2) * mat  +  this.getRed(this.imageData,x+2, y-2) * mat
+        + this.getRed(this.imageData, x-2, y-1) * mat + this.getRed(this.imageData, x-1, y-1) * mat +  this.getRed(this.imageData,x, y-1) * mat +  this.getRed(this.imageData,x+1, y-1) * mat  +  this.getRed(this.imageData,x+2, y-1) * mat
+        + this.getRed(this.imageData, x-2, y) * mat + this.getRed(this.imageData,x-1, y) * mat +  this.getRed(this.imageData,x, y) * mat +  this.getRed(this.imageData,x+1, y) * mat  +  this.getRed(this.imageData,x+2, y) * mat
+        + this.getRed(this.imageData, x-2, y+1) * mat + this.getRed(this.imageData,x-1, y+1) * mat +  this.getRed(this.imageData,x, y+1) * mat +  this.getRed(this.imageData,x+1, y+1) * mat  +  this.getRed(this.imageData,x+2, y+1) * mat
+        + this.getRed(this.imageData, x-2, y+2) * mat + this.getRed(this.imageData,x-1, y+2) * mat +  this.getRed(this.imageData,x, y+2) * mat +  this.getRed(this.imageData,x+1, y+2) * mat  +  this.getRed(this.imageData,x+2, y+2) * mat;
+
+        green = this.getGreen(this.imageData,x-2, y-2) * mat +  this.getGreen(this.imageData,x-1, y-2) * mat +  this.getGreen(this.imageData,x, y-2) * mat  +  this.getGreen(this.imageData,x+1, y-2) * mat  +  this.getGreen(this.imageData,x+2, y-2) * mat 
+        +  this.getGreen(this.imageData,x-2, y-1) * mat +  this.getGreen(this.imageData,x-1, y-1) * mat +  this.getGreen(this.imageData,x, y-1) * mat +  this.getGreen(this.imageData,x+1, y-1) * mat  +  this.getGreen(this.imageData,x+2, y-1) * mat 
+        +  this.getGreen(this.imageData,x-2, y) * mat +  this.getGreen(this.imageData,x-1, y) * mat +  this.getGreen(this.imageData,x, y) * mat +  this.getGreen(this.imageData,x+1, y) * mat  +  this.getGreen(this.imageData,x+2, y) * mat 
+        +  this.getGreen(this.imageData,x-2, y+1) * mat +  this.getGreen(this.imageData,x-1, y+1) * mat +  this.getGreen(this.imageData,x, y+1) * mat +  this.getGreen(this.imageData,x+1, y+1) * mat +  this.getGreen(this.imageData,x+2, y+1) * mat 
+        +  this.getGreen(this.imageData,x-2, y+2) * mat +  this.getGreen(this.imageData,x-1, y+2) * mat +  this.getGreen(this.imageData,x, y+2) * mat +  this.getGreen(this.imageData,x+1, y+2) * mat +  this.getGreen(this.imageData,x+2, y+2) * mat;
+ 
+        blue = this.getBlue(this.imageData,x-2, y-2) * mat +  this.getBlue(this.imageData,x-1, y-2) * mat +  this.getBlue(this.imageData,x, y-2) * mat +  this.getBlue(this.imageData,x+1, y-2) * mat  +  this.getBlue(this.imageData,x+2, y-2) * mat 
+        +  this.getBlue(this.imageData,x-2, y-1) * mat +  this.getBlue(this.imageData,x-1, y-1) * mat +  this.getBlue(this.imageData,x, y-1) * mat +  this.getBlue(this.imageData,x+1, y-1) * mat  +  this.getBlue(this.imageData,x+2, y-2) * mat 
+        +  this.getBlue(this.imageData,x-2, y) * mat   +  this.getBlue(this.imageData,x-1, y) * mat + this.getBlue(this.imageData,x, y) * mat  +  this.getBlue(this.imageData,x+1, y) * mat +  this.getBlue(this.imageData,x+2, y) * mat 
+        +  this.getBlue(this.imageData,x-2, y+1) * mat + this.getBlue(this.imageData,x-1, y+1) * mat +  this.getBlue(this.imageData,x, y+1) * mat +  this.getBlue(this.imageData,x+1, y+1) * mat +  this.getBlue(this.imageData,x+2, y+1) * mat 
+        +  this.getBlue(this.imageData,x-2, y+2) * mat +  this.getBlue(this.imageData,x-1, y+2) * mat +  this.getBlue(this.imageData,x, y+2) * mat +  this.getBlue(this.imageData,x+1, y+2) * mat +  this.getBlue(this.imageData,x+2, y+2) * mat;
+
+
+        this.setPixel(this.imageData, x, y, red, green, blue);
+      }
+  }
+
+  this.ctx.putImageData(this.imageData, 0, 0);
+  }
+
+  /* filtroSangrado(){
+    for(let i=0; i<this.imageData.data.length; i+=4){
+      let red = this.imageData.data[i]+10;
+      let green = this.imageData.data[i+1]+10;
+      let blue = this.imageData.data[i+2]+10;
+      this.setPixel(this.imageData,red,green,blue);
+
+    }
+    this.ctx.putImageData(this.imageData,0,0);
+  } 
+  
+
+  filtroEnfoque(){
+    let red = 0.0;
+    let green = 0.0;
+    let blue = 0.0;
+    let mat = [[0, -1, 0], [-1, 5, -1], [0, -1, 0]];
     for (let x = 1; x < this.imageData.width-1; x++) {
       for (let y = 1; y < this.imageData.height-1; y++) {
         red = this.getRed(this.imageData, x-1, y-1) * mat[0][0] +  this.getRed(this.imageData,x, y-1) * mat[0][1] +  this.getRed(this.imageData,x+1, y-1) * mat[0][2]
@@ -158,10 +219,61 @@ class CanvasImg extends Canvas {
   }
 
   this.ctx.putImageData(this.imageData, 0, 0);
-
-
   }
-  
+
+    filtroSobel(){
+    let red = 0.0;
+    let green = 0.0;
+    let blue = 0.0;
+    let r = 0.0;
+    let g = 0.0;
+    let b = 0.0;
+    let mat = [[-1,-2,-1],[0,0,0],[1,2,1]];
+    let mat2 = [[-1,0,1],[-2,0,2],[-1,0,1]];
+    for (let x = 1; x < this.imageData.width-1; x++) {
+      for (let y = 1; y < this.imageData.height-1; y++) {
+        red = this.getRed(this.imageData, x-1, y-1) * mat[0][0] +  this.getRed(this.imageData,x, y-1) * mat[0][1] +  this.getRed(this.imageData,x+1, y-1) * mat[0][2]
+        + this.getRed(this.imageData,x-1, y) * mat[1][0] +  this.getRed(this.imageData,x, y) * mat[1][1] +  this.getRed(this.imageData,x+1, y) * mat[1][2]
+        + this.getRed(this.imageData,x-1, y+1) * mat[2][0] +  this.getRed(this.imageData,x, y+1) * mat[2][1] +  this.getRed(this.imageData,x+1, y+1) * mat[2][2];
+      
+        green = this.getGreen(this.imageData,x-1, y-1) * mat[0][0] +  this.getGreen(this.imageData,x, y-1) * mat[0][1] +  this.getGreen(this.imageData,x+1, y-1) * mat[0][2] 
+        +   this.getGreen(this.imageData,x-1, y) * mat[1][0] +  this.getGreen(this.imageData,x, y) * mat[1][1] +  this.getGreen(this.imageData,x+1, y) * mat[1][2]
+        +   this.getGreen(this.imageData,x-1, y+1) * mat[2][0] +  this.getGreen(this.imageData,x, y+1) * mat[2][1] +  this.getGreen(this.imageData,x+1, y+1) * mat[2][2];
+      
+        blue = this.getBlue(this.imageData,x-1, y-1) * mat[0][0] +  this.getBlue(this.imageData,x, y-1) * mat[0][1] +  this.getBlue(this.imageData,x+1, y-1) * mat[0][2] 
+        +   this.getBlue(this.imageData,x-1, y) * mat[1][0] +  this.getBlue(this.imageData,x, y) * mat[1][1] +  this.getBlue(this.imageData,x+1, y+1) * mat[1][2] 
+        +   this.getBlue(this.imageData,x-1, y+1) * mat[2][0] +  this.getBlue(this.imageData,x, y+1) * mat[2][1] +  this.getBlue(this.imageData,x+1, y+1) * mat[2][2];
+      
+        r = this.getRed(this.imageData, x-1, y-1) * mat2[0][0] +  this.getRed(this.imageData,x, y-1) * mat2[0][1] +  this.getRed(this.imageData,x+1, y-1) * mat2[0][2]
+        + this.getRed(this.imageData,x-1, y) * mat2[1][0] +  this.getRed(this.imageData,x, y) * mat2[1][1] +  this.getRed(this.imageData,x+1, y) * mat2[1][2]
+        + this.getRed(this.imageData,x-1, y+1) * mat2[2][0] +  this.getRed(this.imageData,x, y+1) * mat2[2][1] +  this.getRed(this.imageData,x+1, y+1) * mat2[2][2];
+      
+        g = this.getGreen(this.imageData,x-1, y-1) * mat2[0][0] +  this.getGreen(this.imageData,x, y-1) * mat2[0][1] +  this.getGreen(this.imageData,x+1, y-1) * mat2[0][2] 
+        +   this.getGreen(this.imageData,x-1, y) * mat2[1][0] +  this.getGreen(this.imageData,x, y) * mat2[1][1] +  this.getGreen(this.imageData,x+1, y) * mat2[1][2]
+        +   this.getGreen(this.imageData,x-1, y+1) * mat2[2][0] +  this.getGreen(this.imageData,x, y+1) * mat2[2][1] +  this.getGreen(this.imageData,x+1, y+1) * mat2[2][2];
+      
+        b = this.getBlue(this.imageData,x-1, y-1) * mat2[0][0] +  this.getBlue(this.imageData,x, y-1) * mat2[0][1] +  this.getBlue(this.imageData,x+1, y-1) * mat2[0][2] 
+        +   this.getBlue(this.imageData,x-1, y) * mat2[1][0] +  this.getBlue(this.imageData,x, y) * mat2[1][1] +  this.getBlue(this.imageData,x+1, y+1) * mat2[1][2] 
+        +   this.getBlue(this.imageData,x-1, y+1) * mat2[2][0] +  this.getBlue(this.imageData,x, y+1) * mat2[2][1] +  this.getBlue(this.imageData,x+1, y+1) * mat2[2][2];
+        
+        let color = (red + green + blue) / 3;
+        let c = (r + g + b) / 3;
+
+        let G=Math.sqrt(color*color+c*c);
+
+
+        this.setPixel(this.imageData, x, y, G, G, G);
+      }
+  }
+
+  this.ctx.putImageData(this.imageData, 0, 0);
+  } */
+
+
+
+
+
+
   }
 
 

@@ -1,21 +1,24 @@
+"use strict";
+
 //BLOQUE PARA CARGAR LA IMAGEN
 var canvas = document.querySelector('#canvas');
 let input = document.querySelector('.input1');
 
 let context = canvas.getContext('2d');
-let imagenBackUp;
+let imagenBackUp = false;
 
 let download = document.querySelector("#btn-download");
 let white = document.querySelector('#btn-clear');
 
 let original = document.querySelector("#btn-origin");
+let brightness = document.querySelector("#btn-brightness");
+let darkness = document.querySelector("#btn-darkness")
+let saturation = document.querySelector("#btn-saturation");
+let desaturation = document.querySelector("#btn-desaturation");
 let grays = document.querySelector("#btn-gray");
 let binary = document.querySelector("#btn-binary");
 let sepia = document.querySelector("#btn-sepia");
 let negative = document.querySelector("#btn-negative");
-let brightness = document.querySelector("#btn-brightness");
-let darkness = document.querySelector("#btn-darkness")
-let saturation = document.querySelector("#btn-saturation");
 let soft = document.querySelector("#btn-soft");
 let blur = document.querySelector("#btn-blur");
 let focus = document.querySelector("#btn-focus");
@@ -23,16 +26,17 @@ let focus = document.querySelector("#btn-focus");
 //let sobel = document.querySelector("#btn-sobel");
 
 original.addEventListener("click", reestablecerImagen); 
+brightness.addEventListener("click", filtroBrillo);
+darkness.addEventListener("click", filtroOscuro);
+saturation.addEventListener("click", filtroSaturacion);
+desaturation.addEventListener("click", filtroDesaturacion);
 grays.addEventListener("click", filtroGris);
 binary.addEventListener("click", filtroBinario);
 sepia.addEventListener("click", filtroSepia);
 negative.addEventListener("click", filtroNegativo);
-brightness.addEventListener("click", filtroBrillo);
-darkness.addEventListener("click", filtroOscuro);
-saturation.addEventListener("click", filtroSaturacion);
 soft.addEventListener("click", filtroSuave);
 blur.addEventListener("click", filtroBlur);
-focus.addEventListener("click", filtroEnfoque);
+focus.addEventListener("click", filtroNitidez);
 //blood.addEventListener("click", filtroSangrado);
 //sobel.addEventListener("click", filtroSobel);
 
@@ -76,6 +80,7 @@ input.onchange = e => {
                 // draw the modified image
                 context.putImageData(imageData, 0, 0);
                 imagenBackUp = imageData;  
+                original.removeAttribute("hidden");
             }
         } else {
             alert('El archivo seleccionado no es una imagen.');

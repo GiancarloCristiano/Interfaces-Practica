@@ -1,165 +1,159 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <title>TPE1 Giancarlo Cristiano</title>
-    <style>
-        .cursor{
-            cursor:crosshair;
-            object-position: 20%;
-        }
-    </style>
-</head>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="icon" type="image/png" href="images/favicon.png"/>
+        <title>TPE1 Giancarlo Cristiano</title>
+        <style>
+            .cursor {
+                cursor: crosshair;
+                object-position: 20%;
+            }
+        </style>
+    </head>
 
-<body class="bg-dark">
-    <div class="container">
-        <nav class="navbar p-3  navbar-expand-lg navbar-dark">
-            <a class="navbar-brand float-left" href="#">Trabajo Práctico Entregable 1</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link disabled float-right" href="#">Giancarlo Cristiano<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled float-right" href="#">UI 2020</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled float-right" href="#">TUDAI</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        
-     
-        <div class="shadow-sm p-3 mb-5 bg-light rounded-lg">
-            <div>
-                <div class="btn-toolbar ml-3 mt-2" role="toolbar" aria-label="Toolbar with button groups">
-                    <div class="btn-group mr-3 mb-3" role="group" aria-label="First group">
-                        <button type="button" class="btn btn-info" id="btn-origin">Original</button>
-                   </div>
-                    <div class="btn-group mr-3 mb-3" role="group" aria-label="Second group"> 
-                       <button type="button" class="btn btn-dark" disabled>Dibujo</button>
-                       <button type="button" class="btn btn-dark" id="btn-pencil" title="Lápiz">
-                           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-                      </svg>
-                    </button>
-                        <button type="button" class="btn btn-dark" id="btn-eraser" title="Goma">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4 0h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"/>
-                            <path fill-rule="evenodd" d="M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
-                          </svg>
-                        </button>
-                        <button type="button" class="btn btn-dark" id="btn-fill" title="Rellenar todo el canvas">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bucket-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M2.522 5H2a.5.5 0 0 0-.494.574l1.372 9.149A1.5 1.5 0 0 0 4.36 16h7.278a1.5 1.5 0 0 0 1.483-1.277l1.373-9.149A.5.5 0 0 0 14 5h-.522A5.5 5.5 0 0 0 2.522 5zm1.005 0h8.945a4.5 4.5 0 0 0-8.945 0z"/>
-                              </svg>
-                        </button>
-                        <button class="btn btn-dark" title="Color">
-                            <input class="rounded" type="color" id="color-picker" value="#007bff">
-                        </button>
-                        <button class="btn btn-dark" title="Grosor">
-                            <input type="range" min="1" max="50" value="25" id="range-size">
+    <body class="bg-dark">
+        <div class="container">
+
+
+            <ul class="nav justify-content-center p-3 navbar-dark">
+                <li class="nav-item">
+                    <a class="navbar-brand" href="#">Trabajo Práctico Entregable 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Giancarlo Cristiano</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">UI '2020</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">TUDAI</a>
+                </li>
+            </ul>
+
+
+            <div class="shadow-sm p-3 mb-5 bg-light rounded-lg">
+                <div>
+                    <div class="btn-toolbar navbar-collapse ml-3 mt-2" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-3 mb-3 flex-fill" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-dark" disabled>Archivo</button>
+                            <button type="button" class="btn btn-dark" id="btn-clear" title="Limpiar canvas">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-file-earmark-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0H4zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>
+                                </svg>
                             </button>
+                            <button type="button" class="btn btn-dark" id="btn-load" title="Insertar imagen" onclick="document.querySelector('.input1').click();">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-file-image" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 0h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10l2.224-2.224a.5.5 0 0 1 .61-.075L8 11l2.157-3.02a.5.5 0 0 1 .76-.063L13 10V2a1 1 0 0 0-1-1H4z"/>
+                                    <path fill-rule="evenodd" d="M6.502 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="btn btn-dark" id="btn-origin" title="Reestablecer imagen" hidden>
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-arrow-counterclockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                                    <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                                </svg>
+                            </button>
+                            <a href="#" type="button" class="btn btn-dark" id="btn-download" download="my-file-name.png" title="Descargar imagen">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-arrow-down-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="btn-group mr-3 mb-3 flex-fill" role="group" aria-label="Second group">
+                            <button type="button" class="btn btn-dark" disabled>Ajustes</button>
+                            <button type="button" class="btn btn-dark" id="btn-darkness" title="Menos brillo">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-brightness-low-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8.5 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707zM3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707z"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="btn btn-dark" id="btn-brightness" title="Más brillo">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-brightness-high-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+                                    <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="btn btn-dark" id="btn-desaturation" title="Menos saturación">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-droplet-half" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10c0 0 2.5 1.5 5 .5s5-.5 5-.5c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                                    <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="btn btn-dark" id="btn-saturation" title="Más saturación">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-droplet-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="btn-group mr-3 mb-3 flex-fill" role="group" aria-label="Third group">
+                            <button type="button" class="btn btn-dark" disabled>Dibujo</button>
+                            <button type="button" class="btn btn-dark" id="btn-pencil" title="Lápiz">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-pencil-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="btn btn-dark" id="btn-eraser" title="Goma">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-file-minus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4 0h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H4z"/>
+                                    <path fill-rule="evenodd" d="M5.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="btn btn-dark" id="btn-fill" title="Rellenar todo el canvas">
+                                <svg width="1em" height="1em" viewbox="0 0 16 16" class="bi bi-bucket-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M2.522 5H2a.5.5 0 0 0-.494.574l1.372 9.149A1.5 1.5 0 0 0 4.36 16h7.278a1.5 1.5 0 0 0 1.483-1.277l1.373-9.149A.5.5 0 0 0 14 5h-.522A5.5 5.5 0 0 0 2.522 5zm1.005 0h8.945a4.5 4.5 0 0 0-8.945 0z"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-dark" title="Color">
+                                <input class="rounded" type="color" id="color-picker" value="#007bff">
+                            </button>
+                            <button class="btn btn-dark" title="Grosor">
+                                <input type="range" min="1" max="50" value="25" id="range-size">
+                            </button>
+                        </div>
                     </div>
-                    <div class="btn-group mr-3 mb-3" role="group" aria-label="Third group">
-                        <button type="button" class="btn btn-dark" disabled>Brillo</button>
-                        <button type="button" class="btn btn-dark" id="btn-darkness" title="Menos brillo">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-brightness-low-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8.5 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707zm7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707zM3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707z"/>
-                          </svg>
-                        </button>
-                        <button type="button" class="btn btn-dark" id="btn-brightness" title="Más brillo">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-brightness-high-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
-                                <path fill-rule="evenodd" d="M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-                              </svg>
-                           </button>     
-                    </div>
-                    <div class="btn-group mb-4" role="group" aria-label="Fourth group">
-                        <button type="button" class="btn btn-dark" disabled>Filtros</button>
-                        <button type="button" class="btn btn-dark text-white-50" id="btn-gray">Grises</button>
-                        <button type="button" class="btn btn-dark" id="btn-binary">Binario</button>
-                        <button type="button" class="btn btn-dark text-warning" id="btn-sepia">Sepia</button>
-                        <button type="button" class="btn btn-dark text-primary" id="btn-negative">Negativo</button>
-                        <button type="button" class="btn btn-dark text-danger" id="btn-saturation">Saturación</button>
-                        <button type="button" class="btn btn-dark text-success" id="btn-soft">Suavizado</button>
-                        <button type="button" class="btn btn-dark text-info" id="btn-blur">Desenfoque</button>
-                        <button type="button" class="btn btn-dark text-success" id="btn-focus">Nitidez</button>
-                        <!-- <button type="button" class="btn btn-dark text-danger" id="btn-blood">Sangrado</button> -->
-                        <!-- <button type="button" class="btn btn-dark text-success" id="btn-sobel">Sobel</button> -->
+                    <div class="btn-toolbar ml-3 mt-2 navbar-collapse" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mb-4 mr-3 flex-fill " role="group" aria-label="First group">
+                            <button type="button" class="btn btn-dark" disabled>Filtros</button>
+                            <button type="button" class="btn btn-dark text-white-50" id="btn-gray">Grises</button>
+                            <button type="button" class="btn btn-dark" id="btn-binary">Binario</button>
+                            <button type="button" class="btn btn-dark text-warning" id="btn-sepia">Sepia</button>
+                            <button type="button" class="btn btn-dark text-primary" id="btn-negative">Negativo</button>
+                            <button type="button" class="btn btn-dark text-success" id="btn-soft">Suavizado</button>
+                            <button type="button" class="btn btn-dark text-info" id="btn-blur">Desenfoque</button>
+                            <button type="button" class="btn btn-dark text-danger" id="btn-focus">Nitidez</button>
+                            <!-- <button type="button" class="btn btn-dark text-danger" id="btn-blood">Sangrado</button> -->
+                            <!-- <button type="button" class="btn btn-dark text-success" id="btn-sobel">Sobel</button> -->
 
+                        </div>
 
 
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <input class="input1" type="file" style="display: none;" accept="image/x-png,image/gif,image/jpeg,image/jpg">
-                <canvas class="shadow-sm bg-white rounded-lg cursor" id="canvas" width="800" height="600"></canvas>
-            </div>
-        
-       
-    
-        <div>
-            <div class="btn-toolbar p-3 mr-2" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group mr-2" role="group" aria-label="First group" >
-                        <button type="button" class="btn" id="btn-clear" title="Nueva imagen">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
-                                <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
-                                <path fill-rule="evenodd" d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
-                              </svg>
-                        </button>
+                <div class="container">
+                    <input class="input1" type="file" style="display: none;" accept="image/x-png,image/gif,image/jpeg,image/jpg">
+                    <div class="d-flex justify-content-center">
+                        <canvas class=" shadow-sm bg-white rounded-lg cursor mb-3" id="canvas" width="800" height="600"></canvas>
                     </div>
-                    <div class="btn-group mr-2" role="group" aria-label="Second group">
-                    <button type="button" class="btn" id="btn-load" title="Cargar imagen" onclick="document.querySelector('.input1').click();">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-upload" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                        <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
-                      </svg>
-                    </button>
-                </div>
-                    <div class="btn-group" role="group" aria-label="Third group">
-                    <a href="#" type="button" class="btn" id="btn-download" download="my-file-name.png" title="Descargar imagen">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                            <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                          </svg>
-                    </a>
                 </div>
 
-            </div>
-        </div>
-    </div>
 
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type='text/javascript' src = 'js/filtros.js'> </script>
-    <script type='text/javascript' src = 'js/paint.js'> </script>
-    <script type='text/javascript' src = 'js/main.js'></script>
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script type='text/javascript' src='js/filtros.js'></script>
+                <script type='text/javascript' src='js/paint.js'></script>
+                <script type='text/javascript' src='js/main.js'></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-</body>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+            </body>
 
+        </html>
+    </body>
 </html>

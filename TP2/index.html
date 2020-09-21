@@ -45,33 +45,33 @@
                   <label for="inputState" class="text-light">Jugador 1</label>
                   <input type="text" name="nombre" class="form-control" id="nombre-j1" placeholder="Ingrese Nombre">
                   <label for="inputState" class="text-light">Color</label>
-                  <select id="inputState" class="form-control" name="id_comida" value=>
-                    <option selected class="text-danger" value="#e3334a" id="color-j1">Rojo</option>
-                    <option class="text-primary" value="#e3334a">Azul</option>
-                    <option class="text-info" value="#e3334a">Turquesa</option>
-                    <option class="text-success" value="#e3334a">Verde</option>
-                    <option class="text-warning" value="#e3334a">Amarillo</option>
-                    <option class="text-dark" value="#e3334a">Negro</option>
+                  <select id="inputState" class="form-control" name="valor-color">
+                    <option selected class="text-light bg-danger" value="#DC3545" id="color-j1">Rojo</option>
+                    <option class="text-light" value="#9900CC" style="background-color:#9900CC">Violeta</option>
+                    <option class="text-light" value="#003399" style="background-color: #003399">Azul</option>
+                    <option class="text-light bg-info" value="#17A2B8">Turquesa</option>
+                    <option class="text-light bg-success" value="#28A745">Verde</option>
+                    <option class="text-light bg-warning" value="#FFC107">Amarillo</option>
+                    <option class="text-light" value="#FF6600" style="background-color:#FF6600">Naranja</option>
+                    <option class="text-light" value="#FF99CC" style="background-color: #FF99CC">Rosa</option>
+                    <option class="text-light bg-dark" value="#343A40">Negro</option>
                     </select>
-                  <button class="btn" title="Color">
-                    <input class="rounded-lg" type="color" id="picker-j1" value="#e3334a">
-                </button>
                 </div>
                 <div class="form-group">
                   <label for="inputState" class="text-light">Jugador 2</label>
                   <input type="text" name="nombre" class="form-control" id="nombre-j2" placeholder="Ingrese Nombre">
                   <label for="inputState" class="text-light">Color</label>
-                  <select id="inputState" class="form-control" name="id_comida" value=>
-                    <option selected class="text-primary" value="#32579a" id="color-j2">Azul</option>
-                    <option class="text-info" value="#32579a">Turquesa</option>
-                    <option class="text-success" value="#32579a">Verde</option>
-                    <option class="text-warning" value="#32579a">Amarillo</option>
-                    <option class="text-danger" value="#32579a">Rojo</option>
-                    <option class="text-dark" value="#32579a">Negro</option>                   
+                  <select id="inputState" class="form-control" name="valor-color">
+                    <option selected class="text-light" style="background-color: #003399" value="#003399" id="color-j2">Azul</option>
+                    <option class="text-light bg-info" value="#17A2B8">Turquesa</option>
+                    <option class="text-light bg-success" value="#28A745">Verde</option>
+                    <option class="text-light bg-warning" value="#FFC107">Amarillo</option>
+                    <option class="text-light" value="#FF6600" style="background-color:#FF6600">Naranja</option>
+                    <option class="text-light bg-danger" value="#DC3545">Rojo</option>
+                    <option class="text-light" value="#FF99CC" style="background-color: #FF99CC">Rosa</option>
+                    <option class="text-light" value="#9900CC" style="background-color:#9900CC">Violeta</option>
+                    <option class="text-light bg-dark" value="#343A40">Negro</option>                  
                    </select>
-                  <button class="btn" title="Color">
-                    <input class="rounded-lg" type="color" id="picker-j2" id="nombre-j2" value="#32579a">
-                </button>
                 </div>
                 <div id="error" class="alert alert-danger" role="alert" hidden>Error: los jugadores no pueden compartir nombre y/o color.</div>
                 <button type="button" class="btn btn-primary btn-lg btn-block p-3" id="boton-jugar">JUGAR</button>

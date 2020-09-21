@@ -12,14 +12,17 @@ function comenzarJuego() {
   let colorj1 = document.querySelector('#color-j1').value;
   let nombrej2 = document.querySelector('#nombre-j2').value;
   let colorj2 = document.querySelector('#color-j2').value;
-  let error = document.querySelector('#error');
+  let error1 = document.querySelector('#error1');
+  let error2 = document.querySelector('#error2');
   if (nombrej1 == "")
     nombrej1 = "Jugador 1";
   if (nombrej2 == "")
     nombrej2 = "Jugador 2";
+  if (colorj1 == "" || colorj2 == "")
+    error1.removeAttribute("hidden");
   else
-    error.removeAttribute("hidden");
-  if (nombrej1 != nombrej2 && colorj1 != colorj2){
+    error2.removeAttribute("hidden");
+  if (nombrej1 != nombrej2 && colorj1 != colorj2 && colorj1 != "" && colorj2 != ""){
     let bloque2 = document.querySelector('#juego');
     bloque2.style.display = 'inline';
     let bloque1 = document.querySelector('#jugadores');

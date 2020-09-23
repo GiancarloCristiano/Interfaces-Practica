@@ -7,26 +7,28 @@ document.querySelector('#boton-jugar').addEventListener('click',function (e) {
   comenzarJuego();
 });
 
+let fichas = []
+
+
 function comenzarJuego() {
   let nombrej1 = document.querySelector('#nombre-j1').value;
   let colorj1 = document.querySelector('#color-j1').value;
   let nombrej2 = document.querySelector('#nombre-j2').value;
   let colorj2 = document.querySelector('#color-j2').value;
-  let error1 = document.querySelector('#error1');
-  let error2 = document.querySelector('#error2');
+  let error = document.querySelector('#error');
   if (nombrej1 == "")
     nombrej1 = "Jugador 1";
   if (nombrej2 == "")
     nombrej2 = "Jugador 2";
-  if (colorj1 == "" || colorj2 == "")
-    error1.removeAttribute("hidden");
-  else
-    error2.removeAttribute("hidden");
-  if (nombrej1 != nombrej2 && colorj1 != colorj2 && colorj1 != "" && colorj2 != ""){
+    error.removeAttribute("hidden");
+  if (nombrej1 != nombrej2 && colorj1 != colorj2 ){
     let bloque2 = document.querySelector('#juego');
-    bloque2.style.display = 'inline';
+    bloque2.removeAttribute("hidden");
     let bloque1 = document.querySelector('#jugadores');
     bloque1.style.display = 'none';
+    addFichas (colorj1, colorj2);
+    //let jugador1 = new Jugador (nombrej1, colorj1);
+    //let jugador2 = new Jugador (nombrej2, colorj2);
     //let j1 = new Jugador(nombrej1, colorj1,"red",21,80,70);
     //let j2 = new Jugador(nombrej2, colorj2, "yellow",21,800,70);
     //juego = new Juego(j1,j2);
@@ -35,11 +37,51 @@ function comenzarJuego() {
 }
 
 
+function addFichas(colorj1, colorj2) {
+  let iX = 50;
+  let iY = 50;
+  let color = colorj1;
+  for (let i = 0; i <= 10; i++){
+    addFicha(color, iX, iY);
+    iY+=98;
+  }
+  iX = 135;
+  iY = 130;
+  for (let i = 0; i < 10; i++){
+    addFicha(color, iX, iY);
+    iY+=100;
+  }
+  color = colorj2;
+  iX = canvas.width - 50;
+  iY = 50;
+  for (let i = 0; i <= 10; i++){
+    addFicha(color, iX, iY);
+    iY+=98;
+  }
+  iX = canvas.width - 135;
+  iY = 130;
+  for (let i = 0; i < 10; i++){
+    addFicha(color, iX, iY);
+    iY+=100;
+  }
+}
+
+function addFicha(color, iX, iY) {
+    let posX = iX;
+    let posY = iY;
+    let img = new Image();
+    img.src = "images/ficha.png";
+    let ficha = new Ficha(posX, posY, color, context, 35, img);
+   //fichas.push(ficha);
+    ficha.draw();
+}
+
+
+
 
 let src = "images/fondo.png";
 let canvas = document.querySelector("#canvas");
 let context = canvas.getContext("2d");
-
 let img = new Image();
 img.src = src;
 img.crossorigin = "anonymous";

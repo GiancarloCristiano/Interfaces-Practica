@@ -46,7 +46,7 @@
                   <input type="text" name="nombre" class="form-control" id="nombre-j1" placeholder="Ingrese Nombre">
                   <label for="inputState" class="text-light"></label>
                   <select value="" id="color-j1" class="form-control" name="valor-color">
-                    <option selected disabled value ="">Color</option>
+                    <option selected disabled value ="rgba(230, 0, 0, 0.52)">Color</option>
                     <option class="text-light bg-danger" value="#DC3545">Rojo</option>
                     <option class="text-light" value="#FF99CC" style="background-color: #FF99CC">Rosa</option>
                     <option class="text-light" value="#9900CC" style="background-color:#9900CC">Violeta</option>
@@ -63,7 +63,7 @@
                   <input type="text" name="nombre" class="form-control" id="nombre-j2" placeholder="Ingrese Nombre">
                   <label for="inputState" class="text-light"></label>
                   <select value="" id="color-j2" class="form-control" name="valor-color">
-                    <option selected disabled value ="">Color</option>
+                    <option selected disabled value ="rgba(37, 10, 158, 0.78)">Color</option>
                     <option class="text-light bg-danger" value="#DC3545">Rojo</option>
                     <option class="text-light" value="#FF99CC" style="background-color: #FF99CC">Rosa</option>
                     <option class="text-light" value="#9900CC" style="background-color:#9900CC">Violeta</option>
@@ -75,15 +75,14 @@
                     <option class="text-light bg-dark" value="#343A40">Negro</option>               
                    </select>
                 </div>
-                <div id="error1" class="alert alert-warning" role="alert" hidden>Selecciona un color para cada jugador.</div>
-                <div id="error2" class="alert alert-danger" role="alert" hidden>Error: los jugadores no pueden compartir nombre y/o color.</div>
+                <div id="error" class="alert alert-danger" role="alert" hidden>Error: los jugadores no pueden compartir nombre y/o color.</div>
                 <label for="inputState" class="text-light"></label>
                 <button type="button" class="btn btn-primary btn-lg btn-block p-3" id="boton-jugar">JUGAR</button>
             </form>
         </div>  
 
                 
-                <div class="container" id="juego" style="display: none;">
+                <div class="container" id="juego" hidden>
                     <!-- <div class="shadow-sm p-3 bg-light justify-content-center rounded-lg"> -->
                         <!-- <div class="d-flex justify-content-center"> -->
                             <canvas class=" shadow-sm bg-white rounded-lg mb-3" id="canvas" width="1080" height="1080"></canvas>
@@ -94,6 +93,8 @@
                 <!-- Optional JavaScript -->
                 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
                 <script type='text/javascript' src='js/main.js'></script>
+                <script type='text/javascript' src='js/ficha.js'></script>
+
 
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

@@ -71,9 +71,11 @@ function addFicha(color, iX, iY) {
     let posY = iY;
     let img = new Image();
     img.src = "images/ficha.png";
-    let ficha = new Ficha(posX, posY, color, context, 35, img);
-   //fichas.push(ficha);
-    ficha.draw();
+    img.onload = function () {
+        let ficha = new Ficha(posX, posY, color, context, 35, img);
+        ficha.draw();
+    }
+      //fichas.push(ficha);
 }
 
 

@@ -45,12 +45,13 @@ class Ficha{
 
 
     draw(){
+        let imgX = this.posX - 35;
+        let imgY = this.posY - 35;
         this.context.beginPath();
         this.context.fillStyle = this.color;
-        //this.context.fillStyle = this.context.createPattern(this.img, "repeat");
         this.context.arc(this.posX, this.posY, this.radius, 0, Math.PI * 2);
         this.context.fill();
-        this.context.drawImage(this.img, this.posX, this.posY);
+        this.context.drawImage(this.img, imgX, imgY);
         this.context.closePath();
     }
 

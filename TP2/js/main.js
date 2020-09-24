@@ -19,8 +19,6 @@ let sonidoOn = document.querySelector('#sonido-on');
 let sonidoOff = document.querySelector('#sonido-off');
 let sonidoStart = new Audio('./sounds/intro.mp3')
 
-//play audio with out html audio tag
-
 document.querySelector("#boton-reiniciar").addEventListener('click', function (e){
   e.preventDefault();
   let final = document.querySelector("#msj-final");

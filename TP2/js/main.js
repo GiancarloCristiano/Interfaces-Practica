@@ -21,9 +21,9 @@ let sonidoStart = new Audio('./sounds/intro.mp3')
 
 document.querySelector("#boton-reiniciar").addEventListener('click', function (e){
   e.preventDefault();
-  let final = document.querySelector("#msj-final");
+  let empate = document.querySelector("#msj-empate");
   //btnTurno.style.display = 'none';
-  final.removeAttribute("hidden");
+  empate.removeAttribute("hidden");
   comenzarJuego();
   
 });
@@ -81,6 +81,35 @@ function comenzarJuego() {
 
 function addFichas(colorj1, colorj2) {
   let iX = 50;
+  let iY = 45;
+  let color = colorj1;
+  for (let i = 0; i <= 10; i++){
+    addFicha(color, iX, iY);
+    iY+=71;
+  }
+  iX = 135;
+  iY = 45;
+  for (let i = 0; i < 10; i++){
+    addFicha(color, iX, iY);
+    iY+=79;
+  }
+  color = colorj2;
+  iX = canvas.width - 50;
+  iY = 45;
+  for (let i = 0; i <= 10; i++){
+    addFicha(color, iX, iY);
+    iY+=71;
+  }
+  iX = canvas.width - 135;
+  iY = 45;
+  for (let i = 0; i < 10; i++){
+    addFicha(color, iX, iY);
+    iY+=79;
+  }
+}
+
+/* function addFichas(colorj1, colorj2) {
+  let iX = 50;
   let iY = 50;
   let color = colorj1;
   for (let i = 0; i <= 10; i++){
@@ -106,7 +135,7 @@ function addFichas(colorj1, colorj2) {
     addFicha(color, iX, iY);
     iY+=100;
   }
-}
+} */
 
 function addFicha(color, iX, iY) {
     let posX = iX;

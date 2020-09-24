@@ -9,6 +9,20 @@ document.querySelector('#boton-jugar').addEventListener('click',function (e) {
 
 let fichas = []
 
+let getj1 = document.querySelector("#get-j1");
+let getj2 = document.querySelector("#get-j2");
+let btnTurno = document.querySelector("#boton-turno");
+let bloque1 = document.querySelector('#jugadores');
+let bloque2 = document.querySelector('#juego');
+
+document.querySelector("#boton-reiniciar").addEventListener('click', function (e){
+  e.preventDefault();
+  let final = document.querySelector("#msj-final");
+  final.removeAttribute("hidden");
+  comenzarJuego();
+
+});
+
 
 function comenzarJuego() {
   let nombrej1 = document.querySelector('#nombre-j1').value;
@@ -22,11 +36,15 @@ function comenzarJuego() {
     nombrej2 = "Jugador 2";
     error.removeAttribute("hidden");
   if (nombrej1 != nombrej2 && colorj1 != colorj2 ){
-    let bloque2 = document.querySelector('#juego');
     bloque2.removeAttribute("hidden");
-    let bloque1 = document.querySelector('#jugadores');
     bloque1.style.display = 'none';
     addFichas (colorj1, colorj2);
+    getj1.style.color = colorj1;  
+    getj1.innerHTML = nombrej1;
+    getj2.style.color = colorj2;  
+    getj2.innerHTML = nombrej2;
+    btnTurno.innerHTML = "Turno de: " + nombrej1;
+    btnTurno.style = `background-color :${colorj1}`;
     //let jugador1 = new Jugador (nombrej1, colorj1);
     //let jugador2 = new Jugador (nombrej2, colorj2);
     //let j1 = new Jugador(nombrej1, colorj1,"red",21,80,70);

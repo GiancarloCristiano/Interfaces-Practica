@@ -45,8 +45,8 @@ class Ficha{
 
 
     draw(){
-        let imgX = this.posX - 35;
-        let imgY = this.posY - 35;
+        let imgX = this.posX - this.radius;
+        let imgY = this.posY - this.radius;
         this.context.beginPath();
         this.context.fillStyle = this.color;
         this.context.arc(this.posX, this.posY, this.radius, 0, Math.PI * 2);

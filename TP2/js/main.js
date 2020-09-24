@@ -14,17 +14,43 @@ let getj2 = document.querySelector("#get-j2");
 let btnTurno = document.querySelector("#boton-turno");
 let bloque1 = document.querySelector('#jugadores');
 let bloque2 = document.querySelector('#juego');
+let sonidosActivados = document.querySelector('#sonidos');
+let sonidoOn = document.querySelector('#sonido-on');
+let sonidoOff = document.querySelector('#sonido-off');
+let sonidoStart = new Audio('./sounds/intro.mp3')
+
+//play audio with out html audio tag
 
 document.querySelector("#boton-reiniciar").addEventListener('click', function (e){
   e.preventDefault();
   let final = document.querySelector("#msj-final");
+  //btnTurno.style.display = 'none';
   final.removeAttribute("hidden");
   comenzarJuego();
-
+  
 });
 
+sonidoOn.addEventListener("click", function (e){
+  e.preventDefault();
+  sonidosActivados.value = "0";
+  sonidoOn.style.display = 'none';
+  sonidoOff.style.display = 'inline';
+})
+
+sonidoOff.addEventListener("click", function (e){
+  e.preventDefault();
+  sonidosActivados.value = "1";
+  sonidoOn.style.display = 'inline';
+  sonidoOff.style.display = 'none';
+})
 
 function comenzarJuego() {
+  if (sonidosActivados.value == "1")
+    sonidoStart.play();
+  else{
+    sonidoOff.style.display = 'inline';
+    sonidoOn.style.display = 'none';
+  }
   let nombrej1 = document.querySelector('#nombre-j1').value;
   let colorj1 = document.querySelector('#color-j1').value;
   let nombrej2 = document.querySelector('#nombre-j2').value;

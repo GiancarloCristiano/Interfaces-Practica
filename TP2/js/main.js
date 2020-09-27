@@ -5,10 +5,30 @@
 document.querySelector('#boton-jugar').addEventListener('click',function (e) {
   e.preventDefault();
   comenzarJuego();
+  redibujar();
 });
 
-let fichas = []
+function redibujar(){
+let src = "images/fondo.png";
+let img = new Image();
+img.src = src;
+img.crossorigin = "anonymous";
+img.onload = function () {
+  let width = canvas.width;
+  let imgWidth = img.naturalWidth;
+  let imgHeight = img.naturalHeight;
+  let aspectRatio = imgWidth / imgHeight;
+  let height = width / aspectRatio;
+  canvas.height = height;
+  context.drawImage(img, 0, 0, width, height);
+  addFichas(colorj1,colorj2);
+};
+}
 
+
+
+let canvas = document.querySelector("#canvas");
+let context = canvas.getContext("2d");
 let getj1 = document.querySelector("#get-j1");
 let getj2 = document.querySelector("#get-j2");
 let btnTurno = document.querySelector("#boton-turno");
@@ -18,6 +38,14 @@ let sonidosActivados = document.querySelector('#sonidos');
 let sonidoOn = document.querySelector('#sonido-on');
 let sonidoOff = document.querySelector('#sonido-off');
 let sonidoStart = new Audio('./sounds/intro.mp3')
+let nombrej1, colorj1, nombrej2, colorj2;
+
+
+
+/* canvas.addEventListener('mousedown', onMouseDown, false);
+canvas.addEventListener('mouseup', onMouseUp, false);
+canvas.addEventListener('mousemove', onMouseMoved, false); */
+
 
 document.querySelector("#boton-reiniciar").addEventListener('click', function (e){
   e.preventDefault();
@@ -49,10 +77,10 @@ function comenzarJuego() {
     sonidoOff.style.display = 'inline';
     sonidoOn.style.display = 'none';
   }
-  let nombrej1 = document.querySelector('#nombre-j1').value;
-  let colorj1 = document.querySelector('#color-j1').value;
-  let nombrej2 = document.querySelector('#nombre-j2').value;
-  let colorj2 = document.querySelector('#color-j2').value;
+  nombrej1 = document.querySelector('#nombre-j1').value;
+  colorj1 = document.querySelector('#color-j1').value;
+  nombrej2 = document.querySelector('#nombre-j2').value;
+  colorj2 = document.querySelector('#color-j2').value;
   let error = document.querySelector('#error');
   if (nombrej1 == "")
     nombrej1 = "Jugador 1";
@@ -137,6 +165,8 @@ function addFichas(colorj1, colorj2) {
   }
 } */
 
+let fichas = [];
+
 function addFicha(color, iX, iY) {
     let posX = iX;
     let posY = iY;
@@ -145,28 +175,23 @@ function addFicha(color, iX, iY) {
     img.onload = function () {
         let ficha = new Ficha(posX, posY, color, context, 35, img);
         ficha.draw();
+        fichas.push(ficha);
+      }
+}
+
+
+
+function fichaClickeada(x, y){
+  for (let i = 0; i < 42; i++){
+    const fichaSelec = fichas[i];
+    if (fichaSelec.estaAdentro(x, y)){
+      return fichaSelec;
     }
-      //fichas.push(ficha);
+  }
 }
 
 
 
 
-let src = "images/fondo.png";
-let canvas = document.querySelector("#canvas");
-let context = canvas.getContext("2d");
-let img = new Image();
-img.src = src;
-img.crossorigin = "anonymous";
-
-img.onload = function () {
-  let width = canvas.width;
-  let imgWidth = img.naturalWidth;
-  let imgHeight = img.naturalHeight;
-  let aspectRatio = imgWidth / imgHeight;
-  let height = width / aspectRatio;
-  canvas.height = height;
-  context.drawImage(img, 0, 0, width, height);
-};
 
 

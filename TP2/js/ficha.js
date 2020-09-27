@@ -43,6 +43,11 @@ class Ficha{
         this.fill = fill;
     }
 
+    setPosition(x, y){
+        this.x = x,
+        this.y = y;
+        };
+    
 
     draw(){
         let imgX = this.posX - this.radius;
@@ -55,12 +60,12 @@ class Ficha{
         this.context.closePath();
     }
 
-    /*
+    
     estaAdentro(x, y){
         let _x = this.posX - x;
         let _y = this.posY - y;
         return Math.sqrt(_x * _x + _y * _y) < this.radius;
-    }*/
+    }
 
 
 }

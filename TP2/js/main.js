@@ -1,32 +1,4 @@
 "use strict";
-
-
-//original.addEventListener("click", reestablecerImagen);
-document.querySelector('#boton-jugar').addEventListener('click',function (e) {
-  e.preventDefault();
-  comenzarJuego();
-  redibujar();
-});
-
-function redibujar(){
-let src = "images/fondo.png";
-let img = new Image();
-img.src = src;
-img.crossorigin = "anonymous";
-img.onload = function () {
-  let width = canvas.width;
-  let imgWidth = img.naturalWidth;
-  let imgHeight = img.naturalHeight;
-  let aspectRatio = imgWidth / imgHeight;
-  let height = width / aspectRatio;
-  canvas.height = height;
-  context.drawImage(img, 0, 0, width, height);
-  addFichas(colorj1,colorj2);
-};
-}
-
-
-
 let canvas = document.querySelector("#canvas");
 let context = canvas.getContext("2d");
 let getj1 = document.querySelector("#get-j1");
@@ -39,6 +11,58 @@ let sonidoOn = document.querySelector('#sonido-on');
 let sonidoOff = document.querySelector('#sonido-off');
 let sonidoStart = new Audio('./sounds/intro.mp3')
 let nombrej1, colorj1, nombrej2, colorj2;
+
+
+let srcFondo = "images/fondo.png";
+let imgFondo = new Image();
+imgFondo.src = srcFondo;
+imgFondo.crossorigin = "anonymous";
+imgFondo.onload = cargarFondo();
+let srcFicha = "images/ficha.ong";
+let imgFicha = new Image();
+imgFicha.src = srcFicha;
+imgFicha.crossorigin = "anonymous";
+
+
+
+function cargarFondo(){
+  let width = canvas.width;
+  let imgWidth = imgFondo.naturalWidth;
+  let imgHeight = imgFondo.naturalHeight;
+  let aspectRatio = imgWidth / imgHeight;
+  let height = width / aspectRatio;
+  canvas.height = height;
+  context.drawImage(imgFondo, 0, 0, width, height);
+}
+
+
+
+
+//original.addEventListener("click", reestablecerImagen);
+document.querySelector('#boton-jugar').addEventListener('click',function (e) {
+  e.preventDefault();
+  comenzarJuego();
+  redibujar();
+});
+
+function redibujar(){
+  cargarFondo();
+  addFichas(colorj1,colorj2);
+};
+
+
+function addFicha(color, iX, iY) {
+  let posX = iX;
+  let posY = iY;
+  let img = new Image();
+  img.src = "images/ficha.png";
+  img.onload = function () {
+      let ficha = new Ficha(posX, posY, color, context, 35, img);
+      ficha.draw();
+      fichas.push(ficha);
+    }
+}
+
 
 
 
@@ -167,17 +191,7 @@ function addFichas(colorj1, colorj2) {
 
 let fichas = [];
 
-function addFicha(color, iX, iY) {
-    let posX = iX;
-    let posY = iY;
-    let img = new Image();
-    img.src = "images/ficha.png";
-    img.onload = function () {
-        let ficha = new Ficha(posX, posY, color, context, 35, img);
-        ficha.draw();
-        fichas.push(ficha);
-      }
-}
+
 
 
 

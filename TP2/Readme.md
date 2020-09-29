@@ -13,7 +13,7 @@ Hecho. Para poder mejorar la UX, la imagen es transparente y el usuario tiene 10
 HECHO. Hay que colocarlas desde que comienzan los agujeros del tablero.
 
 5. Se debe implementar la lógica del juego, teniendo en cuenta los turnos de jugador (un jugador por vez).
-A MEDIO HACER
+HECHO. Se cambia el turno recién cuando una ficha es insertada en el fichero (tablero).
 
 6. El juego termina cuando un jugador consigue ubicar cuatro fichas en línea (Vertical, horizontal o diagonal).
 FALTA

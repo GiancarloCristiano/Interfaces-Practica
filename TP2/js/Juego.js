@@ -46,7 +46,8 @@ class Juego {
 
     dibujarTablero() {
         if (this.tablero == null) {
-            this.tablero = new Tablero(this.canvas, "images/tablero.png");
+            let imgSrc = "images/tablero.png"
+            this.tablero = new Tablero(this.canvas, imgSrc);
         }
         this.tablero.dibujarTablero();
     }
@@ -82,7 +83,17 @@ class Juego {
         }
     }
 
-    
+    getTurno() {
+        return this.turno;
+    }
+
+    cambiarTurno() {
+        if (this.turno == 1)
+            this.turno = 2;
+        else
+            this.turno = 1;
+    }
+
     setTurno() {
         if (!this.gameover) {
             if (this.turno == 1) {
@@ -139,6 +150,7 @@ class Juego {
             if (this.tablero.insertarFicha(this.clickFicha, mX)) {
                 this.clickFicha.setUsada();
                 this.clickFicha.setSeleccionada(false);
+                this.cambiarTurno();
             }
         }
     }

@@ -93,7 +93,7 @@ class Tablero {
     checkGanador() {
         let i = this.ultInsertada.i;
         let j = this.ultInsertada.j;
-        return this.checkVert(j);
+        return (this.checkVert(j) || this.checkHor(i));
     }
 
     checkVert(j) {
@@ -114,4 +114,24 @@ class Tablero {
         }
         return false;
     }
+
+    checkHor(i) {
+        let match = 0;
+        let pos = 1;
+        while (pos < this.columnas) {
+            if (this.fichas[pos][i - 1] != null && this.fichas[pos + 1][i - 1] != null) {
+                if (this.fichas[pos][i - 1].getNumJugador() === this.fichas[pos + 1][i - 1].getNumJugador()) {
+                    match++;
+                    if (match == 3) {
+                        return true;
+                    }
+                } else {
+                    match = 0;
+                }
+            }
+            pos++;
+        }
+        return false;
+    }
+
 }

@@ -160,15 +160,18 @@ class Juego {
     }
 
     juegoFinalizado() {
+        this.gameover = true;
         let final = document.querySelector("#msj-final");
         versus.style.display = 'none';
         botonSonidos.style.display = 'none';
         spanTurno.style.display = 'none';
         final.style.display = 'inline';
         final.innerHTML = "¡GANÓ " + this.clickFicha.getJugador().getNombre() + "!";
-         if (sonidosActivados.value == "1")
+        let colorGan = this.clickFicha.getJugador().getColor();
+        final.style = `background-color : ${colorGan}`;
+        if (sonidosActivados.value == "1")
             sonidoWin.play();
-            canvas.style.display = 'none';
+        canvas.style.display = 'none';
     }
 
 }

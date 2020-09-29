@@ -102,12 +102,13 @@ class Tablero {
         while (pos < this.filas) {
             if (this.fichas[j][pos] != null && this.fichas[j][pos + 1] != null) {
                 if (this.fichas[j][pos].getNumJugador() === this.fichas[j][pos + 1].getNumJugador()) {
-                    match++;
+                    match ++;
                     if (match == 4)
                         return true;
                 } else
                     match = 1;
-            }
+            } else
+                match = 1;
             pos++;
         }
         return false;
@@ -119,12 +120,13 @@ class Tablero {
         while (pos < this.columnas) {
             if (this.fichas[pos][i - 1] != null && this.fichas[pos + 1][i - 1] != null) {
                 if (this.fichas[pos][i - 1].getNumJugador() === this.fichas[pos + 1][i - 1].getNumJugador()) {
-                    match++;
+                    match ++;
                     if (match == 4)
                         return true;
                 } else
                     match = 1;
-            }
+            } else
+                match = 1;
             pos++;
         }
         return false;

@@ -98,8 +98,8 @@ class Tablero {
 
     checkVert(j) {
         let match = 1;
-        let pos = 1;
-        while (pos < this.filas) {
+        let pos = 0;
+        while (pos + 1 < this.filas) {
             if (this.fichas[j][pos] != null && this.fichas[j][pos + 1] != null) {
                 if (this.fichas[j][pos].getNumJugador() === this.fichas[j][pos + 1].getNumJugador()) {
                     match ++;

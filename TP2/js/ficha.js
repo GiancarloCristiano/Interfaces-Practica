@@ -81,6 +81,10 @@ class Ficha {
         } else
             this.context.drawImage(this.img, this.pos.X, this.pos.Y, this.radio * 2, this.radio * 2);
         this.context.closePath();
+        if (this.seleccionada == true) {
+            this.context.fillStyle = "rgba(255,255,255,0.5)";
+            this.context.fill();
+        }
     }
 
     setSeleccionada(bool) {

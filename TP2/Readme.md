@@ -20,7 +20,7 @@ FALTA
 
 EXTRAS PARA PROMO:
 .Las fichas deben elegirse con click de mouse, y el usuario debe poder arrastrar la ficha y soltarla donde quiere.
-HECHO.
+HECHO. También se resalta la ficha seleccionada.
 
 . Algún feature adicional extra, por ejemplo: poder reiniciar el juego, poder establecer la dimensión del tablero, colocar un timer que limite el tiempo de juego, etc.
 Luego de investigar y debido a la forma en la que está pensada crear el tablero, no se implementará el cambio de dimensión ya que el juego original consta de 6 filas y 7 columnas, en el caso de cambiar esto tal vez también debería considerarse la cantidad de fichas a alinear por lo que no sería el "4 en línea".

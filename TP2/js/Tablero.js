@@ -90,4 +90,28 @@ class Tablero {
         return false;
     }
 
+    checkGanador() {
+        let i = this.ultInsertada.i;
+        let j = this.ultInsertada.j;
+        return this.checkVert(j);
+    }
+
+    checkVert(j) {
+        let match = 0;
+        let pos = 0;
+        while (pos + 1 < this.fichas[j].length) {
+            if (this.fichas[j][pos] != null && this.fichas[j][pos + 1] != null) {
+                if (this.fichas[j][pos].getNumJugador() == this.fichas[j][pos + 1].getNumJugador()) {
+                    match++;
+                    if (match == 3) {
+                        return true;
+                    }
+                } else {
+                    match = 0;
+                }
+            }
+            pos++;
+        }
+        return false;
+    }
 }

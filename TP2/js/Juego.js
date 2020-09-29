@@ -147,13 +147,22 @@ class Juego {
 
     tableroClickeado(mX, mY) {
         if ((this.clickFicha != null) && (this.tablero.clickeado(mX, mY))) {
-            if (this.tablero.insertarFicha(this.clickFicha, mX)) {
-                this.clickFicha.setUsada();
+            if (this.tablero.insertFicha(this.clickFicha, mX)) {
                 this.clickFicha.setSeleccionada(false);
-                this.cambiarTurno();
+                this.clickFicha.setUsada();
+                if (this.tablero.checkGanador()) {
+                    this.juegoFinalizado();
+                } else {
+                    this.cambiarTurno();
+                }
             }
         }
     }
 
+    juegoFinalizado() {
+         if (sonidosActivados.value == "1")
+            sonidoWin.play();
+            canvas.style.display = 'none';
+    }
 
 }

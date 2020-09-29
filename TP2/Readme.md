@@ -16,7 +16,7 @@ HECHO. Hay que colocarlas desde que comienzan los agujeros del tablero.
 HECHO. Se cambia el turno recién cuando una ficha es insertada en el fichero (tablero).
 
 6. El juego termina cuando un jugador consigue ubicar cuatro fichas en línea (Vertical, horizontal o diagonal).
-FALTA
+Va queriendo
 
 EXTRAS PARA PROMO:
 .Las fichas deben elegirse con click de mouse, y el usuario debe poder arrastrar la ficha y soltarla donde quiere.

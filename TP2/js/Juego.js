@@ -147,7 +147,7 @@ class Juego {
 
     tableroClickeado(mX, mY) {
         if ((this.clickFicha != null) && (this.tablero.clickeado(mX, mY))) {
-            if (this.tablero.insertFicha(this.clickFicha, mX)) {
+            if (this.tablero.insertarFicha(this.clickFicha, mX)) {
                 this.clickFicha.setSeleccionada(false);
                 this.clickFicha.setUsada();
                 if (this.tablero.checkGanador()) {

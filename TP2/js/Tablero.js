@@ -9,7 +9,7 @@ class Tablero {
         this.context = canvas.getContext('2d');
         this.imgSrc = imgSrc;
         this.img = new Image();
-        this.fichas = []
+        this.fichas = [];
         this.ultJugador = null;
         this.ultInsertada = { j: 0, i: 0 };
         this.pos = { X: 0, Y: 0 };
@@ -93,7 +93,7 @@ class Tablero {
     checkGanador() {
         let i = this.ultInsertada.i;
         let j = this.ultInsertada.j;
-        return (this.checkVert(j) || this.checkHor(i));
+        return (this.checkVert(j) || this.checkHor(i) || this.checkAsc(j, i) || this.checkDesc(j, i));
     }
 
     checkVert(j) {
@@ -101,7 +101,7 @@ class Tablero {
         let pos = 0;
         while (pos + 1 < this.filas) {
             if (this.fichas[j][pos] != null && this.fichas[j][pos + 1] != null) {
-                if (this.fichas[j][pos].getNumJugador() === this.fichas[j][pos + 1].getNumJugador()) {
+                if (this.fichas[j][pos].getNumJugador() == this.fichas[j][pos + 1].getNumJugador()) {
                     match ++;
                     if (match == 4)
                         return true;
@@ -109,7 +109,7 @@ class Tablero {
                     match = 1;
             } else
                 match = 1;
-            pos++;
+            pos ++;
         }
         return false;
     }
@@ -119,7 +119,7 @@ class Tablero {
         let pos = 1;
         while (pos < this.columnas) {
             if (this.fichas[pos][i - 1] != null && this.fichas[pos + 1][i - 1] != null) {
-                if (this.fichas[pos][i - 1].getNumJugador() === this.fichas[pos + 1][i - 1].getNumJugador()) {
+                if (this.fichas[pos][i - 1].getNumJugador() == this.fichas[pos + 1][i - 1].getNumJugador()) {
                     match ++;
                     if (match == 4)
                         return true;
@@ -127,9 +127,54 @@ class Tablero {
                     match = 1;
             } else
                 match = 1;
-            pos++;
+            pos ++;
         }
         return false;
     }
 
+    checkAsc(j, i) {
+        i --;
+        let match = 1;
+        while (i < this.filas - 1 && j < this.columnas) {
+            i ++;
+            j ++;
+        }
+        while (i > 0 && j > 1) {
+            if (this.fichas[j][i] != null && this.fichas[j - 1][i - 1] != null) {
+                if (this.fichas[j][i].getNumJugador() == this.fichas[j - 1][i - 1].getNumJugador()) {
+                    match ++;
+                    if (match == 4)
+                        return true;
+                } else
+                    match = 1;
+            } else
+                match = 1;
+            i --;
+            j --;
+        }
+        return false;
+    }
+
+    checkDesc(j, i) {
+        i --;
+        let match = 1;
+        while (i < this.filas - 1 && j > 1) {
+            i ++;
+            j --;
+        }
+        while (i > 0 && j < this.columnas) {
+            if (this.fichas[j][i] != null && this.fichas[j + 1][i - 1] != null) {
+                if (this.fichas[j][i].getNumJugador() == this.fichas[j + 1][i - 1].getNumJugador()) {
+                    match ++;
+                    if (match == 4)
+                        return true;
+                } else
+                    match = 1;
+            } else
+                match = 1;
+            i --;
+            j ++;
+        }
+        return false;
+    }
 }

@@ -10,6 +10,7 @@ class Juego {
         this.tablero = null;
         this.clickFicha = null;
         this.turno = 1;
+        this.gameover = false;
     }
 
     nuevoJuego() {
@@ -19,7 +20,7 @@ class Juego {
         this.dibujarTablero();
         setTimeout(() => {
             this.cargarFichas();
-        }, 500);
+        }, 350);
     }
 
     limpiarCanvas() {

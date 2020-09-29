@@ -42,6 +42,19 @@ class Tablero {
         return !(mX < this.pos.X + 25 || mX > this.pos.X + (this.img.width - 25) || mY < this.pos.Y || mY > this.pos.Y + this.img.height)
     }
 
+    selecColumna(mX) {
+        let pos = 1;
+        if (mX > this.pos.X && mX < this.pos.X + this.img.width) {
+            while (pos <= this.columnas) {
+                if (mX < this.pos.X + this.casillero * pos) {
+                    return pos;
+                } else {
+                    pos++;
+                }
+            }
+        }
+    }
+
     posFicha(ficha) {
         let posX = 0;
         let posY = 0;
@@ -58,6 +71,23 @@ class Tablero {
         ficha.setPosiciones(posX, posY);
         if (sonidosActivados.value == "1")
             sonidoFicha.play();
+    }
+
+    insertarFicha(ficha, mX) {
+        this.ultInsertada.j = this.selecColumna(mX);
+        let j = this.ultInsertada.j;
+        let pos = 0;
+        while (pos < this.filas) {
+            if (this.fichas[j][pos] == null) {
+                this.ultInsertada.i = pos + 1;
+                this.posFicha(ficha);
+                this.fichas[j].splice(pos, 1, ficha);
+                this.ultJugador = ficha.getNumJugador();
+                return true;
+            }
+            pos++;
+        }
+        return false;
     }
 
 }

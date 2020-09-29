@@ -82,7 +82,7 @@ class Juego {
         }
     }
 
-
+    
     setTurno() {
         if (!this.gameover) {
             if (this.turno == 1) {
@@ -136,14 +136,9 @@ class Juego {
 
     tableroClickeado(mX, mY) {
         if ((this.clickFicha != null) && (this.tablero.clickeado(mX, mY))) {
-            if (this.tablero.insertFicha(this.clickFicha, mX)) {
+            if (this.tablero.insertarFicha(this.clickFicha, mX)) {
                 this.clickFicha.setUsada();
                 this.clickFicha.setSeleccionada(false);
-                if (this.tablero.checkGanador()) {
-                    this.juegoFinalizado();
-                } else {
-                    this.cambiarTurno();
-                }
             }
         }
     }

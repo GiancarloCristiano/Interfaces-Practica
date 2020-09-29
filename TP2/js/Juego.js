@@ -19,7 +19,7 @@ class Juego {
         this.dibujarTablero();
         setTimeout(() => {
             this.cargarFichas();
-        }, 100);
+        }, 350);
     }
 
     limpiarCanvas() {

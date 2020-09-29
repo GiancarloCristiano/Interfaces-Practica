@@ -66,7 +66,6 @@ function setInicial() {
         getj2.innerHTML = nombrej2;
         let canvas = document.querySelector("#canvas");
         let juego = new Juego(canvas);
-        juego.nuevoJuego();
         canvas.addEventListener("mousedown", function (e) {
             juego.onMouseDown(e);
             canvas.addEventListener("mousemove", moverMouse, false);
@@ -76,9 +75,10 @@ function setInicial() {
             canvas.removeEventListener("mousemove", moverMouse, false);
             juego.reDibujar();
         });
-
+        
         function moverMouse(e) {
             juego.onMouseMove(e);
         }
+        juego.nuevoJuego();
     }
 }

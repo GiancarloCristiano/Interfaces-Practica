@@ -12,11 +12,11 @@ Hecho. Para poder mejorar la UX, la imagen es transparente y el usuario tiene 10
 4. Cada jugador va seleccionando sus fichas y las ubica en una de las columnas del tablero.
 HECHO. Hay que colocarlas desde que comienzan los agujeros del tablero.
 
-5. Se debe implementar la lógica del juego, teniendo en cuenta los turnos de jugador (un jugador por vez).
+5. Se debe implementar la lógica del juego, teniendo en cuenta los turnos de jugador.
 HECHO. Se cambia el turno recién cuando una ficha es insertada en el fichero (tablero).
 
 6. El juego termina cuando un jugador consigue ubicar cuatro fichas en línea (Vertical, horizontal o diagonal).
-Va queriendo
+Va queriendo.
 
 EXTRAS PARA PROMO:
 .Las fichas deben elegirse con click de mouse, y el usuario debe poder arrastrar la ficha y soltarla donde quiere.

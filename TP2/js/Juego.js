@@ -160,6 +160,12 @@ class Juego {
     }
 
     juegoFinalizado() {
+        let final = document.querySelector("#msj-final");
+        versus.style.display = 'none';
+        botonSonidos.style.display = 'none';
+        spanTurno.style.display = 'none';
+        final.style.display = 'inline';
+        final.innerHTML = "¡GANÓ " + this.clickFicha.getJugador().getNombre() + "!";
          if (sonidosActivados.value == "1")
             sonidoWin.play();
             canvas.style.display = 'none';

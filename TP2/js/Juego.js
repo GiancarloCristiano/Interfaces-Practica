@@ -142,7 +142,7 @@ class Juego {
                 ficha.setSeleccionada(true);
                 find = true;
             }
-            pos++;
+            pos ++;
         }
     }
 
@@ -172,7 +172,13 @@ class Juego {
         final.style = `background-color : ${colorGan}`;
         if (sonidosActivados.value == "1")
             sonidoWin.play();
-        canvas.style.display = 'none';
+        setTimeout(() => {
+            this.canvas.removeEventListener("mousedown", function (e) {
+            onMouseDown(e);})
+        }, 1000);
+        setTimeout(() => {
+            canvas.style.display = 'none';
+        }, 2500);
     }
 
 }

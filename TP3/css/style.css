@@ -1,0 +1,329 @@
+ /* RESET */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:top}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+a, a:link, a:visited { color: inherit; text-decoration: inherit; }
+
+/* GLOBAL */
+
+.section.internallinks, .section.internallinks * {
+	vertical-align: baseline;
+}
+.gridwithicons.section.internallinks, .gridwithicons.section.internallinks * {
+	vertical-align: top;
+}
+
+
+
+nav {
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px 0 0;
+}
+
+nav li a {
+    padding: 2px 7px 2px 7px;
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+nav li a.active {
+    color: #c20000;
+    opacity: 0.9;
+    border-bottom: 2px solid #c20000;
+}
+
+nav li a:hover {
+    opacity: 1;
+    border-bottom: 2px solid;
+}
+
+
+
+
+
+
+html {
+	background-color: #000000;
+	color: #FFFFFF;
+	font-family: 'Verlag A', 'Verlag B', "Verlag";
+	font-weight: 300;
+	font-style: normal;
+	text-align: center;
+	font-size: 20px;
+}
+
+.section {
+	color: #00000;
+}
+
+p>a:link, p>a:visited {
+	color: #c20000;
+	text-decoration: underline;
+	transition: color 0.2s;
+}
+p>a:hover {
+	color: #fff;
+
+}
+
+body {
+	font-family: 'Cinzel', serif;
+	font-weight: 600;
+	position: relative;
+	background-color: #000000;
+}
+
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+}
+
+s {
+	opacity: 0.8;
+	position: relative;
+	text-decoration: none;
+}
+s:before {
+	position: absolute;
+	content: "";
+	left: -3px;
+	top: 50%;
+	right: -3px;
+	border-top: 2px solid;
+	box-shadow: 0px 1px 1px #000000;
+	border-color: #973700;
+	-webkit-transform: rotate(-4deg);
+	-moz-transform: rotate(-4deg);
+	-ms-transform: rotate(-4deg);
+	-o-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+}
+
+
+/* MAGNIFIC OVERRIDE */
+
+.firewatch .mfp-image-holder .mfp-content {
+    max-width: 90%;
+}
+
+
+
+/* PARALLAX */
+
+.keyart, .keyart_layer {
+	height: 1450px;
+}
+
+#parallax {
+	display: none;
+}
+
+
+.keyart {
+	position: relative;
+	z-index: 10;
+}
+
+.keyart_layer {
+	background-position: bottom center;
+	background-size: auto 1450px;
+	background-repeat: no-repeat;
+	width: 100%;
+	/* background-size: 100% auto; */
+	position: absolute;
+}
+.keyart_layer.parallax {
+	position: fixed;
+}
+
+	@keyframes scroll {
+		0% {background-position-x: 0px;}
+		100% {background-position-x: -3840px;}
+	}
+
+	@keyframes color {
+		0% {opacity: 1;}
+		50% {opacity: 0.5;}
+	}
+
+   	#keyart-0 {
+		background-image: url('../images/parallax/HERO_9.png');
+		animation: scroll 300s infinite linear;
+		background-repeat: repeat-x;
+	}
+	#keyart-1 {
+		background-image: url('../images/parallax/HERO_8.png');
+	}
+	#keyart-2 {
+		background-image: url('../images/parallax/HERO_7.png');
+	}
+	#keyart-3 {
+		background-image: url('../images/parallax/HERO_6.png');
+	}
+	#keyart-4 {
+		background-image: url('../images/parallax/HERO_5.png');
+	}
+	#keyart-5 {
+		background-image: url('../images/parallax/HERO_4.png');
+		animation: scroll 60s infinite linear;
+
+	}
+	#keyart-6 {
+		background-image: url('../images/parallax/HERO_3.png');
+		animation: color 6s infinite linear;
+
+	}
+	#keyart-7 {
+		background-image: url('../images/parallax/HERO_2.png');
+	}
+	#keyart-8 {
+		background-image: url('../images/parallax/HERO_1.png');
+	}
+
+
+
+#maincontain {
+	background-color: #000000;
+	position: relative;
+	z-index: 98;
+}
+
+	.pax #maincontain {
+		top: 140px;
+	}
+
+
+#main {
+	max-width: 900px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 99;
+	position: relative;
+	background-color:#000000;
+}
+
+.section {
+
+}
+
+
+
+
+
+/* GAME DESCRIPTION */
+
+.section.description {
+	text-align: left;
+	line-height: 1.6em;
+	margin-top: 80px;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section.description h5 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.5em;
+	margin-bottom: 30px;
+}
+
+.columntext p {
+	margin-bottom: 1.6em;
+	width: 325px;
+	display: inline-block;
+}
+	.columntext p.left {
+		margin-right: 50px;
+	}
+
+@media (min-width: 601px) {
+
+	#nonparallax {
+		display: none;
+	}
+	#parallax {
+		display: block;
+	}
+
+}
+
+/*********************/
+/*********************/
+/* DISABLES PARALLAX */
+/*********************/
+/*********************/
+
+@media (max-width: 600px) {
+
+	#nonparallax {
+		display: block;
+	}
+	#parallax {
+		display: none;
+	}
+
+	#main {
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 70px;
+	}
+
+
+}
+
+
+@media only screen and (max-device-width: 450px) {
+
+
+
+	.section.buy h2 {
+		font-size: 22px;
+		letter-spacing: 3px;
+		font-weight: 700;
+		line-height: 28px;
+	}
+	.section.buy h2.banner span {
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+	.withxbone .section.buy h2.banner span {
+		padding-top: 6px;
+		padding-bottom: 8px;
+	}
+
+	.columntext p {
+		font-size: 23px;
+	}
+
+
+
+
+
+
+
+
+/* PARALLAX */
+
+	.keyart, .keyart_layer {
+		height: 550px;
+	}
+
+	.keyart_layer {
+		position: absolute;
+		background-size: auto 600px;
+	}
+}
+

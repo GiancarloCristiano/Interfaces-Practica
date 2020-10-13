@@ -63,7 +63,7 @@ html {
 }
 
 .section {
-	color: #00000;
+	color: #000000;
 }
 
 p>a:link, p>a:visited {
@@ -133,19 +133,84 @@ h5 {
 }
 
 
+.detalles {
+	padding: 5px;
+	
 
+}
+
+.detalles > summary::-webkit-details-marker { display: none; }
+
+
+
+.detalles > summary{
+    /*position: relative;*/
+    text-decoration: none;
+    background-color: rgb(150,0,0);
+    color: white;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+    transition: padding, border-radius 0.2s ease-in;
+}
+
+
+
+.detalles > p{
+    background-color: #222222;
+    transition: 0.25s ease-out;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 4px;
+    margin: 0;
+    color: white;
+    transition: 0.5s ease-out;
+}
+
+
+
+
+.detalles > summary:hover{
+    background-color: rgb(200,0,0);
+    /* flex-direction: column; */
+    font-weight: bolder;
+    font-size: larger;
+    transition: 0.25s ease-out;
+}
+
+.detalles:active{
+    font-weight: bolder;
+    font-size: larger;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.detalles[open]{
+    outline: none;
+}
+
+
+
+.detalles[open] > summary{
+    outline: none;
+    font-weight: bolder;
+    font-size: larger;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
 
 input, textarea {
     width: 75%;
     resize: none;
-	font-family: 'Prompt', sans-serif;
-	background-color: #222222;
+	font-family: 'Cinzel', serif;
+	background-color: #333333;
 	border-radius: 3px;
 	color: white;
 	border: none;
 	min-height: 2em;
-	animation: color 3s infinite linear;
+	animation: color 2.5s infinite linear;
 }
 
 
@@ -161,13 +226,23 @@ input:valid, textarea:valid {
   }
 
 
-.contact-content, .success-content {
+.contact-content, .success-content{
     color: white;
     width: 500px;
     padding: 0.5%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
     margin: 3.5% auto;
+}
+
+
+.events-content{
+color: white;
+width: 800px;
+padding: 0.5%;
+background-color: rgba(0, 0, 0, 0.9);
+border-radius: 10px;
+margin: 3.5% auto;
 }
 
 
@@ -292,7 +367,7 @@ s:before {
 }
 
 .keyart_layer {
-	background-position: center;
+	background-position: bottom, center;
 	background-size: auto 1450px;
 	background-repeat: no-repeat;
 	width: 100%;

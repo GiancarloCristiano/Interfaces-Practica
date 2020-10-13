@@ -65,7 +65,16 @@ document.body.onload = startSite();
 
 
 
-
+let burger = document.querySelector('.burger');
+burger.addEventListener("click", menuHamburguesa);
+function menuHamburguesa() {
+	var x = document.querySelector(".btns-social");
+	if (x.style.display === "inline") {
+	  x.style.display = "none";
+	} else {
+	  x.style.display = "inline";
+	}
+  }
 
 
 let enviar = document.querySelector('.btn-enviar');
@@ -78,6 +87,8 @@ function llenarBarra(){
 	enviar.style.animation = "tamanio 0.3s linear";	
 }, 1200);
 }
+
+
 
 /*
 let botonr = document.querySelector("#botonr");

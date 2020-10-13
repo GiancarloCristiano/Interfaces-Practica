@@ -10,6 +10,7 @@ a, a:link, a:visited { color: inherit; text-decoration: inherit; }
 nav {
 	margin-right: 20px;
 	margin-top: 20px;
+	margin-bottom: 7px;
 }
 
 nav ul {
@@ -23,7 +24,7 @@ nav li {
 }
 
 nav li a {
-    padding: 2px 7px 2px 7px;
+    padding: 2px 7px;
     color: white;
     font-size: 24px;
     text-transform: uppercase;
@@ -42,7 +43,11 @@ nav li a:hover {
     border-bottom: 2px solid;
 }
 
+.burger:hover {
+	border: none;
+	cursor: pointer;
 
+}
 
 
 
@@ -115,7 +120,7 @@ h2 {
 
 h3 {
     font-size: 16px;
-    margin-block-end: 0em;
+    margin-block-end: 0.3em;
     margin-block-start: 1em;
 }
 
@@ -198,15 +203,28 @@ input:valid, textarea:valid {
     background-color: rgb(200,0,0);
 }
 
+.btns-social{
+	display: none;
+
+}
+
 .button-social {
-    list-style-type: none;
-    display: inline;
-    padding: 3%;
-    opacity: 0.85;
+	opacity: 0.75;
+	padding: 0px;
+	animation: slide 5s linear;
+
+
+}
+
+@keyframes slide {
+	0% { left: 4000px; } 
+	100% { left: 0px; }
 }
 
 .button-social:hover {
-    opacity: 1;
+	opacity: 1;
+	border: none;
+
 }
 
 .success-content {
@@ -423,5 +441,8 @@ s:before {
 
 
 }
+
+
+
 
 

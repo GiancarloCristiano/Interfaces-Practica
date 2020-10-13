@@ -63,7 +63,6 @@ html {
 }
 
 .section {
-	color: #000000;
 }
 
 p>a:link, p>a:visited {
@@ -135,6 +134,8 @@ h5 {
 
 .detalles {
 	padding: 5px;
+	cursor: pointer;
+
 	
 
 }
@@ -145,7 +146,6 @@ h5 {
 
 .detalles > summary{
     /*position: relative;*/
-    text-decoration: none;
     background-color: rgb(150,0,0);
     color: white;
     padding: 4px;
@@ -156,18 +156,23 @@ h5 {
 
 
 
-.detalles > p{
-    background-color: #222222;
+.detalles > div{
+    background-color: #111111;
     transition: 0.25s ease-out;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 4px;
+    padding: 10px;
     margin: 0;
     color: white;
-    transition: 0.5s ease-out;
+	transition: 0.5s ease-out;
+	font-weight: 300;
+	font-size: 0.8em;
+	font-family: 'Trebuchet MS', sans-serif;
 }
 
+.detalles > p{
 
+}
 
 
 .detalles > summary:hover{
@@ -178,12 +183,16 @@ h5 {
     transition: 0.25s ease-out;
 }
 
+.detalles > summary:active{
+    font-size: larger;
+}
+
 .detalles:active{
     font-weight: bolder;
-    font-size: larger;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
 
 
 .detalles[open]{
@@ -261,15 +270,15 @@ margin: 3.5% auto;
 	border-radius: 5px;
 	color: white;
 	border: none;
-	height: 100px;
-	width: 200px;
+	height: 50px;
+	width: 150px;
 	background-size: 600px;
 }
 
 @keyframes tamanio {
-	0% {width: 200px; height:100px;}
-	50% {width: 220px; height: 110px;}
-	100% {width: 200px; height: 100px;}
+	0% {width: 150px; height:50px;}
+	50% {width: 170px; height: 60px;}
+	100% {width: 150px; height: 50px;}
 }
 
 
@@ -458,10 +467,10 @@ s:before {
 /* GAME DESCRIPTION */
 
 .section.description {
-	text-align: left;
+	text-align: center;
 	line-height: 1.6em;
 	margin-top: 80px;
-	max-width: 700px;
+	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }

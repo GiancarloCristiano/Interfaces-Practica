@@ -4,12 +4,6 @@ a, a:link, a:visited { color: inherit; text-decoration: inherit; }
 
 /* GLOBAL */
 
-.section.internallinks, .section.internallinks * {
-	vertical-align: baseline;
-}
-.gridwithicons.section.internallinks, .gridwithicons.section.internallinks * {
-	vertical-align: top;
-}
 
 
 
@@ -81,12 +75,157 @@ body {
 	font-family: 'Cinzel', serif;
 	font-weight: 600;
 	position: relative;
+    background-image: url("../images/fondo.png");
 	background-color: #000000;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100% auto;
+    margin: 0;
+    text-align: center;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h1, h2, h3, h4 {
 	text-transform: uppercase;
 }
+
+h1 {
+    font-size: 36px;
+}
+
+h1, h5 {
+    padding: 1% 2% 0% 2%;
+    color: #c20000;
+    margin-block-end: 1em;
+    margin-block-start: 0em;
+}
+
+h2 {
+    font-style: oblique;
+    color: grey;
+    padding: 0% 2% 2% 2%;
+    font-size: 22px;
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+}
+
+h3 {
+    font-size: 16px;
+    margin-block-end: 0em;
+    margin-block-start: 1em;
+}
+
+h4 {
+    margin: 0.25%;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+
+
+
+
+input, textarea {
+    width: 75%;
+    resize: none;
+	font-family: 'Prompt', sans-serif;
+	background-color: #222222;
+	border-radius: 3px;
+	color: white;
+	border: none;
+	min-height: 2em;
+	animation: color 3s infinite linear;
+}
+
+
+
+input:focus, textarea:focus {
+  background-color: rgba(150, 150, 150, 0.5);
+  animation: none;
+}
+
+input:valid, textarea:valid {
+	background-color: rgba(100, 0, 0, 0.5);
+	animation: none;
+  }
+
+
+.contact-content, .success-content {
+    color: white;
+    width: 500px;
+    padding: 0.5%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    margin: 3.5% auto;
+}
+
+
+
+.btn-enviar {
+	background: linear-gradient(to right,rgb(150,0,0),rgb(150,0,0) 50%,rgb(100, 0, 0) 50%);
+	transition: background-position 2s cubic-bezier(0.83, 0, 0.17, 1);
+    align-content: center;
+    margin: 5% auto;
+    padding: 2%;
+    font-size: 24px;
+	font-family: 'Cinzel', serif;
+	font-weight: 900;
+    text-transform: uppercase;
+    /*width: 96%;*/
+	border-radius: 5px;
+	color: white;
+	border: none;
+	height: 100px;
+	width: 200px;
+	background-size: 600px;
+}
+
+@keyframes tamanio {
+	0% {width: 200px; height:100px;}
+	50% {width: 220px; height: 110px;}
+	100% {width: 200px; height: 100px;}
+}
+
+
+.btn-enviar:hover {
+    color: white;
+    background-color: rgb(200,0,0);
+}
+
+.button-social {
+    list-style-type: none;
+    display: inline;
+    padding: 3%;
+    opacity: 0.85;
+}
+
+.button-social:hover {
+    opacity: 1;
+}
+
+.success-content {
+    margin: 5% auto;
+}
+
+.success-msg {
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 1px solid #c20000;
+    padding: 2%;
+    margin-block-end: 1em;
+    margin: auto;
+}
+
+
+
+
+
 
 s {
 	opacity: 0.8;
@@ -135,7 +274,7 @@ s:before {
 }
 
 .keyart_layer {
-	background-position: bottom center;
+	background-position: center;
 	background-size: auto 1450px;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -147,8 +286,8 @@ s:before {
 }
 
 	@keyframes scroll {
-		0% {background-position-x: 0px;}
-		100% {background-position-x: -3840px;}
+		0% { background-position:3840px } 
+		100% { background-position:0 }
 	}
 
 	@keyframes color {
@@ -158,7 +297,7 @@ s:before {
 
    	#keyart-0 {
 		background-image: url('../images/parallax/HERO_9.png');
-		animation: scroll 300s infinite linear;
+		animation: scroll 200s linear infinite;
 		background-repeat: repeat-x;
 	}
 	#keyart-1 {
@@ -175,7 +314,8 @@ s:before {
 	}
 	#keyart-5 {
 		background-image: url('../images/parallax/HERO_4.png');
-		animation: scroll 60s infinite linear;
+		animation: scroll 90s linear infinite;
+		background-repeat: repeat-x;
 
 	}
 	#keyart-6 {
@@ -204,7 +344,7 @@ s:before {
 
 
 #main {
-	max-width: 900px;
+	max-width: 1200px;
 	padding-left: 30px;
 	padding-right: 30px;
 	margin-left: auto;
@@ -284,46 +424,4 @@ s:before {
 
 }
 
-
-@media only screen and (max-device-width: 450px) {
-
-
-
-	.section.buy h2 {
-		font-size: 22px;
-		letter-spacing: 3px;
-		font-weight: 700;
-		line-height: 28px;
-	}
-	.section.buy h2.banner span {
-		padding-top: 7px;
-		padding-bottom: 7px;
-	}
-	.withxbone .section.buy h2.banner span {
-		padding-top: 6px;
-		padding-bottom: 8px;
-	}
-
-	.columntext p {
-		font-size: 23px;
-	}
-
-
-
-
-
-
-
-
-/* PARALLAX */
-
-	.keyart, .keyart_layer {
-		height: 550px;
-	}
-
-	.keyart_layer {
-		position: absolute;
-		background-size: auto 600px;
-	}
-}
 

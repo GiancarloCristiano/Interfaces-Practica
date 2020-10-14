@@ -24,10 +24,10 @@
   
             headline.innerText = "¡Llegó el Reinicio!";
             countdown.style.display = "none";
+            content.style.display = "block";
   
             clearInterval(x);
           }
           //seconds
         }, 0)
     }());
-

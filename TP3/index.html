@@ -19,93 +19,92 @@
 
 </head>
 
-<body class="firewatch launch withxbone">
-	<nav>
-		<ul>
-			<li>
-				<a class="active" href="index.html">Home</a>
-			</li>
-			<li>
-				<a href="events.html">Eventos</a>
-			</li>
-			<li>
-				<a href="form.html">Kontacto</a>
-			</li>
-			<div class="btns-social">
-				<li>
-					<a class="button-social" href="mailto:staff@mkmovie.com" target="_blank"><img
-							src="./images/button-social-m.svg" width="25px"></a>
-				</li>
-				<li>
-					<a class="button-social" href="https://www.instagram.com/mortalkombat_themovie/"
-						target="_blank"><img src="./images/button-social-i.svg" width="25px"></a>
-				</li>
-				<li>
-					<a class="button-social" href="https://twitter.com/MKMovieWB" target="_blank"><img
-							src="./images/button-social-t.svg" width="25px"></a>
-				</li>
-				<li>
-					<a class="button-social" href="https://www.youtube.com/watch?v=beDDGk2tKFo" target="_blank"><img
-							src="./images/button-social-y.svg" width="25px"></a>
-				</li>
-				<li>
-					<a class="button-social" href="https://www.facebook.com/MortalKombatFilm/" target="_blank"><img
-							src="./images/button-social-f.svg" width="25px"></a>
-				</li>
-			</div>
-			<li>
-				<a class="burger" class="icon">
-					<i class="fa fa-bars"></i>
-				</a>
-			</li>
-	</nav>
-	<div id="page">
-
-
+<body>
+	<div class="loader-container">
+		<div class="loader"></div>
+		<div class="loader2"></div>
+	</div>
+	<div class="page" hidden>
 		<div class="keyart" id="parallax" display="none">
 			<div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div> <!-- 00.0 -->
 			<div class="keyart_layer parallax" id="keyart-1" data-speed="5"></div> <!-- 12.5 -->
 			<div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div><!-- 25.0 -->
-			<div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div>	<!-- 37.5 -->
-			<div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div>	<!-- 50.0 -->
-			<div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div>	<!-- 62.5 -->
-			<div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div>	<!-- 75.0 -->
+			<div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div> <!-- 37.5 -->
+			<div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div> <!-- 50.0 -->
+			<div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div> <!-- 62.5 -->
+			<div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div> <!-- 75.0 -->
 			<div class="keyart_layer" id="keyart-scrim"></div>
-			<div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div>	<!-- 87.5 -->
-			<div class="keyart_layer" id="keyart-8" data-speed="100"></div>	<!-- 100. -->
+			<div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div> <!-- 87.5 -->
+			<div class="keyart_layer" id="keyart-8" data-speed="100"></div> <!-- 100. -->
+			<nav>
+				<ul>
+					<li>
+						<a class="active" href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="events.html">Eventos</a>
+					</li>
+					<li>
+						<a href="form.html">Kontacto</a>
+					</li>
+					<div class="btns-social">
+						<li>
+							<a class="button-social" href="mailto:staff@mkmovie.com" target="_blank"><img
+									src="./images/button-social-m.svg" width="25px"></a>
+						</li>
+						<li>
+							<a class="button-social" href="https://www.instagram.com/mortalkombat_themovie/"
+								target="_blank"><img src="./images/button-social-i.svg" width="25px"></a>
+						</li>
+						<li>
+							<a class="button-social" href="https://twitter.com/MKMovieWB" target="_blank"><img
+									src="./images/button-social-t.svg" width="25px"></a>
+						</li>
+						<li>
+							<a class="button-social" href="https://www.youtube.com/watch?v=beDDGk2tKFo"
+								target="_blank"><img src="./images/button-social-y.svg" width="25px"></a>
+						</li>
+						<li>
+							<a class="button-social" href="https://www.facebook.com/MortalKombatFilm/"
+								target="_blank"><img src="./images/button-social-f.svg" width="25px"></a>
+						</li>
+					</div>
+					<li>
+						<a class="burger" class="icon">
+							<i class="fa fa-bars"></i>
+						</a>
+					</li>
+			</nav>
 		</div>
 
 		<div id="maincontain">
 			<div id="main">
-					<div id="countdown">
+				<div id="countdown">
 					<h5 id="headline">Avant Premiere del reinicio de MK La Película en...</h5>
-						<ul>
-							<li class="li-contador">
-								<span class="num-contador" id="days"></span>Días</li>
-							<li class="li-contador">
-								<span class="num-contador" id="hours"></span>Horas</li>
-							<li class="li-contador">
-								<span class="num-contador" id="minutes"></span>Minutos</li>
-							<li class="li-contador">
-								<span class="num-contador" id="seconds"></span>Segundos</li>
-						</ul>
+					<ul>
+						<li class="li-contador">
+							<span class="num-contador" id="days"></span>Días</li>
+						<li class="li-contador">
+							<span class="num-contador" id="hours"></span>Horas</li>
+						<li class="li-contador">
+							<span class="num-contador" id="minutes"></span>Minutos</li>
+						<li class="li-contador">
+							<span class="num-contador" id="seconds"></span>Segundos</li>
+					</ul>
+				</div>
+
+
+
+				<header class="intro">
+					<div class="intro-slideshow">
+						<img src="images/slide_1.jpg">
+						<img src="images/slide_2.jpg">
+						<img src="images/slide_3.jpg">
+						<img src="images/slide_4.jpg">
+						<img src="images/slide_5.jpg">
+						<img src="images/slide_6.jpg">
 					</div>
-
-					<div class="loader-container">
-						<div class="loader"></div>
-						<div class="loader2"></div>
-					  </div>
-
-					<header class="intro">
-						<div class="intro-slideshow">
-							<img src="images/slide_1.jpg">
-							<img src="images/slide_2.jpg">
-							<img src="images/slide_3.jpg">
-							<img src="images/slide_4.jpg">
-							<img src="images/slide_5.jpg">
-							<img src="images/slide_6.jpg">
-						  </div>
-					</header>
+				</header>
 
 				<div class="section description">
 					<p>El legendario Raiden guía al guerrero Liu Kang, a la policía detective Sonya Blade y a la
@@ -120,10 +119,11 @@
 
 			</div>
 		</div>
+	</div>
 
-			<script type="text/javascript" src="js/main.js"></script>
-			<script type="text/javascript" src="js/home.js"></script>
-			<script type="text/javascript" src="js/countdown.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/countdown.js"></script>
 
 
 

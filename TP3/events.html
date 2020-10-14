@@ -4,8 +4,8 @@
      Es una web para un ilustrador. -->
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -14,65 +14,79 @@
 
 
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="events.html">Eventos</a></li>
-            <li><a href="form.html">Kontacto</a></li>
-            <div class="btns-social">				
-                <li><a class="button-social" href="mailto:staff@mkmovie.com" target="_blank"><img
-                    src="./images/button-social-m.svg" width="25px"></a></li>
-                <li><a class="button-social" href="https://www.instagram.com/mortalkombat_themovie/" target="_blank"><img
-                    src="./images/button-social-i.svg" width="25px"></a></li>
-                <li><a class="button-social" href="https://twitter.com/MKMovieWB" target="_blank"><img
-                    src="./images/button-social-t.svg" width="25px"></a></li>
-                <li><a class="button-social" href="https://www.youtube.com/watch?v=beDDGk2tKFo" target="_blank"><img
-                    src="./images/button-social-y.svg" width="25px"></a></li>
-                <li><a class="button-social" href="https://www.facebook.com/MortalKombatFilm/" target="_blank"><img
-                    src="./images/button-social-f.svg" width="25px"></a></li>
-            </div>
-            <li>  <a class="burger" class="icon">
-                <i class="fa fa-bars"></i>
-              </a></li>	
-        </ul>
-    </nav>
-    <article class="events-content">
-        <section>
-            <h1>Eventos</h1>
-            <details class="detalles">
-                <summary>MK 11: Kombat Pack 2 [17|11|20]</summary>
-                <div>
-                    <img src="images/kp2.jpg" alt="" width="768px">
-                <p>Llega un nuevo DLC al videojuego de pelea más taquillero de la historia con más de 8 millones de copias vendidas.
-                    En esta entrega, celebramos el retorno de Mileena y Rain, como así también un nuevo invitado: John Rambo.</p></div>
-            </details>
-            <details class="detalles">
-                <summary>MK 11: Ultimate [17|11|20]</summary>
-                <div>
-                    <img src="images/mk11u.jpg" alt="" width="768px">
-                <p>Llega a la nueva generación de consolas (Xbox X y PS5) el juego más completo en su versión más completa: MK11 Ultimate.
-                    Incluye Aftermath y los KP1 y 2.</p></div>
-            </details>
-            <details class="detalles">
-                <summary>MK La Película, El reinicio. [15|01|21]</summary>
-                <div>
-                    <img src="images/mkmr.jpg" alt="" width="768px">
-                <p>Celebrando los 25 años de la mejor película de videojuegos de la historia, llega MK Movie Reborn. El reinicio que nos merecíamos.</p></div>
-            </details>
-            <details class="detalles">
-                 <summary>El reinicio en Netflix. [21|12|21]</summary>
-                 <div>
-                    <img src="images/nf.jpg" alt="" width="768px">
-                <p>Llega a la plataforma de streaming más popular el reinicio más esperado. MK Movie Reborn.</p></div>
-            </details>
-        </section>
-    </article>
+    <div class="loader-container">
+		<div class="loader"></div>
+        <div class="loader2"></div>
+    </div>
+    <div class="page" hidden>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="events.html">Eventos</a></li>
+                <li><a href="form.html">Kontacto</a></li>
+                <div class="btns-social">
+                    <li><a class="button-social" href="mailto:staff@mkmovie.com" target="_blank"><img
+                                src="./images/button-social-m.svg" width="25px"></a></li>
+                    <li><a class="button-social" href="https://www.instagram.com/mortalkombat_themovie/"
+                            target="_blank"><img src="./images/button-social-i.svg" width="25px"></a></li>
+                    <li><a class="button-social" href="https://twitter.com/MKMovieWB" target="_blank"><img
+                                src="./images/button-social-t.svg" width="25px"></a></li>
+                    <li><a class="button-social" href="https://www.youtube.com/watch?v=beDDGk2tKFo" target="_blank"><img
+                                src="./images/button-social-y.svg" width="25px"></a></li>
+                    <li><a class="button-social" href="https://www.facebook.com/MortalKombatFilm/" target="_blank"><img
+                                src="./images/button-social-f.svg" width="25px"></a></li>
+                </div>
+                <li> <a class="burger" class="icon">
+                        <i class="fa fa-bars"></i>
+                    </a></li>
+            </ul>
+        </nav>
+        <article class="events-content">
+            <section>
+                <h1>Eventos</h1>
+                <details class="detalles">
+                    <summary>MK 11: Kombat Pack 2 [17|11|20]</summary>
+                    <div>
+                        <img src="images/kp2.jpg" alt="" width="768px">
+                        <p>Llega un nuevo DLC al videojuego de pelea más taquillero de la historia con más de 8 millones
+                            de copias vendidas.
+                            En esta entrega, celebramos el retorno de Mileena y Rain, como así también un nuevo
+                            invitado: John Rambo.</p>
+                    </div>
+                </details>
+                <details class="detalles">
+                    <summary>MK 11: Ultimate [17|11|20]</summary>
+                    <div>
+                        <img src="images/mk11u.jpg" alt="" width="768px">
+                        <p>Llega a la nueva generación de consolas (Xbox X y PS5) el juego más completo en su versión
+                            más completa: MK11 Ultimate.
+                            Incluye Aftermath y los KP1 y 2.</p>
+                    </div>
+                </details>
+                <details class="detalles">
+                    <summary>MK La Película, El reinicio. [15|01|21]</summary>
+                    <div>
+                        <img src="images/mkmr.jpg" alt="" width="768px">
+                        <p>Celebrando los 25 años de la mejor película de videojuegos de la historia, llega MK Movie
+                            Reborn. El reinicio que nos merecíamos.</p>
+                    </div>
+                </details>
+                <details class="detalles">
+                    <summary>El reinicio en Netflix. [21|12|21]</summary>
+                    <div>
+                        <img src="images/nf.jpg" alt="" width="768px">
+                        <p>Llega a la plataforma de streaming más popular el reinicio más esperado. MK Movie Reborn.</p>
+                    </div>
+                </details>
+            </section>
+        </article>
+    </div>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/summary.js"></script>
 </body>

@@ -4,8 +4,8 @@
      Es una web para un ilustrador. -->
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -14,52 +14,58 @@
 
 
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="events.html">Eventos</a></li>
-            <li><a class="active" href="form.html">Kontacto</a></li>
-            <div class="btns-social">				
-                <li><a class="button-social" href="mailto:staff@mkmovie.com" target="_blank"><img
-                    src="./images/button-social-m.svg" width="25px"></a></li>
-                <li><a class="button-social" href="https://www.instagram.com/mortalkombat_themovie/" target="_blank"><img
-                    src="./images/button-social-i.svg" width="25px"></a></li>
-                <li><a class="button-social" href="https://twitter.com/MKMovieWB" target="_blank"><img
-                    src="./images/button-social-t.svg" width="25px"></a></li>
-                <li><a class="button-social" href="https://www.youtube.com/watch?v=beDDGk2tKFo" target="_blank"><img
-                    src="./images/button-social-y.svg" width="25px"></a></li>
-                <li><a class="button-social" href="https://www.facebook.com/MortalKombatFilm/" target="_blank"><img
-                    src="./images/button-social-f.svg" width="25px"></a></li>
-            </div>
-            <li>  <a class="burger" class="icon">
-                <i class="fa fa-bars"></i>
-              </a></li>	
-        </ul>
-    </nav>
-    <article class="contact-content">
-        <section>
-            <form id="formContacto" action="">
-                <h1>Kontacto</h1>
-                <h3 class="tag-form">Nombre / Alias</h3>
-                <input type="text" name="nombre" value="" required>
-                <h3 class="tag-form">Número de Teléfono</h3>
-                <input type="text" name="telefono" required>
-                <h3 class="tag-form">Kasilla de E-mail</h3>
-                <input type="email" name="email" value="" required>
-                <h3 class="tag-form">Mensaje</h3>
-                <textarea name="mensaje" rows="6" value="" required></textarea>
-                <button class="btn-enviar" type="button">Enviar</button>
-            </form>
-        </section>
-    </article>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/submit.js"></script>
+	<section class="loader-container">
+		<div class="loader"></div>
+		<div class="loader2"></div>
+	</section>
+    <div class="page" hidden>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a class="active" href="form.html">Kontacto</a></li>
+                <div class="btns-social">
+                    <li><a class="button-social" href="mailto:staff@mkmovie.com" target="_blank"><img
+                                src="./images/button-social-m.svg" width="25px"></a></li>
+                    <li><a class="button-social" href="https://www.instagram.com/mortalkombat_themovie/"
+                            target="_blank"><img src="./images/button-social-i.svg" width="25px"></a></li>
+                    <li><a class="button-social" href="https://twitter.com/MKMovieWB" target="_blank"><img
+                                src="./images/button-social-t.svg" width="25px"></a></li>
+                    <li><a class="button-social" href="https://www.youtube.com/watch?v=beDDGk2tKFo" target="_blank"><img
+                                src="./images/button-social-y.svg" width="25px"></a></li>
+                    <li><a class="button-social" href="https://www.facebook.com/MortalKombatFilm/" target="_blank"><img
+                                src="./images/button-social-f.svg" width="25px"></a></li>
+                </div>
+                <li> <a class="burger" class="icon">
+                        <i class="fa fa-bars"></i>
+                    </a></li>
+            </ul>
+        </nav>
+        <article class="contact-content">
+            <section>
+                <form id="formContacto" action="">
+                    <h1>Kontacto</h1>
+                    <h3 class="tag-form">Nombre / Alias</h3>
+                    <input type="text" name="nombre" value="" required>
+                    <h3 class="tag-form">Número de Teléfono</h3>
+                    <input type="text" name="telefono" required>
+                    <h3 class="tag-form">Kasilla de E-mail</h3>
+                    <input type="email" name="email" value="" required>
+                    <h3 class="tag-form">Mensaje</h3>
+                    <textarea name="mensaje" rows="6" value="" required></textarea>
+                    <button class="btn-enviar" type="button">Enviar</button>
+                </form>
+            </section>
+        </article>
+    </div>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/submit.js"></script>
 </body>
 
 </html>

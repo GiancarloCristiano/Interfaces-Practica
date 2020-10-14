@@ -3,19 +3,24 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 a, a:link, a:visited { color: inherit; text-decoration: inherit; }
 
 /* GLOBAL */
+
+
+
 .loader-container{
-	position: relative;
+	position: fixed;
+	align-items: center;
+	display: flex;
+	justify-content: center;
 	width: 60px;
 	height: 60px;
-	margin: 10px;
+	margin: 600px 1200px;
 	box-sizing: border-box;
-
+	object-fit: cover;
+	vertical-align: auto;
   }
    
   .loader-container .loader{
 	position: absolute;
-	top: 50%;
-	left: 50%;
 	width: 102%;
 	height: 102%;
 	border: solid 4px transparent;
@@ -29,30 +34,20 @@ a, a:link, a:visited { color: inherit; text-decoration: inherit; }
 	position: absolute;
 	background-image: url("../images/dragon.png");
 	background-repeat: no-repeat;
-	top: 50%;
-	left: 50%;
+
 	width: 100%;
 	height: 100%;
-	animation: loader2 1s linear infinite;
   }
    
   @keyframes loader{
 	0%{
-	  transform: translate(-50%, -50%) rotate(0deg);
+	  transform: rotate(0deg);
 	}
 	100%{
-	  transform: translate(-50%, -50%) rotate(360deg);
+	  transform: rotate(360deg);
 	}
   }
    
-  @keyframes loader2{
-	0%{
-	  transform: translate(-50%, -50%);
-	}
-	100%{
-	  transform: translate(-50%, -50%);
-	}
-  }
 
 
 
@@ -132,10 +127,10 @@ body {
 	background-color: #000000;
     background-repeat: no-repeat;
     width: 100%;
-    background-size: 100% auto;
+	background-size: 100% auto;
+	background-position: fixed;
     margin: 0;
     text-align: center;
-
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -380,6 +375,8 @@ margin: 3.5% auto;
 	height: 50px;
 	width: 150px;
 	background-size: 600px;
+	cursor: pointer;
+
 }
 
 @keyframes tamanio {

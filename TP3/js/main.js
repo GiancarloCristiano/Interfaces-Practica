@@ -8,3 +8,9 @@ function menuHamburguesa() {
 	  x.style.display = "inline";
 	}
   }
+
+
+window.onload = setTimeout(function(){
+	document.querySelector('.loader-container').style.display="none";
+	document.querySelector('.page').style.display="block";
+}, 1000);

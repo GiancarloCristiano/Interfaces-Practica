@@ -53,7 +53,7 @@ a, a:link, a:visited { color: inherit; text-decoration: inherit; }
 
 nav {
 	margin-right: 20px;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-bottom: 7px;
 }
 
@@ -84,7 +84,8 @@ nav li a.active {
 
 nav li a:hover {
     opacity: 1;
-    border-bottom: 2px solid;
+	border-bottom: solid;
+	animation: borde 0.1s ease-in;
 }
 
 .burger:hover {
@@ -93,48 +94,33 @@ nav li a:hover {
 
 }
 
-
-
-
-html {
-	background-color: #000000;
-	color: #FFFFFF;
-	font-family: 'Verlag A', 'Verlag B', "Verlag";
-	font-weight: 300;
-	font-style: normal;
-	text-align: center;
-	font-size: 20px;
+@keyframes borde {
+	0% {border-bottom: 0px}
+	100% {border-bottom: 3px; padding:5px}
 }
 
-.section {
-}
 
-p>a:link, p>a:visited {
-	color: #c20000;
-	text-decoration: underline;
-	transition: color 0.2s;
-}
-p>a:hover {
-	color: #fff;
-
-}
 
 body {
 	font-family: 'Cinzel', serif;
 	font-weight: 600;
+	color: #FFFFFF;
 	position: relative;
     background-image: url("../images/fondo.png");
 	background-color: #000000;
     background-repeat: no-repeat;
     width: 100%;
-	background-size: 100% auto;
-	background-position: fixed;
+    background-size: 100% auto;
     margin: 0;
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.body-home{
+	background-image: none;
 }
 
 h1, h2, h3, h4 {

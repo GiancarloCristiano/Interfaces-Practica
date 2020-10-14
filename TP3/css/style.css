@@ -98,13 +98,10 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 36px;
-}
-
-h1, h5 {
-    color: #c20000;
-    margin-block-end: 0em;
-    margin-block-start: 0em;
+	font-size: 36px;
+	margin-block-end: 0.5em;
+	margin-block-start: 0.5em;
+	color: #c20000;
 }
 
 h2 {
@@ -127,7 +124,9 @@ h4 {
 }
 
 h5 {
-    font-size: 24px;
+	font-size: 24px;
+	color: #c20000;
+
 }
 
 
@@ -175,7 +174,7 @@ h5 {
 .detalles {
 	padding: 5px;
 	cursor: pointer;
-	
+	transform: translate3d(0,0,-100px);  
 
 }
 
@@ -210,9 +209,6 @@ h5 {
 	
 }
 
-.detalles > p{
-
-}
 
 
 .detalles > summary:hover{

@@ -315,17 +315,21 @@ h5 {
 
 .flip-box-front, .flip-box-back{
 	position: absolute;
-	height: 100%;
+	height: auto;
 	width: 100%;
 	backface-visibility: hidden;
 }
 
 .flip-box-back{
 	transform: rotateX(180deg);
-	margin: auto;
-	padding: auto;
 	font-style: normal;
     color: white;
+}
+
+.flip-box-back h2{
+	height: 100%;
+	align-items: center;
+	animation: zoom 4s infinite linear;
 }
 
 
@@ -398,7 +402,7 @@ margin: 3.5% auto;
 
 }
 
-@keyframes tamanio {
+@keyframes tamanio-boton {
 	0% {width: 150px; height:50px;}
 	50% {width: 170px; height: 60px;}
 	100% {width: 150px; height: 50px;}

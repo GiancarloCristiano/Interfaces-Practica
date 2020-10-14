@@ -5,6 +5,6 @@ function llenarBarra(){
   enviar.style.backgroundPosition = '300px 0';
   setTimeout(() => {
 	enviar.innerHTML = '¡Enviado!';
-	enviar.style.animation = "tamanio 0.3s linear";	
+	enviar.style.animation = "tamanio-boton 0.3s linear";	
 }, 1200);
 }

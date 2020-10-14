@@ -326,7 +326,7 @@ margin: 3.5% auto;
 
 .li-contador {
 	display: inline-block;
-	font-size: 1.5em;
+	font-size: 1em;
 	list-style-type: none;
 	padding: 1em;
 	text-transform: uppercase;
@@ -338,9 +338,9 @@ margin: 3.5% auto;
 
 @keyframes desaparecer {
 	0% {opacity: 0;}
-	80% {opacity: 0.3;}
-	90% {opacity: 1;}
-	
+	75% {opacity: 0;}
+	90% {opacity: 0.5;}
+	95% {opacity: 1;}	
 }
 
 .num-contador  {

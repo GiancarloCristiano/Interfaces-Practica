@@ -13,4 +13,4 @@ function menuHamburguesa() {
 window.onload = setTimeout(function(){
 	document.querySelector('.loader-container').style.display="none";
 	document.querySelector('.page').style.display="block";
-}, 1000);
+}, 1500);

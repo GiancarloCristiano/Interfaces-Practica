@@ -11,10 +11,13 @@
           let now = new Date().getTime(),
               distance = countDown - now;
   
-          document.getElementById("days").innerText = Math.floor(distance / (day)),
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
             document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
             document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+            setTimeout(() => {
+              document.getElementById("seconds").style.animation = "seconds 1s infinite linear";
+            }, 1000);
   
           //do something later when date is reached
           if (distance < 0) {

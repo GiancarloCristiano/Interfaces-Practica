@@ -1,3 +1,24 @@
+::-webkit-scrollbar {
+	width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #555555;
+	border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #c20000;  
+  }
+
 .loader-container{
 	position: fixed;
 	align-items: center;
@@ -59,6 +80,7 @@
 	margin-left: 47.5vw;
 	position: absolute;
 	animation: aparecer 3s ease;
+	opacity: 0;
 }
 
 @keyframes aparecer {

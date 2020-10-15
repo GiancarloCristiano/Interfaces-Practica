@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!-- Este sitio fue realizado por Giancarlo Cristiano y Andrés Llanezas con motivo del Trabajo Práctico Especial.
-     Es una web para un ilustrador. -->
+<!-- Este sitio fue realizado por Giancarlo Cristiano con motivo del Trabajo Práctico Entregable. -->
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +48,7 @@
         </nav>
         <article class="contact-content">
             <section>
-                <form id="formContacto" action="">
+                <form id="formContacto" action="#" onsubmit="llenarBarra();return false">
                     <h1>Kontacto</h1>
                     <h3 class="tag-form">Nombre / Alias</h3>
                     <input type="text" name="nombre" value="" required>
@@ -59,7 +58,7 @@
                     <input type="email" name="email" value="" required>
                     <h3 class="tag-form">Mensaje</h3>
                     <textarea name="mensaje" rows="6" value="" required></textarea>
-                    <button class="btn-enviar" type="button">Enviar</button>
+                    <button class="btn-enviar" type="submit">Enviar</button>
                 </form>
             </section>
         </article>

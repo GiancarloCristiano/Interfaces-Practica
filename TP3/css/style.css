@@ -19,6 +19,91 @@
 	background: #c20000;  
   }
 
+  .card {
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 15px;
+	transition: 0.5s;
+	position: relative;
+	background-color: #fff0;
+	border: none;
+	transform-style: preserve-3d;
+
+  }
+  
+  .card img {
+	height: 440px;
+  }
+  
+  .card h3 {
+	position: absolute;
+	bottom: 0;
+	color: #fced08;
+	text-shadow: 2px 2px #f4984f;
+	padding: 10px;
+  }
+  
+  .card:hover{
+	cursor: pointer;
+	border-radius: 15px;
+	box-shadow: 5px 10px 20px #888888;
+	transform: rotateY(360deg);
+	transition: 1.5s;
+  }
+  
+
+
+  .personajes {
+	display: flex;
+	align-content: space-between;
+	justify-content: space-between;
+  }
+
+
+  .flip-box{
+	cursor: default;
+	background-color: transparent;
+	height: 384px;
+	width: 768px;
+	border: 1px solid;
+	perspective: 1000px;
+}
+
+.flip-box-inner{
+	width:100%;
+	height: 100%;
+	text-align: center;
+	transform-style: preserve-3d;
+	transition: transform 0.3s;
+	/*transform: rotateX(180deg);*/
+
+}
+
+.flip-box:hover .flip-box-inner{
+	transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back{
+	position: absolute;
+	height: auto;
+	width: 100%;
+	backface-visibility: hidden;
+}
+
+.flip-box-back{
+	transform: rotateX(180deg);
+	font-style: normal;
+    color: white;
+}
+
+.flip-box-back h2{
+	height: 100%;
+	align-items: center;
+	animation: zoom 4s infinite linear;
+}
+
+
+
 .loader-container{
 	position: fixed;
 	align-items: center;
@@ -105,7 +190,8 @@ nav ul {
 nav li {
 	display: inline;
 	padding: 5px;
-    margin: 0 10px 0 0;
+	margin: 0 10px 0 0;
+	cursor: pointer;
 }
 
 nav li a {
@@ -389,7 +475,7 @@ h5 {
 input, textarea {
     width: 75%;
     resize: none;
-	font-family: 'Cinzel', serif;
+	font-family: 'Segoe UI', sans-serif;
 	background-color: #333333;
 	border-radius: 3px;
 	color: white;

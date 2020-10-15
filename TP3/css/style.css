@@ -21,34 +21,36 @@
 
   .card {
 	vertical-align: middle;
-	text-align: center;
 	border-radius: 15px;
 	transition: 0.5s;
 	position: relative;
 	background-color: #fff0;
 	border: none;
 	transform-style: preserve-3d;
+	perspective: 1000px;
+	
+	
+}
 
-  }
-  
-  .card img {
-	height: 440px;
-  }
-  
-  .card h3 {
+.card img {
+	opacity: 0.5;
+}
+
+.card h3 {
 	position: absolute;
 	bottom: 0;
-	color: #fced08;
-	text-shadow: 2px 2px #f4984f;
+	text-align: center;
+	text-shadow: 2px 2px #000000;
 	padding: 10px;
+	opacity: 1;
   }
   
   .card:hover{
-	cursor: pointer;
 	border-radius: 15px;
 	box-shadow: 5px 10px 20px #888888;
 	transform: rotateY(360deg);
 	transition: 1.5s;
+
   }
   
 
@@ -65,7 +67,6 @@
 	background-color: transparent;
 	height: 384px;
 	width: 768px;
-	border: 1px solid;
 	perspective: 1000px;
 }
 

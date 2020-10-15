@@ -9,7 +9,7 @@
 	justify-content: center;
 	width: 60px;
 	height: 60px;
-	margin: 600px 1000px;
+	margin: 600px 1250px;
 	box-sizing: border-box;
 	object-fit: cover;
 	vertical-align: auto;
@@ -49,7 +49,6 @@
 
 nav {
 	margin-right: 20px;
-	margin-top: 10px;
 	margin-bottom: 7px;
 }
 
@@ -64,12 +63,11 @@ nav li {
 }
 
 nav li a {
-    padding: 2px 7px;
     color: white;
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 nav li a.active {
@@ -363,13 +361,15 @@ input:valid, textarea:valid {
   }
 
 
-.contact-content, .success-content{
+.contact-content {
     color: white;
     width: 500px;
     padding: 0.5%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
-    margin: 3.5% auto;
+	margin: 3.5% auto;
+	-webkit-animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+		animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
@@ -380,6 +380,8 @@ padding: 0.5%;
 background-color: rgba(0, 0, 0, 0.9);
 border-radius: 10px;
 margin: 3.5% auto;
+-webkit-animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
@@ -438,7 +440,7 @@ margin: 3.5% auto;
 	100% {
 	  -webkit-transform: translateX(0);
 			  transform: translateX(0);
-	  opacity: 0,75;
+	  opacity: 0.7;
 	}
   }
 
@@ -446,21 +448,8 @@ margin: 3.5% auto;
 .button-social:hover {
 	opacity: 1;
 	border: none;
-
 }
 
-.success-content {
-    margin: 5% auto;
-}
-
-.success-msg {
-    font-size: 30px;
-    text-align: center;
-    border-bottom: 1px solid #c20000;
-    padding: 2%;
-    margin-block-end: 1em;
-    margin: auto;
-}
 
 .li-contador {
 	display: inline-block;
@@ -565,34 +554,6 @@ margin: 3.5% auto;
 
 
 
-s {
-	opacity: 0.8;
-	position: relative;
-	text-decoration: none;
-}
-s:before {
-	position: absolute;
-	content: "";
-	left: -3px;
-	top: 50%;
-	right: -3px;
-	border-top: 2px solid;
-	box-shadow: 0px 1px 1px #000000;
-	border-color: #973700;
-	-webkit-transform: rotate(-4deg);
-	-moz-transform: rotate(-4deg);
-	-ms-transform: rotate(-4deg);
-	-o-transform: rotate(-4deg);
-	transform: rotate(-4deg);
-}
-
-
-/* MAGNIFIC OVERRIDE */
-
-.firewatch .mfp-image-holder .mfp-content {
-    max-width: 90%;
-}
-
 
 
 /* PARALLAX */
@@ -692,12 +653,6 @@ s:before {
 	background-color:#000000;
 }
 
-.section {
-
-}
-
-
-
 
 
 /* GAME DESCRIPTION */
@@ -718,14 +673,6 @@ s:before {
 	margin-bottom: 30px;
 }
 
-.columntext p {
-	margin-bottom: 1.6em;
-	width: 325px;
-	display: inline-block;
-}
-	.columntext p.left {
-		margin-right: 50px;
-	}
 
 @media (min-width: 601px) {
 

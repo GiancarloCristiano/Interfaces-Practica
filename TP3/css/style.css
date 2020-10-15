@@ -41,16 +41,18 @@
   }
    
 .scroll-img{
-	margin-top: 90vh;
+	margin-top: 35vh;
 	position: absolute;
-	animation: desaparecer 5s ease-out;
+	animation: desaparecer 2s ease-out;
 	opacity: 0;
 }
 
 
 @keyframes desaparecer {
-	50% {opacity: 1;}
-	100% {opacity: 0;}	
+	35% {opacity: 0.5;}
+	70% {opacity: 0.5; margin-top: 90vh;}
+	90% {opacity: 0.5; margin-top: 90vh;}
+	100% {opacity: 0; margin-top: 75vh;}	
 }
 
 

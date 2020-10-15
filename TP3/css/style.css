@@ -1,8 +1,4 @@
- /* RESET */
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:center}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
-a, a:link, a:visited { color: inherit; text-decoration: inherit; }
 
-/* GLOBAL */
 
 
 
@@ -13,7 +9,7 @@ a, a:link, a:visited { color: inherit; text-decoration: inherit; }
 	justify-content: center;
 	width: 60px;
 	height: 60px;
-	margin: 600px 1200px;
+	margin: 600px 1000px;
 	box-sizing: border-box;
 	object-fit: cover;
 	vertical-align: auto;
@@ -147,10 +143,6 @@ h3 {
 	font-size: 1.2em;
 }
 
-#headline{
-	margin-top: 0;
-	margin-block-start: 0;
-}
 
 h4 {
 	margin: 0.25%;
@@ -164,12 +156,14 @@ h5 {
 
 
 #countdown {
-	margin-bottom: 50px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
 
 .intro {
 	height: 563px;
+	width: 1000px;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -196,9 +190,10 @@ h5 {
 	display: block;
 	opacity: 1;
   } */
+  
   @keyframes zoom {
 	80% {
-		  transform: scale(1.03);
+		  transform: scale(1.01);
 	}
   }
 
@@ -687,7 +682,7 @@ s:before {
 
 
 #main {
-	max-width: 1200px;
+	max-width: 1000px;
 	padding-left: 30px;
 	padding-right: 30px;
 	margin-left: auto;

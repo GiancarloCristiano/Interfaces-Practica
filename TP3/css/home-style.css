@@ -148,7 +148,6 @@
 .intro:hover{
     filter: brightness(120%) contrast(120%);
 	transition: filter .2s ease-out;
-	animation: zoom 2s ease-out;
 }
 
 
@@ -171,13 +170,6 @@
 	opacity: 1;
   } */
   
-  @keyframes zoom {
-	95% {
-		  transform: scale(1.05);
-	}
-  }
-
-
 
 
 .li-contador {

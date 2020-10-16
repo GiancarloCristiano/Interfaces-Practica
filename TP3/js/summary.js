@@ -1,7 +1,7 @@
 window.onload = setTimeout(function () {
-  document.querySelector('.loader-container').style.display = "none";
-  document.querySelector('.page').style.display = "block";
-  let el = document.querySelector('.detalles');
+  //document.querySelector('.loader-container').style.display = "none";
+  //document.querySelector('.page').style.display = "block";
+  let el = document.querySelector('.intro');
 
   /* Get the height and width of the element */
   const height = el.clientHeight;

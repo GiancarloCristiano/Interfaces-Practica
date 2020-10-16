@@ -731,8 +731,8 @@ animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 	@keyframes scroll {
-		0% { background-position:3840px } 
-		100% { background-position:0 }
+		0% { background-position:-50% } 
+		100% { background-position:50% }
 	}
 
 	@keyframes color {
@@ -742,7 +742,7 @@ animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
    	#keyart-0 {
 		background-image: url('../images/parallax/HERO_9.png');
-		animation: scroll 200s linear infinite;
+		animation: scroll 300s linear infinite;
 		background-repeat: repeat-x;
 	}
 	#keyart-1 {
@@ -759,7 +759,7 @@ animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	}
 	#keyart-5 {
 		background-image: url('../images/parallax/HERO_4.png');
-		animation: scroll 90s linear infinite;
+		animation: scroll 120s linear infinite;
 		background-repeat: repeat-x;
 
 	}

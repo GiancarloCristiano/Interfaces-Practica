@@ -1,7 +1,11 @@
-function castParallax() {
+document.body.onload = startSite();
+/* document.addEventListener('DOMContentLoaded', setTimeout(() => {
+	let fondo = document.querySelector("#page");
+	fondo.style.display="block";
+}, 1000); */
 
 
-
+function startSite() {
 	window.addEventListener("scroll", function(event){
 
 		var top = this.pageYOffset;
@@ -20,52 +24,9 @@ function castParallax() {
 
 }
 
-function dispelParallax() {
-	$("#nonparallax").css('display','block');
-	$("#parallax").css('display','none');
-}
-
-function castSmoothScroll() {
-	$.srSmoothscroll({
-		step: 80,
-		speed: 300,
-		ease: 'linear'
-	});
-}
 
 
-
-function startSite() {
-
-	var platform = navigator.platform.toLowerCase();
-	var userAgent = navigator.userAgent.toLowerCase();
-
-	if ( platform.indexOf('ipad') != -1  ||  platform.indexOf('iphone') != -1 ) 
-	{
-		dispelParallax();
-	}
-	
-	else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
-	{
-		castParallax();					
-	}
-	
-	else
-	{
-		castParallax();
-	}
-
-}
-
-document.body.onload = startSite();
-/* document.addEventListener('DOMContentLoaded', setTimeout(() => {
-	let fondo = document.querySelector("#page");
-	fondo.style.display="block";
-}, 1000); */
-
-
-
-  const slideshowImages = document.querySelectorAll(".intro-slideshow img");
+const slideshowImages = document.querySelectorAll(".intro-slideshow img");
 
 const nextImageDelay = 4000;
 let currentImageCounter = 0; // setting a variable to keep track of the current image (slide)

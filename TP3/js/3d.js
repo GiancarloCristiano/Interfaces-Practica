@@ -32,10 +32,10 @@ window.onload = setTimeout(function () {
     * Control the rotation
     * You can change the value and see the results
     */
-    const yRotation = 1 * ((xVal - width / 2) / width);
+    const yRotation = 5 * ((xVal - width / 2) / width);
 
     /* Calculate the rotation along the X-axis */
-    const xRotation = -1 * ((yVal - height / 2) / height);
+    const xRotation = -5 * ((yVal - height / 2) / height);
 
     /* Generate string for CSS transform property */
     const string = 'perspective(500px) scale(1.03) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)';

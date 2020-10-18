@@ -1,7 +1,7 @@
 .scroll-img{
 	margin-top: 30vh;
 	position: absolute;
-	animation: desaparecer 3s ease;
+	animation: desaparecer 5s ease;
 	opacity: 0;
 }
 
@@ -16,7 +16,7 @@
 	margin-top: 105vh;
 	margin-left: 47.5vw;
 	position: absolute;
-	animation: aparecer 3s ease;
+	animation: aparecer 5s ease;
 	opacity: 0;
 }
 
@@ -269,15 +269,6 @@
 	position: fixed;
 }
 
-	@keyframes scroll {
-		0% { background-position:-50% } 
-		100% { background-position:50% }
-	}
-
-	@keyframes color {
-		0% {opacity: 1;}
-		50% {opacity: 0.5;}
-	}
 
    	#keyart-0 {
 		background-image: url('../images/parallax/HERO_9.png');

@@ -19,6 +19,13 @@
 	background: #c20000;  
   }
 
+  @media (max-width: 1920px) {
+  body {
+	transform: scale(0.5);
+	transform-origin: 0 0;
+	// add prefixed versions too.
+ }
+}
 
 
 
@@ -229,3 +236,14 @@ h5 {
 	  opacity: 1;
 	}
   }
+
+  
+	@keyframes scroll {
+		0% { background-position:-50% } 
+		100% { background-position:50% }
+	}
+
+	@keyframes color {
+		0% {opacity: 1;}
+		50% {opacity: 0.5;}
+	}

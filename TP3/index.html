@@ -64,29 +64,30 @@
 					</a>
 				</li>
 		</nav>
-	<section class = "hero-container">
-		<div class="keyart" id="parallax">
-			<div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div> <!-- 00.0 -->
-			<div class="keyart_layer parallax" id="keyart-1" data-speed="5"></div> <!-- 12.5 -->
-			<div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div><!-- 25.0 -->
-			<div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div> <!-- 37.5 -->
-			<div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div> <!-- 50.0 -->
-			<div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div> <!-- 62.5 -->
-			<div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div> <!-- 75.0 -->
-			<div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div> <!-- 87.5 -->
-			<div class="keyart_layer" id="keyart-8" data-speed="100"></div> <!-- 100. -->
-			<img src="images/kunai.svg" width="20" class="scroll-img">
-			<p class="goh">¡Get over here!</p>
-		</div>
-	</section>
+		<section class="hero-container">
+			<div class="keyart" id="parallax">
+				<div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div> <!-- 00.0 -->
+				<div class="keyart_layer parallax" id="keyart-1" data-speed="5"></div> <!-- 12.5 -->
+				<div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div><!-- 25.0 -->
+				<div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div> <!-- 37.5 -->
+				<div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div> <!-- 50.0 -->
+				<div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div> <!-- 62.5 -->
+				<div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div> <!-- 75.0 -->
+				<div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div> <!-- 87.5 -->
+				<div class="keyart_layer" id="keyart-8" data-speed="100"></div> <!-- 100. -->
+				<img src="images/kunai.svg" width="20" class="scroll-img">
+				<p class="goh">¡Get over here!</p>
+			</div>
+		</section>
 
 		<div id="maincontain">
 			<div id="main">
-				<iframe width="1000" height="563" src="https://www.youtube.com/embed/gJY90vf9COM?start=4">
+				<iframe width="1000" height="563" id="video" src="https://www.youtube.com/embed/gJY90vf9COM?start=4"
+					hidden>
 				</iframe>
-				<div id="countdown">
+				<div id="countdown" hidden>
 					<h1 id="headline">Avant Premiere del reinicio de MK La Película en...</h3>
-						<ul>
+						<ul id="cont-num" hidden>
 							<li class="li-contador">
 								<span class="num-contador" id="days"></span>Días</li>
 							<li class="li-contador">
@@ -109,7 +110,7 @@
 					</div>
 				</header>
 
-				<div class="section description">
+				<div class="section-description" hidden>
 					<h4>El legendario Raiden guía al guerrero Liu Kang, a la policía detective Sonya Blade y a la
 						estrella de cine de artes marciales Johnny Cage
 						a una isla remota para competir en el torneo Shaolin conocido como Mortal Kombat.
@@ -120,8 +121,8 @@
 				</div>
 
 
-				<div class="container">
-					<div class="personajes animation-element slide-up">
+				<div class="container" id="cards">
+					<div class="personajes-b">
 						<div class="card">
 							<div class="card-inner">
 								<div class="card-front">
@@ -182,7 +183,8 @@
 								</div>
 							</div>
 						</div>
-					</div><div class="personajes animation-element slide-up">
+					</div>
+					<div class="personajes-m">
 						<div class="card-2">
 							<div class="card-inner">
 								<div class="card-front">
@@ -190,7 +192,8 @@
 									<h3>Scorpion</h3>
 								</div>
 								<div class="card-back">
-									<p>El ninja Shirai Ryu llega desde el Netherrealm con su kunai para apoyar a la facción del Mundo Exterior.</p>
+									<p>El ninja Shirai Ryu llega desde el Netherrealm con su kunai para apoyar a la
+										facción del Mundo Exterior.</p>
 								</div>
 							</div>
 						</div>
@@ -201,7 +204,8 @@
 									<h3>Sub Zero</h3>
 								</div>
 								<div class="card-back">
-									<p>El criomante Lin Kuei con su frío corazón combatirá a favor del brujo, en contra de su propio reino.</p>
+									<p>El criomante Lin Kuei con su frío corazón combatirá a favor del brujo, en contra
+										de su propio reino.</p>
 								</div>
 							</div>
 						</div>
@@ -212,7 +216,8 @@
 									<h3>Reptile</h3>
 								</div>
 								<div class="card-back">
-									<p>El zaterrano ayudará a Tsung con sus poderes camaleónicos para informar al brujo y luchar por él.</p>
+									<p>El zaterrano ayudará a Tsung con sus poderes camaleónicos para informar al brujo
+										y luchar por él.</p>
 								</div>
 							</div>
 						</div>
@@ -223,7 +228,8 @@
 									<h3>Kano</h3>
 								</div>
 								<div class="card-back">
-									<p>Un mercenario miembro del Clan del Dragón Negro que luego de matar a un compañero de Sonya, la atrae hacia el torneo por pedido de Tsung.</p>
+									<p>Un mercenario miembro del Clan del Dragón Negro que luego de matar a un compañero
+										de Sonya, la atrae hacia el torneo por pedido de Tsung.</p>
 								</div>
 							</div>
 						</div>
@@ -234,7 +240,8 @@
 									<h3>Goro</h3>
 								</div>
 								<div class="card-back">
-									<p>El príncipe Shokan ya ha ganado 9 torneos y apuesta a sus 4 brazos para la victoria definitiva.</p>
+									<p>El príncipe Shokan ya ha ganado 9 torneos y apuesta a sus 4 brazos para la
+										victoria definitiva.</p>
 								</div>
 							</div>
 						</div>
@@ -245,24 +252,22 @@
 									<h3>Shang Tsung</h3>
 								</div>
 								<div class="card-back">
-									<p>El malvado brujo devorador de almas tiene sus propios planes para asegurar la décima victoria y que nada impida la derrota decisiva sobre los guerreros de la Tierra.</p>
+									<p>El malvado brujo devorador de almas tiene sus propios planes para asegurar la
+										décima victoria y que nada impida la derrota decisiva sobre los guerreros de la
+										Tierra.</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-					
-
-
-
-					</div>
-				</div>
 			</div>
+		</div>
+	</div>
 
-			<script type="text/javascript" src="js/main.js"></script>
-			<script type="text/javascript" src="js/home.js"></script>
-			<script type="text/javascript" src="js/countdown.js"></script>
-			<script type="text/javascript" src="js/3d.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/countdown.js"></script>
+	<script type="text/javascript" src="js/3d.js"></script>
 
 
 

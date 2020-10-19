@@ -164,8 +164,8 @@ h3 {
 h4 {
 	margin: 0.25%;
 	font-size: 1.1em;
-	margin-block-end: 125px;
-	margin-block-start: 125px;
+	margin-block-end: 30px;
+	margin-block-start: 70px;
 	line-height: 3em; 
 }
 
@@ -183,12 +183,12 @@ h5 {
 
 .button-social {
 	padding: 0px;
-	animation: slide-left 0.3s linear;
+	animation: slide-burger 0.3s linear;
 
 
 }
 
-@keyframes slide-left {
+@keyframes slide-burger {
 	0% {
 	  -webkit-transform: translateX(50px);
 			  transform: translateX(1000px);
@@ -231,6 +231,36 @@ h5 {
 	  opacity: 1;
 	}
   }
+
+  @keyframes slide-up {
+	0% {
+	  -webkit-transform: translateY(100px);
+			  transform: translateY(100px);
+	  opacity: 0;
+	}
+	
+	100% {
+	  -webkit-transform: translateY(0);
+			  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+
+  
+  @keyframes slide-rg {
+	0% {
+	  -webkit-transform: translateX(-100vw);
+			  transform: translateX(-100vw);
+	  opacity: 0;
+	}
+	
+	100% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+
 
   
 	@keyframes scroll {

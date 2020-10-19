@@ -143,6 +143,9 @@
 	transition: filter .2s ease-out;
 }
 
+.intro-slideshow {
+	opacity: 0;
+}
 
   .intro-slideshow img {
 	border-radius: 10px;
@@ -163,6 +166,14 @@
 	opacity: 1;
   } */
   
+
+
+  .personajes-b, .personajes-m {
+	opacity: 0;
+	display: flex;
+	align-content: space-between;
+	justify-content: space-between;
+  }
 
 
 
@@ -262,13 +273,6 @@
   }
 
 
-
-
-  .personajes {
-	display: flex;
-	align-content: space-between;
-	justify-content: space-between;
-  }
 
 
 

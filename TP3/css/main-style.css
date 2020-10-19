@@ -19,13 +19,13 @@
 	background: #c20000;  
   }
 
-  @media (max-width: 1921px) {
-  body {
+  /*@media (max-width: 1921px) {
+ body {
 	transform: scale(0.75);
 	transform-origin: 0 0;
 	// add prefixed versions too.
  }
-}
+}*/
 
 
 body {
@@ -170,6 +170,9 @@ h3 {
 h4 {
 	margin: 0.25%;
 	font-size: 1.1em;
+	margin-block-end: 125px;
+	margin-block-start: 125px;
+	line-height: 3em; 
 }
 
 h5 {
@@ -237,11 +240,28 @@ h5 {
 
   
 	@keyframes scroll {
-		0% { background-position:-50% } 
-		100% { background-position:50% }
+		0% { background-position:-50%; opacity: 0.5;}
+		9% {opacity: 1;}
+		10% {opacity: 0;}
+		11% {opacity: 1;}
+		14% {opacity: 1;}
+		15% {opacity: 0;}
+		16% {opacity: 1;}
+		88% {opacity: 1;}
+		100% { background-position:150%; opacity: 0.5;}
 	}
 
 	@keyframes color {
 		0% {opacity: 1;}
 		50% {opacity: 0.5;}
+	}
+
+
+	@keyframes thunder {
+		9% {filter: brightness(100%);}
+		10% {filter: brightness(200%);}
+		11% {filter: brightness(100%);}
+		14% {filter: brightness(100%);}
+		15% {filter: brightness(200%);}
+		16% {filter: brightness(100%);}
 	}

@@ -5,14 +5,14 @@
 	margin-left:auto;
 	margin-right:auto;
 	position: absolute;
-	animation: desaparecer 5s ease;
+	animation: desaparecer 3s ease;
 	opacity: 0;
 }
 
 @keyframes desaparecer {
-	55% {opacity: 0.5; margin-top: 84vh;}
-	65% {opacity: 0.5; margin-top: 80vh;}
-	90% {opacity: 1; margin-top:80vh;}
+	55% {opacity: 0.5; margin-top: 94vh;}
+	65% {opacity: 0.5; margin-top: 85vh;}
+	90% {opacity: 1; margin-top:85vh;}
 	100% {opacity: 0; margin-top: 70vh;}	
 }
 
@@ -27,14 +27,14 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	animation: aparecer 5s ease;
+	animation: aparecer 3s ease;
 	opacity: 0;
 }
 
 @keyframes aparecer {
 	55% {opacity: 0; margin-top: 100vh;}
-	65% {opacity: 0.5; margin-top: 88vh;}
-	90% {opacity: 1; margin-top: 88vh;}
+	65% {opacity: 0.5; margin-top: 90vh;}
+	90% {opacity: 1; margin-top: 90vh;}
 	100% {opacity: 0; margin-top: 100vh;}	
 }
 
@@ -393,6 +393,19 @@
 @media (max-width: 1366px) {
 	.keyart_layer {
 		background-size: auto 768px;
+	}
+	@keyframes desaparecer {
+		55% {opacity: 0.5; margin-top: 90vh;}
+		65% {opacity: 0.5; margin-top: 78vh;}
+		90% {opacity: 1; margin-top:78vh;}
+		100% {opacity: 0; margin-top: 70vh;}	
+	}
+	
+	@keyframes aparecer {
+		55% {opacity: 0; margin-top: 100vh;}
+		65% {opacity: 0.5; margin-top: 86vh;}
+		90% {opacity: 1; margin-top: 86vh;}
+		100% {opacity: 0; margin-top: 100vh;}	
 	}
 }
 

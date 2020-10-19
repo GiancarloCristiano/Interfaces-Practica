@@ -1,5 +1,9 @@
 TPE3 - comentarios.
 
+A modo de prólogo, puedo decir que fue desafiante elegir una película con más de 25 años de vida ya que resultaba
+dificultosa la obtención de algunos recursos (teniendo que generar algunas imágenes o textos desde mi conocimiento)
+pero para la época tenía efectos muy bien realizados. Catalogada como el mejor film de videojuegos hasta la fecha.
+
 HOME:
 1. Debe tener una sección hero con fondos parallax animados constantemente. ideas:
 nubes de fondo, estrellas en movimiento, 3 layers que se mueven según la posición
@@ -61,7 +65,7 @@ importancia.
 Aclaraciones
 - Todas las páginas deben mantener una consistencia gráfica.
 ---Se utilizó un diseño algo sombrío, con una paleta de negros, blanco y rojo intermedio. Además de dos tipografías relacionadas
-con el film y el juego y varios detalles que pertenecen al mundo MK, como la vibración en el hover del navbar (estilo UMK3) y hasta la scrollbar
+con el film y el juego y varios detalles que pertenecen al mundo MK, como la vibración en el hover del navbar (estilo UMK3), scrollbar y un trailer moderno.
 
 
 - Los formularios no deben enviar nada, solo simularlo.

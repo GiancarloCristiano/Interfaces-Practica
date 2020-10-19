@@ -19,13 +19,7 @@
 	background: #c20000;  
   }
 
-  /*@media (max-width: 1921px) {
- body {
-	transform: scale(0.75);
-	transform-origin: 0 0;
-	// add prefixed versions too.
- }
-}*/
+
 
 
 body {
@@ -240,15 +234,8 @@ h5 {
 
   
 	@keyframes scroll {
-		0% { background-position:-50%; opacity: 0.5;}
-		9% {opacity: 1;}
-		10% {opacity: 0;}
-		11% {opacity: 1;}
-		14% {opacity: 1;}
-		15% {opacity: 0;}
-		16% {opacity: 1;}
-		88% {opacity: 1;}
-		100% { background-position:150%; opacity: 0.5;}
+		0% { background-position:-100vw;}
+		100% { background-position:0;}
 	}
 
 	@keyframes color {
@@ -265,3 +252,15 @@ h5 {
 		15% {filter: brightness(200%);}
 		16% {filter: brightness(100%);}
 	}
+
+	@keyframes thunder-efect {
+		0% {opacity: 0.5;}
+		9% {opacity: 1;}
+		10% {opacity: 0;}
+		11% {opacity: 1;}
+		14% {opacity: 1;}
+		15% {opacity: 0;}
+		16% {opacity: 1;}
+		91% {opacity: 1;}
+		100% {opacity: 0.5;}
+		}

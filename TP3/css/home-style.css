@@ -1,29 +1,40 @@
 .scroll-img{
 	margin-top: 30vh;
+	left: 0;
+	right: 0;
+	margin-left:auto;
+	margin-right:auto;
 	position: absolute;
 	animation: desaparecer 5s ease;
 	opacity: 0;
 }
 
 @keyframes desaparecer {
-	55% {opacity: 0.5; margin-top: 90vh;}
-	65% {opacity: 0.5; margin-top: 88vh;}
-	90% {opacity: 1; margin-top: 88vh;}
+	55% {opacity: 0.5; margin-top: 84vh;}
+	65% {opacity: 0.5; margin-top: 80vh;}
+	90% {opacity: 1; margin-top:80vh;}
 	100% {opacity: 0; margin-top: 70vh;}	
 }
 
 .goh{
 	margin-top: 105vh;
-	margin-left: 47.5vw;
+	left: 0;
+	right: 0;
+	margin-left:auto;
+	margin-right:auto;
 	position: absolute;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	animation: aparecer 5s ease;
 	opacity: 0;
 }
 
 @keyframes aparecer {
 	55% {opacity: 0; margin-top: 100vh;}
-	65% {opacity: 0.5; margin-top: 93vh;}
-	90% {opacity: 1; margin-top: 93vh;}
+	65% {opacity: 0.5; margin-top: 88vh;}
+	90% {opacity: 1; margin-top: 88vh;}
 	100% {opacity: 0; margin-top: 100vh;}	
 }
 
@@ -264,7 +275,7 @@
 /* PARALLAX */
 
 .keyart, .keyart_layer {
-	height: 1450px;
+	height: 100vh;
 }
 
 
@@ -289,9 +300,8 @@
 
    	#keyart-0 {
 		background-image: url('../images/parallax/HERO_9.png');
-		animation: thunder 8s infinite linear;
-		
-		
+		animation: scroll 40s linear infinite, thunder 7s infinite linear;
+		background-repeat: repeat-x;
 	}
 	#keyart-1 {
 		background-image: url('../images/parallax/HERO_8.png');
@@ -301,26 +311,34 @@
 	}
 	#keyart-3 {
 		background-image: url('../images/parallax/HERO_6.png');
+		animation: thunder 7s linear infinite;
+
 	}
 	#keyart-4 {
 		background-image: url('../images/parallax/HERO_5.png');
+		animation: thunder 7s linear infinite;
+
 	}
 	#keyart-5 {
 		background-image: url('../images/parallax/HERO_4.png');
-		animation: scroll 8s linear infinite;
+		animation: scroll 25s linear infinite, thunder-efect 7s linear infinite;
 		background-repeat: repeat-x;
 
 	}
 	#keyart-6 {
 		background-image: url('../images/parallax/HERO_3.png');
-		animation: color 6s infinite linear;
+		animation: color 4s infinite linear;
 
 	}
 	#keyart-7 {
 		background-image: url('../images/parallax/HERO_2.png');
+		animation: thunder 7s linear infinite;
+
 	}
 	#keyart-8 {
 		background-image: url('../images/parallax/HERO_1.png');
+		animation: thunder 7s linear infinite;
+
 	}
 
 
@@ -366,6 +384,18 @@
 	margin-bottom: 30px;
 }
 
+@media (max-width: 1920px) {
+	.keyart_layer {
+		background-size: auto 1080px;
+	}
+}
+
+@media (max-width: 1366px) {
+	.keyart_layer {
+		background-size: auto 768px;
+	}
+}
+
 
 @media (min-width: 601px) {
 
@@ -391,11 +421,7 @@
 		display: none;
 	}
 
-	#main {
-		padding-left: 10px;
-		padding-right: 10px;
-		padding-top: 70px;
-	}
+
 
 
 }

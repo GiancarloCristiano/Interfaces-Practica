@@ -138,8 +138,9 @@
 }
 
 .flip-box-back h4{
-	padding: 120px;
+	padding: 100px;
 	margin: 0;
+	line-height: 2em; 
 }
 
 

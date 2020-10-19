@@ -17,6 +17,8 @@ resto con partes del templ, más el logo del dragón y tipografía.
 Este Hero tiene variedad de efectos, comenzando con el movimiento horizontal de las nubes y neblina simulando al viento.
 Sumado al efecto vertical que al ser scroll cambia la velocidad a la que se desplazan.
 Otro efecto general de color para simular el efecto de relámpagos y uno menos de respiración para el texto.
+Además tiene un indicador para que el usuario deslice, inspirado en el Kunai y mensaje que grita Scorpion al atrapar al enemigo.
+"Get over here" significaría "Ven aquí", encajaba perfectamente.
 
 2. Debe animar la entrada de los componentes en pantalla.
 ---Las animaciones varían entre entradas desde abajo, arriba y laterales, entre otras.
@@ -65,7 +67,8 @@ importancia.
 Aclaraciones
 - Todas las páginas deben mantener una consistencia gráfica.
 ---Se utilizó un diseño algo sombrío, con una paleta de negros, blanco y rojo intermedio. Además de dos tipografías relacionadas
-con el film y el juego y varios detalles que pertenecen al mundo MK, como la vibración en el hover del navbar (estilo UMK3), scrollbar y un trailer moderno.
+con el film y el juego y varios detalles que pertenecen al mundo MK, como la vibración en el hover del navbar (estilo UMK3),
+scrollbar, el kunai en el hero y un trailer moderno.
 
 
 - Los formularios no deben enviar nada, solo simularlo.

@@ -1,4 +1,4 @@
-document.body.onload = startSite();
+document.onload = startSite();
 /* document.addEventListener('DOMContentLoaded', setTimeout(() => {
 	let fondo = document.querySelector("#page");
 	fondo.style.display="block";
@@ -43,9 +43,11 @@ function startSite() {
 			} 
 		if (document.body.scrollTop > 2300|| document.documentElement.scrollTop > 2300){
 			document.querySelector('.personajes-b').style.opacity="1";
-			document.querySelector('.personajes-m').style.opacity="1";
 			document.querySelector('.personajes-b').style.animation = "slide-rg 1s cubic-bezier(0.34, 1.56, 0.64, 1)";
-			document.querySelector('.personajes-m').style.animation = "slide-rg 2.5s cubic-bezier(0.34, 1.56, 0.64, 1)";
+		}  
+		if (document.body.scrollTop > 2400|| document.documentElement.scrollTop > 2400){
+			document.querySelector('.personajes-m').style.opacity="1";
+			document.querySelector('.personajes-m').style.animation = "slide-lf 1.5s cubic-bezier(0.34, 1.56, 0.64, 1)";
 		}  
     });/*
 	let scroll = window.scrollY;

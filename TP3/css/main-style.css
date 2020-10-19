@@ -261,6 +261,19 @@ h5 {
 	}
   }
 
+  @keyframes slide-lf {
+	0% {
+	  -webkit-transform: translateX(100vw);
+			  transform: translateX(100vw);
+	  opacity: 0;
+	}
+	
+	100% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
 
   
 	@keyframes scroll {

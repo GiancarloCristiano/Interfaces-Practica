@@ -166,7 +166,10 @@
 	opacity: 1;
   } */
   
-
+.section-description h4{
+	font-family: 'Cinzel', serif;
+	font-size: 1.1em;
+}
 
   .personajes-b, .personajes-m {
 	opacity: 0;
@@ -270,6 +273,8 @@
 	align-content: center;
 	justify-content: center;
 	padding: 15px;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 1.1em;
   }
 
 

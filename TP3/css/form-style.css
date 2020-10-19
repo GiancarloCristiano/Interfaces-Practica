@@ -1,13 +1,14 @@
 input, textarea {
     width: 75%;
     resize: none;
-	font-family: 'Segoe UI', sans-serif;
 	background-color: #333333;
 	border-radius: 3px;
 	color: white;
 	border: none;
 	min-height: 2em;
 	animation: color 2s infinite linear;
+	font-family: 'Titillium Web', sans-serif;
+
 }
 
 

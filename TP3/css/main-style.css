@@ -163,10 +163,11 @@ h3 {
 
 h4 {
 	margin: 0.25%;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	margin-block-end: 30px;
 	margin-block-start: 70px;
-	line-height: 3em; 
+	line-height: 3em;
+	font-family: 'Titillium Web', sans-serif;
 }
 
 h5 {

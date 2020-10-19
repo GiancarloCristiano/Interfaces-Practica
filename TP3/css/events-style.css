@@ -4,6 +4,7 @@
 	font-size: 1.2em;
 	transform: translate3d(0,0,-100px);  
 
+
 }
 
 .detalles > summary::-webkit-details-marker { display: none; }
@@ -99,7 +100,6 @@
 	background-color: transparent;
 	height: 384px;
 	width: 768px;
-	border: 1px solid;
 	perspective: 1000px;
 }
 
@@ -109,6 +109,9 @@
 	text-align: center;
 	transform-style: preserve-3d;
 	transition: transform 0.3s;
+	justify-content: center;
+    flex-direction: row;
+	
 	/*transform: rotateX(180deg);*/
 
 }
@@ -127,13 +130,16 @@
 .flip-box-back{
 	transform: rotateX(180deg);
 	font-style: normal;
-    color: white;
+	color: white;
+	align-content: center;
+	justify-content: center;
+	overflow: hidden;
+
 }
 
-.flip-box-back h2{
-	height: 100%;
-	align-items: center;
-	animation: zoom 4s infinite linear;
+.flip-box-back h4{
+	padding: 120px;
+	margin: 0;
 }
 
 
@@ -145,7 +151,7 @@ width: 800px;
 padding: 0.5%;
 background-color: rgba(0, 0, 0, 0.9);
 border-radius: 10px;
-margin: 3.5% auto;
+margin: 5% auto;
 -webkit-animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

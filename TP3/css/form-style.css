@@ -29,7 +29,7 @@ input:valid, textarea:valid {
     padding: 0.5%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
-	margin: 3.5% auto;
+	margin: 5% auto;
 	-webkit-animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 		animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

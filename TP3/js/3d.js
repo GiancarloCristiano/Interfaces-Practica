@@ -32,13 +32,13 @@ window.onload = setTimeout(function () {
     * Control the rotation
     * You can change the value and see the results
     */
-    const yRotation = 5 * ((xVal - width / 2) / width);
+    const yRotation = 2 * ((xVal - width / 2) / width);
 
     /* Calculate the rotation along the X-axis */
-    const xRotation = -5 * ((yVal - height / 2) / height);
+    const xRotation = -2 * ((yVal - height / 2) / height);
 
     /* Generate string for CSS transform property */
-    const string = 'perspective(500px) scale(1.03) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)';
+    const string = 'perspective(500px) scale(1.01) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)';
 
     /* Apply the calculated transformation */
     el.style.transform = string;
@@ -56,6 +56,6 @@ window.onload = setTimeout(function () {
 
   /* Add listener for mouseup, simulate release of mouse click */
   el.addEventListener('mouseup', function () {
-    el.style.transform = 'perspective(500px) scale(1.03) rotateX(0) rotateY(0)';
+    el.style.transform = 'perspective(500px) scale(1.01) rotateX(0) rotateY(0)';
   })
 }, 3100);/* Store the element in el */

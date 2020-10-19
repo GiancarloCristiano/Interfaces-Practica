@@ -6,7 +6,6 @@ input, textarea {
 	color: white;
 	border: none;
 	min-height: 2em;
-	animation: color 2s infinite linear;
 	font-family: 'Titillium Web', sans-serif;
 
 }
@@ -23,6 +22,15 @@ input:valid, textarea:valid {
 	animation: none;
   }
 
+#form-name, #form-mail{
+	animation: slide-rg 1s cubic-bezier(0.34, 1.56, 0.64, 1), color 2s infinite linear;
+	;
+}
+
+#form-phone, #form-text{
+	animation: slide-lf 1s cubic-bezier(0.34, 1.56, 0.64, 1), color 2s infinite linear;
+}
+
 
 .contact-content {
     color: white;
@@ -31,6 +39,7 @@ input:valid, textarea:valid {
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
 	margin: 5% auto;
+	overflow: hidden;
 	-webkit-animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 		animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

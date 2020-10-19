@@ -68,7 +68,7 @@ Aclaraciones
 - Todas las páginas deben mantener una consistencia gráfica.
 ---Se utilizó un diseño algo sombrío, con una paleta de negros, blanco y rojo intermedio. Además de dos tipografías relacionadas
 con el film y el juego y varios detalles que pertenecen al mundo MK, como la vibración en el hover del navbar (estilo UMK3),
-scrollbar, el kunai en el hero y un trailer moderno.
+scrollbar, el kunai en el hero y un trailer moderno. El sitio tiene varias queries para adaptarse a desktop HD, FHD y 4K.
 
 
 - Los formularios no deben enviar nada, solo simularlo.

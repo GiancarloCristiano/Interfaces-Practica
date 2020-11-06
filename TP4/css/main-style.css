@@ -1,0 +1,45 @@
+::-webkit-scrollbar {
+	width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #232323;
+	border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #00D2DC;  
+  }
+
+
+  @colorTurquesa: #00D2DC;
+  @colorTurqOsc: #00AAB4;
+  @colorGris35: #232323;
+  @colorGris245: #F5F5F5;
+  @colorGris15: #0F0F0F;
+  @colorGris50: #323232;
+  @colorDisabled: #AAAAAA;
+  @colorBlur: #0F0F0F;
+
+
+#header {
+     color: @color;
+}
+h2 {
+     color: @color;
+}
+
+
+
+
+body {
+	background-color: @colorTurquesa;
+}

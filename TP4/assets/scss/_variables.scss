@@ -5,6 +5,23 @@
 
 // Color system
 
+$turquesa: #00D2DC;
+$turquesa-oscuro: #00AAB4;
+$gris-35: #232323;
+$gris-245: #F5F5F5;
+$gris-15: #0F0F0F;
+$gris-50: #323232;
+$gris-disabled: #AAAAAA;
+$color-blur: rgba(70,70,70,0.5);
+
+
+
+
+
+
+
+
+
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -59,7 +76,15 @@ $colors: map-merge(
     "cyan":       $cyan,
     "white":      $white,
     "gray":       $gray-600,
-    "gray-dark":  $gray-800
+    "gray-dark":  $gray-800,
+    "turquesa":  $turquesa,
+    "turquesa-oscuro": $turquesa-oscuro,
+    "gris-35":    $gris-35,
+    "gris-245":    $gris-245,
+    "gris-15":    $gris-15,
+    "gris-50":    $gris-50,
+    "gris-disabled":  $gris-disabled,
+    "color-blur":  $color-blur
   ),
   $colors
 );

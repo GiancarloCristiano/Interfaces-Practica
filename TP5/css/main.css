@@ -47,6 +47,15 @@ article{
   margin-right: auto;
 }
 
+.icon{
+  width: 15px;
+  height: 15px;
+}
+
+/* #Capa_1{
+  fill:#F5F5F5;
+} */
+
 nav {
   max-height: 55px;
   display: flex;
@@ -58,7 +67,7 @@ nav {
   padding: 1%;
 }
 
-.main-body{
+main{
   max-width: 1000px;
 	margin-left: auto;
   margin-right: auto;

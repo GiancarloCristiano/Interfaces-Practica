@@ -1,0 +1,129 @@
+:root {
+  --primary-color: #00AAB4;
+  --secondary-color: #00D2DC;
+  --font-color: #0F0F0F;
+  --bg-color: #F5F5F5;
+  --heading-color: #292922;
+  --disabled-color: #AAAAAA;
+  --turquesa-color: #00AAB4;
+  --turquesa-oscuro-color: #00D2DC;
+  --gris-245-color: #0F0F0F;
+  --gris-15-color: #F5F5F5;
+  --gris-35-color: rgb(220,220,220);
+  --gris-50-color: rgb(200,200,200);
+  --blur-color: rgba(70, 70, 70, 0.5);
+}
+
+[data-theme="dark"] {
+  --primary-color: #00D2DC;
+  --secondary-color: #00AAB4;
+  --font-color: #F5F5F5;
+  --bg-color:  #0F0F0F;
+  --heading-color: #818cab;
+  --disabled-color: #AAAAAA;
+  --turquesa-color: #00D2DC;
+  --turquesa-oscuro-color: #00AAB4;
+  --gris-35-color: #232323;
+  --gris-245-color: #F5F5F5;
+  --gris-15-color: #0F0F0F;
+  --gris-50-color: #323232;
+  --blur-color: rgba(180, 180, 180, 0.5);
+}
+
+body {
+  font-family: 'Rowdies', cursive !important;
+  /* font-family: 'Asap', sans-serif; */
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  max-width: 100%;
+  position: relative;
+}
+
+article{
+  justify-content: space-between;
+  display: block;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  max-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: var(--gris-35-color);
+  padding: 1%;
+}
+
+.main-body{
+  max-width: 1000px;
+	margin-left: auto;
+  margin-right: auto;
+  background-color: var(--gris-35-color);
+	position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.album{
+  height: 140px;
+  width: 140px;
+  border-radius: 10%;
+
+}
+
+.player {
+  position: fixed;
+  vertical-align: baseline;
+  bottom: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 110px;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: var(--gris-35-color);
+}
+
+.main-btns{
+  width: 25%;
+}
+
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2em;
+}
+
+p {
+}
+
+a {
+  color: var(--primary-color);
+}
+a:hover, a:focus {
+}
+
+
+.profile {
+  border-radius: 50%;
+  height: 48px;
+}
+
+.main-logo{
+  height: 48px;
+}
+
+
+.btn {
+  background-color: var(--primary-color) !important;
+  color: var(--bg-color) !important;
+}

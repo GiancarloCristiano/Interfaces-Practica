@@ -13,32 +13,23 @@
   margin: auto;
   display: grid;
   width: 100%;
-  height: auto;
   clear: both;
-  padding: 2px;
 
 }
 .container img{
   width: 100%;
-  background-size: cover;
-  height: auto;
   position: relative;
   float: left;
 }
 .row{
   width: 100%;
-  height: auto;
-  padding: 10px;
-  margin-bottom: 1%;
-  margin-top: 1%;
   clear: both;
 }
 *[class *= "col-"]{
   float: left;
   height: auto;
-  margin-bottom: 1%;
-  margin-top: 1%;
 }
+
 .col-12{
   width:100%; 
 }
@@ -81,7 +72,7 @@
   /* For tablets: */
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
-  .col-s-git {width: 25%;}
+  .col-s-3 {width: 25%;}
   .col-s-4 {width: 33.33%;}
   .col-s-5 {width: 41.66%;}
   .col-s-6 {width: 50%;}
@@ -100,8 +91,8 @@
 
 .box{
   width: calc(26.3333% - 32px);
+  justify-self: center;
+  align-self:   center;
   margin: 8px;
-  height: auto;
-  position: relative;
   float: left;
 } 

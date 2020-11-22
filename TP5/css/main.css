@@ -61,8 +61,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-decoration: none;
-  list-style-type: none;
   background-color: var(--gris-35-color);
   padding: 1%;
 }
@@ -102,10 +100,37 @@ main{
   background-color: var(--gris-35-color);
 }
 
+/*#region navbar*/
+
 .main-btns{
   width: 25%;
 }
 
+.main-btns ul{
+  list-style-type: none;
+  text-align: center;
+}
+.main-btns li{
+  display: inline;
+  text-align: center;
+  margin: 0 80px 0 0;
+}
+.main-btns li a{
+  padding: 2px 7px 2px 7px;
+  color: #666;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  text-decoration: none;
+}
+.main-btns li a:hover{
+  background-color: #333333;
+  color: #ffffff;
+}
+.img-perfil{
+  float: right;
+}
+
+/*#endregion navbar*/
 
 h1 {
   color: var(--primary-color);

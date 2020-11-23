@@ -33,20 +33,31 @@
 body {
   font-family: 'Rowdies', cursive !important;
   /* font-family: 'Asap', sans-serif; */
-  background-color: var(--bg-color);
-  color: var(--font-color);
+  background-color: var(--gris-245-color);
+  color: var(--bg-color);
   max-width: 100%;
   position: relative;
+  
 }
 
 article{
-  justify-content: space-between;
+  padding: 1em;
   display: block;
-  max-width: 950px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
+  /* max-width: 950px;
+  margin-left: auto;
+  margin-right: auto; */
+}
+article div{
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+
+
+}
+.img-album{
+  margin-left: 1em;
+  margin-right: 0.8em;
+}
 .icon{
   width: 15px;
   height: 15px;
@@ -56,14 +67,7 @@ article{
   fill:#F5F5F5;
 }*/
 
-nav {
-  max-height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--gris-35-color);
-  padding: 1%;
-}
+
 
 /* main{
   max-width: 1000px;
@@ -80,7 +84,6 @@ nav {
   height: 140px;
   width: 140px;
   border-radius: 10%;
-
 }
 
 .player {
@@ -102,17 +105,25 @@ nav {
 
 /*#region navbar*/
 
+nav {
+  max-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--gris-35-color);
+  padding: 1%;
+}
 .main-btns{
   width: 25%;
 }
-
+.main-btns ul, .main-btns li{
+  text-align: center;
+}
 .main-btns ul{
   list-style-type: none;
-  text-align: center;
 }
 .main-btns li{
   display: inline;
-  text-align: center;
   margin: 0 80px 0 0;
 }
 .main-btns li a{

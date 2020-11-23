@@ -65,7 +65,7 @@ nav {
   padding: 1%;
 }
 
-main{
+/* main{
   max-width: 1000px;
 	margin-left: auto;
   margin-right: auto;
@@ -74,7 +74,7 @@ main{
   align-content: center;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 .album{
   height: 140px;
@@ -132,6 +132,10 @@ main{
 
 /*#endregion navbar*/
 
+
+
+
+
 h1 {
   color: var(--primary-color);
   font-size: 2em;
@@ -160,4 +164,5 @@ a:hover, a:focus {
 .btn {
   background-color: var(--primary-color) !important;
   color: var(--bg-color) !important;
+  
 }

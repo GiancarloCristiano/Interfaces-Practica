@@ -7,23 +7,33 @@
   vertical-align: middle;
 }
 .container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   background-color: black;
-  opacity: 0.9;
-  position: relative;
-  margin: auto;
-  display: grid;
-  width: 100%;
-  clear: both;
-
+  margin: auto 0;
 }
 .container img{
   width: 100%;
-  position: relative;
-  float: left;
+  height: auto;
+}
+@supports(object-fit: cover){
+    .box img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
 }
 .row{
+  overflow: hidden;
   width: 100%;
   clear: both;
+  display: flex;
+  justify-content: center;
+
 }
 *[class *= "col-"]{
   float: left;

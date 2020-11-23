@@ -86,12 +86,15 @@ article div{
   border-radius: 10%;
 }
 
-.player {
+.player, nav{
   position: fixed;
+  width: 100vw;
+}
+
+.player {
   vertical-align: baseline;
   bottom: 0;
   z-index: 1;
-  width: 100vw;
   height: 5em;
   align-items: center;
   flex-direction: row;
@@ -106,6 +109,8 @@ article div{
 /*#region navbar*/
 
 nav {
+  vertical-align: top;
+  top: 0;
   max-height: 55px;
   display: flex;
   align-items: center;

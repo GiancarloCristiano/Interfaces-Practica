@@ -19,3 +19,64 @@
     --blur-color: rgba(70, 70, 70, 0.5);
     --disabled-color: #AAAAAA;
   }
+
+  .bg-turquesa{
+    background-color: var(--turquesa-color);
+  }
+
+  .bg-turquesa-oscuro{
+    background-color: var(--turquesa-oscuro-color);
+  }
+
+  .bg-gris35{
+    background-color: var(--gris-35-color);
+  }
+  
+  .bg-gris245{
+    background-color: var(--gris-245-color);
+  }
+
+  .bg-gris15{
+    background-color: var(--gris-15-color);
+  }
+
+  .bg-gris50{
+    background-color: var(--gris-50-color);
+  }
+
+  .bg-blur{
+    background-color: var(--blur-color);
+    filter: blur(10px)
+  }
+
+  .bg-disabled{
+    background-color: var(--disabled-color);
+  }
+
+  .color-turquesa{
+    color: var(--turquesa-color);
+  }
+  
+  .color-turquesa-oscuro{
+    color: var(--turquesa-oscuro-color);
+  }
+
+  .color-gris35{
+    color: var(--gris35-color);
+  }
+
+  .color-gris245{
+    color: var(--gris245-color);
+  }
+
+  .color-gris15{
+    color: var(--gris15-color);
+  }
+
+  .color-gris50{
+    color: var(--gris50-color);
+  }
+
+  .color-disabled{
+    color: var(--disabled-color);
+  }

@@ -101,9 +101,15 @@ nav {
 .main-btns li a:hover{
   background-color: var(--turquesa-color);
 }
-.img-perfil{
-  float: right;
+.main-logo{
+  width: 100%;
 }
+.profile {
+  float: right;
+  width: 22%;
+  border-radius: 50%;
+}
+
 
 /*#endregion navbar*/
 
@@ -116,14 +122,7 @@ a {
 }*/
 
 
-.profile {
-  border-radius: 50%;
-  height: 48px;
-}
 
-.main-logo{
-  height: 48px;
-}
 
 
 .btn {

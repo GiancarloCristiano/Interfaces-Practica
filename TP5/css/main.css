@@ -1,7 +1,4 @@
 body {
-  font-family: 'Rowdies', cursive !important;
-  /* font-family: 'Asap', sans-serif; */
-  background-color: var(--gris-245-color);
   color: var(--bg-color);
   max-width: 100%;
   position: relative;
@@ -15,9 +12,10 @@ article div{
   padding-top: 0.3em;
   padding-bottom: 0.2em;
 }
+/*
 .img-album h4, .img-album h6{
   font-size:85%;
-}
+}*/
 .icon{
   width: 15px;
   height: 15px;
@@ -48,7 +46,6 @@ article div{
   justify-content: space-between;
   text-decoration: none;
   list-style-type: none;
-  background-color: var(--gris-35-color);
 }
 
 /*#region navbar*/
@@ -60,7 +57,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--gris-35-color);
   padding: 1%;
 }
 .main-btns{
@@ -93,17 +89,6 @@ nav {
 
 /*#endregion navbar*/
 
-
-
-
-
-h1 {
-  color: var(--primary-color);
-  font-size: 2em;
-}
-
-p {
-}
 
 a {
   color: var(--primary-color);

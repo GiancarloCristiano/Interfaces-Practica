@@ -1,0 +1,47 @@
+:root {
+  --bold-font: bold;
+  --regular-font: normal;
+  --light-font: 300;
+  --cursive-font: italic;
+  --rowdies-font: 'Rowdies', sans-serif;
+  --asap-font: 'Asap', sans-serif;
+}
+
+* {
+    font-family: var(--rowdies-font);
+  }
+
+  .font-bold {
+    font-weight: var(--bold-font);
+  }
+
+  .font-regular {
+    font-weight: var(--regular-font);;
+  }
+
+  .font-light {
+    font-weight: var(--light-font);
+  }
+
+  .font-cursive {
+    font-style: var(--cursive-font);
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    color: var(--gris-245-color);
+  }
+
+  h4 {
+    font-weight: var(--light-font);
+    font-size: 15px;
+  }
+
+  h6 {
+    font-weight: var(--light-font);
+    color: var(--disabled-color);
+    font-size: 11px;
+  }
+  
+  p {
+    font-family: var(--asap-font);
+  }

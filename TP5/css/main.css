@@ -48,41 +48,34 @@ article div{
   margin-left: 1%;
 }
 
-
-
 .player, header{
   position: fixed;
-  width: 100vw;
 }
 
-.player {
+.player, nav{
   clear: both;
   display: flex;
-  /* vertical-align: baseline; */
-  bottom: 0;
-  z-index: 1;
-  height: 6em;
   align-items: center;
-  max-height: 4.4em;
-
-  /* flex-direction: row; */
-  /* padding: 0 16px; */
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  padding: 1%;
+}
+.player {
+  bottom: 0;
+  max-height: 5.4em;
   text-decoration: none;
   list-style-type: none;
+}
+.progress-bar{
+  width: 100%;
 }
 
 /*#region navbar*/
 
 nav {
-  clear: both;
   vertical-align: top;
   top: 0;
   max-height: 4.4em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1%;
+
 }
 main{
   padding-top: 5em;
@@ -124,11 +117,6 @@ main{
 a {
   color: var(--primary-color);
 }
-
-/* a:hover, a:focus {
-}*/
-
-
 
 
 

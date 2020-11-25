@@ -51,19 +51,19 @@
   }
 
   .color-gris35{
-    color: var(--gris35-color);
+    color: var(--gris-35-color);
   }
 
   .color-gris245{
-    color: var(--gris245-color);
+    color: var(--gris-245-color);
   }
 
   .color-gris15{
-    color: var(--gris15-color);
+    color: var(--gris-15-color);
   }
 
   .color-gris50{
-    color: var(--gris50-color);
+    color: var(--gris-50-color);
   }
 
   .color-disabled{

@@ -1,34 +1,28 @@
 .texto-principal-login{
     text-align: center;
-    color: white; 
     padding: 0.5em;
   }
-  .texto-principal-login h4, .btn-login p{
-    padding: 1.1em;
-    font-size: 1.2em;
-  }
-  .texto-principal-login h4{
-    color: rgb(35, 159, 190);
+  .texto-principal-login h3, .btn-login p{
+    padding: 1.5em;
   }
   .btn-sign-in, .btn-sign-up{
     text-decoration: none;
-    padding: 0.3em;
-    font-weight: 600;
-    font-size: 2em;
-    border: 0.09em solid rgb(35, 159, 190);
-    border-radius: 0.2em;
-
+    padding: 0.5em;
+    font-size: 1.5em;
+    border: 0.1em solid var(--turquesa-color);
+    border-radius: 0.3em;
+    width: 100%;
   }
-  .btn-sign-in{
-    color: rgb(35, 159, 190);
-    background-color: #030303;
-  }
-  .btn-sign-up{
-    color: #000000;
-    background-color: rgb(35, 159, 190);
+  
+  .btn-login {
+    max-width: 100%;
   }
   
   .btn-sign-in:hover, .btn-sign-up:hover{
-    color: #1883ba;
-    background-color: #ffffff;
+      color: var(--gris-245-color);
   }
+
+
+  .logo-login {
+    padding: 0.5em;
+  }/*

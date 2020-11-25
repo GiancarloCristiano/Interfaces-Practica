@@ -19,14 +19,22 @@ article div{
   width: 15px;
   height: 15px;
 }
-.img-album{
-  text-align: center;
+
+
+.triangle{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-bottom: 100px solid var(--gris-15-color);
+  opacity: 0.5;
+  border-left: 100px solid transparent;
 }
 
-.img-container{
+.img-container{ 
   height: 90%;
   width: 90%;
   border-radius: 10%;
+  text-align: center;
 }
 
 .player, header{

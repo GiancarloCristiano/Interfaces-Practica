@@ -1,0 +1,26 @@
+
+
+.texto-img-grid-lista{
+    display: inline-block;
+    text-align: center;
+    margin-left:0vw;
+  }
+
+/* Mobile---------------------------------- */
+
+@media only screen and (max-width: 600px) {
+    .texto-img-grid-lista{
+        margin-left: 4vw;
+        text-align: left;
+        margin-bottom: 6vw;
+    }
+    .texto-img-grid-lista h4{
+        margin-top: 2vw;
+        margin-bottom: 5vw;
+    }
+
+    .row-search>*:nth-child(n+4){
+        display: none;
+    }
+                                              
+}

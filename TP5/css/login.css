@@ -2,7 +2,7 @@
     text-align: center;
     padding: 0.5em;
   }
-  .texto-principal-login h3, .btn-login p{
+  .texto-principal-login h3, .btn-login h4{
     padding: 1.5em;
   }
   .btn-sign-in, .btn-sign-up{

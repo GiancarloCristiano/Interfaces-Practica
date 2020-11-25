@@ -38,6 +38,19 @@ article div{
   text-align: center;
 }
 
+.img-player{ 
+  height: 60px;
+  width: 60px;
+  border-radius: 10%;
+
+}
+
+.text-player{ 
+  margin-left: 1%;
+}
+
+
+
 .player, header{
   position: fixed;
   width: 100vw;
@@ -126,7 +139,7 @@ input[type=range]{
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-  height: 7px;
+  height: 5px;
   background: linear-gradient(to right, var(--turquesa-color) 0%, var(--turquesa-color) 50%, var(--gris-15-color) 50%, var(--gris-15-color));
 
   border-radius: 10px;
@@ -135,11 +148,11 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: none;
-  height: 16px;
-  width: 16px;
+  height: 13px;
+  width: 13px;
   border-radius: 50%;
   background: var(--turquesa-color);
-  margin-top: -5px;
+  margin-top: -4px;
 }
 
 input[type=range]:focus {

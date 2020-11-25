@@ -65,6 +65,9 @@ article div{
   text-decoration: none;
   list-style-type: none;
 }
+.player .container .row, nav .container .row{
+  justify-content: space-between;
+}
 .progress-bar{
   width: 100%;
 }
@@ -102,7 +105,7 @@ main{
   background-color: var(--turquesa-color);
 }
 .main-logo{
-  width: 90%;
+  width: 100%;
 }
 .profile {
   float: right;

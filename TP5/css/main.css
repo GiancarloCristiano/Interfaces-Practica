@@ -54,8 +54,11 @@ article div{
   width: 15px;
   height: 15px;
 }
-
+.img-album{
+  text-align: center;
+}
 .album{
+
   height: 90%;
   width: 90%;
   border-radius: 10%;

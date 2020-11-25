@@ -127,7 +127,8 @@ input[type=range]{
 
 input[type=range]::-webkit-slider-runnable-track {
   height: 7px;
-  background: var(--gris-15-color);
+  background: linear-gradient(to right, var(--turquesa-color) 0%, var(--turquesa-color) 50%, var(--gris-15-color) 50%, var(--gris-15-color));
+
   border-radius: 10px;
 }
 
@@ -148,3 +149,10 @@ input[type=range]:focus {
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: var(--turquesa-color);
 }
+
+  /*
+  border-radius: 8px;
+  outline: none;
+  transition: background 450ms ease-in;
+  stroke: var(--turquesa-color);
+  -webkit-appearance: none;*/

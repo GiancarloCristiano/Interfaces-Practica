@@ -1,5 +1,4 @@
 body {
-  color: var(--bg-color);
   max-width: 100%;
   position: relative;
   
@@ -29,7 +28,7 @@ article div{
   border-radius: 10%;
 }
 
-.player, nav{
+.player, header{
   position: fixed;
   width: 100vw;
 }
@@ -93,8 +92,9 @@ nav {
 a {
   color: var(--primary-color);
 }
-a:hover, a:focus {
-}
+
+/* a:hover, a:focus {
+}*/
 
 
 .profile {

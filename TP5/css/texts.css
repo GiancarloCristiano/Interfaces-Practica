@@ -9,6 +9,7 @@
 
 * {
     font-family: var(--rowdies-font);
+    font-weight: var(--regular-font);
   }
 
   .font-bold {
@@ -16,7 +17,7 @@
   }
 
   .font-regular {
-    font-weight: var(--regular-font);;
+    font-weight: var(--regular-font);
   }
 
   .font-light {
@@ -29,6 +30,18 @@
 
   h1, h2, h3, h4, h5, h6, p {
     color: var(--gris-245-color);
+  }
+
+  .main-title {
+    font-size: 2em;
+  }
+ 
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
   }
 
   h4 {

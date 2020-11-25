@@ -22,7 +22,8 @@ article div{
 .img-album{
   text-align: center;
 }
-.album{
+
+.img-container{
   height: 90%;
   width: 90%;
   border-radius: 10%;

@@ -21,7 +21,21 @@ function switchTheme(e) {
           localStorage.setItem('theme', 'light');
     }    
 }
+document.addEventListener("DOMContentLoaded", () => {
 
+let openNav = document.querySelector("#open-comments");
+let closeNav = document.querySelector("#close-comments");
+
+const open = () =>{
+    document.getElementById("comments").style.width = "100%";
+}
+/* Close when someone clicks on the "x" symbol inside the overlay */
+const  close = () => {
+    document.getElementById("comments").style.width = "0%";
+}
+openNav.addEventListener("click", open);
+closeNav.addEventListener("click", close);
+});
 //toggleSwitch.addEventListener('change', switchTheme, true);
 
 

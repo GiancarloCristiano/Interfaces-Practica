@@ -69,3 +69,31 @@
   .color-disabled{
     color: var(--disabled-color);
   }
+
+  .fill-turquesa{
+    fill: var(--turquesa-color);
+  }
+  
+  .fill-turquesa-oscuro{
+    fill: var(--turquesa-oscuro-color);
+  }
+
+  .fill-gris35{
+    fill: var(--gris-35-color);
+  }
+
+  .fill-gris245{
+    fill: var(--gris-245-color);
+  }
+
+  .fill-gris15{
+    fill: var(--gris-15-color);
+  }
+
+  .fill-gris50{
+    fill: var(--gris-50-color);
+  }
+
+  .fill-disabled{
+    fill: var(--disabled-color);
+  }

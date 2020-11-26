@@ -22,15 +22,35 @@ function switchTheme(e) {
     }    
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    let openMenu = document.querySelector("#open-menu-profile");
+    let closeMenu = document.querySelector("#close-menu-profile");
+
+    let openComments = document.querySelector("#open-comments");
+    let closeComments = document.querySelector("#close-comments");
+
+    const open = () =>{
+        document.getElementById("comments").style.width = "100%";
+    }
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    const  close = () => {
+        document.getElementById("comments").style.width = "0%";
+    }
+
+    const openMenuProfile = () =>{
+        document.getElementById("mySidenav").style.width = "280px";
+    }
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    const  closeMenuProfile = () => {
+        document.getElementById("mySidenav").style.width = "0%";
+    }
+
+    openComments.addEventListener("click", open);
+    closeComments.addEventListener("click", close);
+
+    openMenu.addEventListener("click", openMenuProfile);
+    closeMenu.addEventListener("click", closeMenuProfile);
+});
 //toggleSwitch.addEventListener('change', switchTheme, true);
-
-
-
-
-function openNav() {
-    document.getElementById("mySidenav").style.width = "280px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }

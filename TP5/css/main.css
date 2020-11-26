@@ -111,6 +111,8 @@ main{
 }
 .main-btns ul{
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
 .main-btns li{
   display: inline;
@@ -182,3 +184,66 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   transition: background 450ms ease-in;
   stroke: var(--turquesa-color);
   -webkit-appearance: none;*/
+
+  #open-comments{
+    cursor:pointer;   
+  }
+  ::-webkit-scrollbar {display: none;}
+
+  .comments-menu {
+
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 2s;
+    text-align:center;
+  }
+  
+  .comments-menu a {
+    transition: 0.3s;
+  }
+  
+  .comments-menu a:hover{
+    color: #f1f1f1;
+  }
+  
+  .comments-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .comments-menu {padding-top: 15px;}
+    .comments-menu a {font-size: 18px;}
+  }
+
+  /*# Comments region #*/
+  .comments-description{
+    text-align: start;
+  }
+
+  .comments-bar input{
+    background-color: var(--gris-245-color);
+    /* background: url("img/svg/Edit.svg"); */
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 2.5em;
+    width: 100%;
+    border-radius: 10%;
+
+  }
+  .comments-box .row{
+    border-radius: 10%;
+  }
+  .comments-box .bg-gris50{
+    border-radius: 10%;
+  }
+/*# End region #*/

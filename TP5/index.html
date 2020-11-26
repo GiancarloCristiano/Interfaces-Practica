@@ -24,7 +24,7 @@
                             <a href="index.html"><img src="css/img/header/Logo Spoiler5_small.png" class="main-logo"></a>
                         </div>
                         <section class="main-btns col-4">
-                            <ul style="display: flex;  justify-content: space-between;">
+                            <ul>
                                 <li >
                                     <a href="index.html"><img src="css/img/svg/Home_fill.svg"></a>
                                 </li>
@@ -32,15 +32,15 @@
                                     <a href="html/search.html"><img src="css/img/svg/Search.svg"></a>
                                 </li>
                                 <li >
-                                    <a href="#"><img src="css/img/svg/Favs.svg"></a>
+                                    <a href="favs.html"><img src="css/img/svg/Favs.svg"></a>
                                 </li>
                             </ul>
                         </section>
                         <div class="col-2">
-                            <a href="#" ><img src="css/img/header/perfil.jpg" class="profile "  onclick="openNav()" style="float: right;"></a>
+                            <a href="#" ><img src="css/img/header/perfil.jpg" class="profile "  id="open-menu-profile" style="float: right;"></a>
                         </div>
-                        <div id="mySidenav" class="sidenav bg-gris35">
-                            <a href="javascript:void(0)" class="color-gris245 closebtn" onclick="closeNav()"><img src="css/img/svg/Arrow_right.svg" alt=""></a>
+                        <div id="mySidenav" class="sideMenu bg-gris35">
+                            <a  class="color-gris245 closebtn" id="close-menu-profile"><img src="css/img/svg/Arrow_right.svg" alt=""></a>
                             <h1 style="text-align: center;">Cuenta</h1>
                             <a href="#"><img src="css/img/header/perfil.jpg" class="profile sidenav-icon"><span class="color-gris245 " style="font-size: larger;">Cosme Fulanito</span></a>
                             <a class="color-gris245" href="#"><img src="css/img/svg/Profile.svg" class="sidenav-icon">Perfil</a>
@@ -375,7 +375,7 @@
                                 <a href="#"><img src="css/img/svg/Share.svg"></a>
                             </div>
                             <div class="col-2">
-                                <a href="#"><img src="css/img/svg/Dots.svg"></a>
+                                <a id="open-comments" href="#"><img src="css/img/svg/Dots.svg"></a>
                             </div>
                         </div>
                         <div class="col-12" style="padding: 2%; ">
@@ -392,6 +392,167 @@
                     </div>
                 </div>
             </div>   
+        </section>
+        <section>
+            <div id="comments" class="comments-menu">
+                <a  class="closebtn" id="close-comments">&times;</a>
+                <div class="bg-gris15">
+                    <div class="row">
+                        <div class="col-7 bg-gris15">
+                            <article class="comments-description">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="col-3 col-s-4">
+                                            <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                            <img src="css/img/covers/nuevos hits/wos - mugre.jpg" class="img-container song">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="col-12" style="border-bottom: 1px solid red;">
+                                                <h1>Mugre</h4>
+                                                <h3>Wos</h6>
+                                            </div>
+                                            <div class="col-11" >
+                                                <h3>Mugre/mugre/mugrecita/2014</h4>
+                                                <h4>30m|2k reproducciones</h6>
+                                            </div>
+                                            <div class="col-1">
+                                                <a id="open-comments" href="#"><img src="css/img/svg/Dots.svg"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 comments-bar" >
+                                            <input class="bg-gris245" type="search" placeholder="" name="" id="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="comments-box">
+                                <div class="row">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="col-11 bg-gris50">
+                                            <div class="row">
+                                                <a id="open-comments" href="#" class="col-2"><img src="css/img/svg/Profile.svg"></a>
+                                                <h4 class="col-8">Nombre Usuario</h4>
+                                                <h6 class="col-2">fecha</h6>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Lorem ipsum dolor sit amet consectetur, mollitia fugit amet ab eveniet error sed? Sit illo praesentium tempore ratione!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="col-12 bg-gris50" style="float: right; ">
+                                            <div class="row">
+                                                <a id="open-comments" href="#" class="col-2"><img src="css/img/svg/Profile.svg"></a>
+                                                <h4 class="col-8">Nombre Usuario</h4>
+                                                <h6 class="col-2">fecha</h6>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-12">
+                                                    Lorem ipsum dolor sit amet consectetur, mollitia fugit amet ab eveniet error sed? Sit illo praesentium tempore ratione!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="col-11 bg-gris50">
+                                            <div class="row">
+                                                <a id="open-comments" href="#" class="col-2"><img src="css/img/svg/Profile.svg"></a>
+                                                <h4 class="col-8">Nombre Usuario</h4>
+                                                <h6 class="col-2">fecha</h6>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Lorem ipsum dolor sit amet consectetur, mollitia fugit amet ab eveniet error sed? Sit illo praesentium tempore ratione!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="col-12 bg-gris50" style="float: right; ">
+                                            <div class="row">
+                                                <a id="open-comments" href="#" class="col-2"><img src="css/img/svg/Profile.svg"></a>
+                                                <h4 class="col-8">Nombre Usuario</h4>
+                                                <h6 class="col-2">fecha</h6>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-12">
+                                                    Lorem ipsum dolor sit amet consectetur, mollitia fugit amet ab eveniet error sed? Sit illo praesentium tempore ratione!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="col-11 bg-gris50">
+                                            <div class="row">
+                                                <a id="open-comments" href="#" class="col-2"><img src="css/img/svg/Profile.svg"></a>
+                                                <h4 class="col-8">Nombre Usuario</h4>
+                                                <h6 class="col-2">fecha</h6>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Lorem ipsum dolor sit amet consectetur, mollitia fugit amet ab eveniet error sed? Sit illo praesentium tempore ratione!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="col-12 bg-gris50" style="float: right; ">
+                                            <div class="row">
+                                                <a id="open-comments" href="#" class="col-2"><img src="css/img/svg/Profile.svg"></a>
+                                                <h4 class="col-8">Nombre Usuario</h4>
+                                                <h6 class="col-2">fecha</h6>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-12">
+                                                    Lorem ipsum dolor sit amet consectetur, mollitia fugit amet ab eveniet error sed? Sit illo praesentium tempore ratione!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="col-11 bg-gris50">
+                                            <div class="row">
+                                                <a id="open-comments" href="#" class="col-2"><img src="css/img/svg/Profile.svg"></a>
+                                                <h4 class="col-8">Nombre Usuario</h4>
+                                                <h6 class="col-2">fecha</h6>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Lorem ipsum dolor sit amet consectetur, mollitia fugit amet ab eveniet error sed? Sit illo praesentium tempore ratione!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="col-12 bg-gris50" style="float: right; ">
+                                            <div class="row">
+                                                <a id="open-comments" href="#" class="col-2"><img src="css/img/svg/Profile.svg"></a>
+                                                <h4 class="col-8">Nombre Usuario</h4>
+                                                <h6 class="col-2">fecha</h6>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-12">
+                                                    Lorem ipsum dolor sit amet consectetur, mollitia fugit amet ab eveniet error sed? Sit illo praesentium tempore ratione!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                            </article>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <span id="open-comments">&#9776;</span>      
         </section>
         <script type='text/javascript' src='js/main.js'></script>
     </body>

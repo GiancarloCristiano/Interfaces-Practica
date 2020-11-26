@@ -153,14 +153,14 @@ input[type=range]{
   background-color: var(--gris-35-color);
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type=range]::-webkit-slider-runnable-track,input[type=range]::-moz-range-track {
   height: 5px;
   background: linear-gradient(to right, var(--turquesa-color) 0%, var(--turquesa-color) 50%, var(--gris-15-color) 50%, var(--gris-15-color));
 
   border-radius: 10px;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb,input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   border: none;
   height: 13px;
@@ -174,7 +174,7 @@ input[type=range]:focus {
   outline: none;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
+input[type=range]:focus::-webkit-slider-runnable-track,input[type=range]:focus::-moz-range-track  {
   background: var(--turquesa-color);
 }
 
@@ -189,6 +189,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     cursor:pointer;   
   }
   ::-webkit-scrollbar {display: none;}
+  *{scrollbar-width: none;}
 
   .comments-menu {
     padding-top: 4em;

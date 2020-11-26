@@ -10,13 +10,14 @@
         <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="css/colors.css" type="text/css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="css/texts.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="css/sidenav.css" type="text/css" media="screen" charset="utf-8">
         <link rel="icon" type="image/png" href="images/favicon.png"/> <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
         <title>Spoiler 5</title>
     </head>
     <body>
         <header class="bg-gris15">
-            <nav class="bg-gris15">
+            <nav>
                 <div class="container">
                     <div class="row">
                         <div class="col-2">
@@ -36,8 +37,20 @@
                             </ul>
                         </section>
                         <div class="col-2">
-                            <a  href="#" ><img src="css/img/header/perfil.jpg" class="profile "  style="float: right;"></a>
+                            <a href="#" ><img src="css/img/header/perfil.jpg" class="profile "  onclick="openNav()" style="float: right;"></a>
                         </div>
+                        <div id="mySidenav" class="sidenav bg-gris35">
+                            <a href="javascript:void(0)" class="color-gris245 closebtn" onclick="closeNav()">&times;</a>
+                            <h1 style="text-align: center;">Cuenta</h1>
+                            <a href="#"><img src="css/img/header/perfil.jpg" class="profile sidenav-icon"><span class="color-gris245 " style="font-size: larger;">Cosme Fulanito</span></a>
+                            <a class="color-gris245" href="#"><img src="css/img/svg/Profile.svg" class="sidenav-icon">Perfil</a>
+                            <a class="color-gris245" href="#"><img src="css/img/svg/Notification.svg" class="sidenav-icon">Notificaciones</a>
+                            <a class="color-gris245" href="#"><img src="css/img/svg/Historial.svg" class="sidenav-icon">Historial</a>
+                            <a class="color-gris245" href="#"><img src="css/img/svg/Plans.svg" class="sidenav-icon">Planes Premium</a>
+                            <a class="color-gris245" href="#"><img src="css/img/svg/Config.svg" class="sidenav-icon">Ajustes</a>
+                            <a class="color-gris245" href="#"><img src="css/img/svg/Help.svg" class="sidenav-icon">Ayuda</a>
+                            <a class="color-gris245" href="#"><img src="css/img/svg/Log Out.svg" class="sidenav-icon">Cerrar sesión</a>
+                          </div>
                     </div>
                 </div>
                 
@@ -46,7 +59,7 @@
         <main class="bg-gris15">
             <section class="row">
                 <div class="col-9 bg-gris15">
-                    <h1 class="main-title">Bienvenido</h1>
+                    <h1 class="main-title color-disabled">Bienvenido</h1>
                     <article class="">
                         <div class="row">
                             <div class="col-8">

@@ -183,7 +183,10 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   #open-comments{
     cursor:pointer;   
   }
+  ::-webkit-scrollbar {display: none;}
+
   .comments-menu {
+
     height: 100%;
     width: 0;
     position: fixed;
@@ -197,11 +200,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   }
   
   .comments-menu a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
     transition: 0.3s;
   }
   

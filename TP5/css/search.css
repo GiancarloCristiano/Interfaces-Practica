@@ -19,7 +19,27 @@
     display: inline-block;
     text-align: center;
     margin-left:0vw;
-  }
+}
+
+/* picture{
+    position: relative;
+    height: 0;
+    width: 0;
+}
+picture::before{
+    content: url('img/svg/Album.svg');
+    display:block;
+    width: 0px;
+    height: 0%;
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+} */
+
+/* .img-container img{
+    border-image-source: url('img/svg/Album.svg');
+    border-image-width: 20px;
+} */
 
 /* Mobile---------------------------------- */
 

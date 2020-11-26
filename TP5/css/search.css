@@ -41,7 +41,7 @@ picture::before{
     border-image-width: 20px;
 } */
 
-/* Mobile---------------------------------- */
+/* Mobile------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
     .hidden-on-mobile{
@@ -71,5 +71,9 @@ picture::before{
     .row-search>*:nth-child(n+4){
         display: none;
     }
-                                              
+         
+    .like-button-mini-reproductor{
+        position: absolute;
+        right: 6%;
+    }
 }

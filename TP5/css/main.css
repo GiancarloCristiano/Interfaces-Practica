@@ -58,6 +58,11 @@ article div{
 .text-player{ 
   margin-left: 1%;
 }
+.text-player>*{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
 
 .player, header{
   position: fixed;

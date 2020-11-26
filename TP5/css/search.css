@@ -1,4 +1,19 @@
+#filters{
+    text-align: center; 
+    display:flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin-bottom: 2vh;
+}
 
+#filters>h4{
+    border: 1.7px solid; 
+    border-radius: 50vw;
+    z-index: 2;
+}
+#filters>h4:hover{
+    cursor: pointer;
+}
 
 .texto-img-grid-lista{
     display: inline-block;
@@ -9,6 +24,20 @@
 /* Mobile---------------------------------- */
 
 @media only screen and (max-width: 600px) {
+    .hidden-on-mobile{
+        display: none!important;
+    }
+
+    .filter-left, .filter-right{
+        margin-top: 1vh;
+    }
+    .filter-left{
+        margin-left: 15vw;
+    }
+    .filter-right{
+        margin-right: 15vw;
+    }
+
     .texto-img-grid-lista{
         margin-left: 4vw;
         text-align: left;

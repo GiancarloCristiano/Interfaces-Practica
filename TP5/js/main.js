@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let openMenu = document.querySelector("#open-menu-profile");
     let closeMenu = document.querySelector("#close-menu-profile");
 
-    let openNav = document.querySelector("#open-comments");
-    let closeNav = document.querySelector("#close-comments");
+    let openComments = document.querySelector("#open-comments");
+    let closeComments = document.querySelector("#close-comments");
 
     const open = () =>{
         document.getElementById("comments").style.width = "100%";
@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const  closeMenuProfile = () => {
         document.getElementById("mySidenav").style.width = "0%";
     }
-    openNav.addEventListener("click", open);
-    closeNav.addEventListener("click", close);
+    openComments.addEventListener("click", open);
+    closeComments.addEventListener("click", close);
 
     openMenu.addEventListener("click", openMenuProfile);
     closeMenu.addEventListener("click", closeMenuProfile);

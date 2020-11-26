@@ -21,30 +21,35 @@ function switchTheme(e) {
           localStorage.setItem('theme', 'light');
     }    
 }
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
-let openNav = document.querySelector("#open-comments");
-let closeNav = document.querySelector("#close-comments");
+    let openMenu = document.querySelector("#open-menu-profile");
+    let closeMenu = document.querySelector("#close-menu-profile");
 
-const open = () =>{
-    document.getElementById("comments").style.width = "100%";
-}
-/* Close when someone clicks on the "x" symbol inside the overlay */
-const  close = () => {
-    document.getElementById("comments").style.width = "0%";
-}
-openNav.addEventListener("click", open);
-closeNav.addEventListener("click", close);
+    let openNav = document.querySelector("#open-comments");
+    let closeNav = document.querySelector("#close-comments");
+
+    const open = () =>{
+        document.getElementById("comments").style.width = "100%";
+    }
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    const  close = () => {
+        document.getElementById("comments").style.width = "0%";
+    }
+
+    const openMenuProfile = () =>{
+        document.getElementById("mySidenav").style.width = "280px";
+    }
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    const  closeMenuProfile = () => {
+        document.getElementById("mySidenav").style.width = "0%";
+    }
+    openNav.addEventListener("click", open);
+    closeNav.addEventListener("click", close);
+
+    openMenu.addEventListener("click", openMenuProfile);
+    closeMenu.addEventListener("click", closeMenuProfile);
 });
 //toggleSwitch.addEventListener('change', switchTheme, true);
-
-
-
-
-function openNav() {
-    document.getElementById("mySidenav").style.width = "280px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }

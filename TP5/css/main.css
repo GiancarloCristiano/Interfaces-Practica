@@ -186,7 +186,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   ::-webkit-scrollbar {display: none;}
 
   .comments-menu {
-
+    padding-top: 5em;
+    padding-bottom: 5em;
     height: 100%;
     width: 0;
     position: fixed;
@@ -200,6 +201,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   }
   
   .comments-menu a {
+    text-decoration: none;
+    color: #818181;
+    display: block;
     transition: 0.3s;
   }
   
@@ -232,13 +236,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     background-position: right;
     height: 2.5em;
     width: 100%;
-    border-radius: 10%;
+    border-radius: 50vw;
 
   }
-  .comments-box .row{
-    border-radius: 10%;
+  .comments-box .row .bg-gris50{
+    border-radius: 50vw;
   }
-  .comments-box .bg-gris50{
-    border-radius: 10%;
-  }
+  
 /*# End region #*/

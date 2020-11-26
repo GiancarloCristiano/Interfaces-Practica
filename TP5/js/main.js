@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let closeComments = document.querySelector("#close-comments");
 
     const open = () =>{
-        document.getElementById("comments").style.width = "100%";
+        document.getElementById("comments").style.right = "0%";
     }
     /* Close when someone clicks on the "x" symbol inside the overlay */
     const  close = () => {
-        document.getElementById("comments").style.width = "0%";
+        document.getElementById("comments").style.right = "-100%";
     }
 
     const openMenuProfile = () =>{

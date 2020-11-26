@@ -194,11 +194,11 @@ input[type=range]:focus::-webkit-slider-runnable-track {
     padding-top: 5em;
     padding-bottom: 5em;
     height: 100%;
-    width: 0;
+    right: -100%;
+    width: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 2s;

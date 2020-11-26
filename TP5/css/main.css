@@ -68,6 +68,9 @@ article div{
 .player .container .row, nav .container .row{
   justify-content: space-between;
 }
+nav .container .row .main-btns{
+  
+}
 .progress-bar{
   width: 100%;
 }

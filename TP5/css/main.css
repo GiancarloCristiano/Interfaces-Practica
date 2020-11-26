@@ -21,7 +21,7 @@ article div{
 }
 
 .triangle{
-  /* float: right; */
+  /*float: right;*/
   position: absolute;
   /* left: 0; */
   width: 1px;
@@ -43,12 +43,17 @@ article div{
   text-align: center;
 }
 
-.img-player{ 
-  height: 60px;
-  width: 60px;
-  border-radius: 10%;
-
+.img-container:hover{
+  opacity: 0.5;
 }
+
+.img-player{ 
+  /* height: 60px;
+  width: 60px; */
+  border-radius: 10%;
+}
+
+
 
 .text-player{ 
   margin-left: 1%;
@@ -74,6 +79,7 @@ article div{
 .player .container .row, nav .container .row{
   justify-content: space-between;
 }
+
 .progress-bar{
   width: 100%;
 }
@@ -91,7 +97,7 @@ main{
   padding-bottom: 5em;
 }
 .main-btns{
-  width: 25%;
+  width: 100%;
 }
 .main-btns ul, .main-btns li{
   text-align: center;
@@ -101,21 +107,18 @@ main{
 }
 .main-btns li{
   display: inline;
-  margin: 0 80px 0 0;
 }
 .main-btns li a{
-  padding: 2px 7px 2px 7px;
   text-decoration: none;
 }
 .main-btns li a:hover{
   background-color: var(--turquesa-color);
 }
 .main-logo{
-  width: 100%;
+  width: 60%;
 }
 .profile {
-  float: right;
-  width: 22%;
+  width: 19%;
   border-radius: 50%;
 }
 

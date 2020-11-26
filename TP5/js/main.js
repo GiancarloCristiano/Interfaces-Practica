@@ -37,3 +37,14 @@ openNav.addEventListener("click", open);
 closeNav.addEventListener("click", close);
 });
 //toggleSwitch.addEventListener('change', switchTheme, true);
+
+
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "280px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }

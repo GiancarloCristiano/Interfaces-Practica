@@ -191,7 +191,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   ::-webkit-scrollbar {display: none;}
 
   .comments-menu {
-    padding-top: 5em;
+    padding-top: 4em;
     padding-bottom: 5em;
     height: 100%;
     right: -100%;

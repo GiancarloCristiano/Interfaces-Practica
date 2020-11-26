@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const  closeMenuProfile = () => {
         document.getElementById("mySidenav").style.width = "0%";
     }
+
     openComments.addEventListener("click", open);
     closeComments.addEventListener("click", close);
 

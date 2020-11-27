@@ -219,8 +219,38 @@ input[type=range]:focus::-moz-range-track  {
     overflow-x: hidden;
     transition: 1s;
     text-align:center;
+    /* animation: comments-open-keyframes 0.5s ease-in; */
   }
-  
+
+
+  .comments-animation-open{
+    animation: comments-open-keyframes 1s ease-in; 
+  }
+  @keyframes comments-open-keyframes{
+    0%{
+      /* transform: perspective(100%) translate3d(0px, 0%, -10%); */
+      transform: scale3d(0.7,0.7,0.7);
+    }
+    100%{
+      /* transform: perspective(100%) translate3d(100px, -100%, 10%); */
+      transform: scale3d(1,1,1);
+    }
+  }
+  .comments-animation-close{
+    animation: comments-open-keyframes 0.5s ease-in; 
+  }
+  @keyframes comments-close-keyframes{
+    0%{
+      /* transform: perspective(100%) translate3d(0px, 0%, -10%); */
+      transform: scale3d(1,1,1);
+    }
+    100%{
+      /* transform: perspective(100%) translate3d(100px, -100%, 10%); */
+      transform: scale3d(0.7,0.7,0.7);
+    }
+  }
+
+
   .comments-menu a {
     text-decoration: none;
     color: #818181;

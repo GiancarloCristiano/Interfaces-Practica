@@ -203,11 +203,12 @@ input[type=range]:focus::-moz-range-track  {
   #open-comments{
     cursor:pointer;   
   }
-  ::-webkit-scrollbar {display: none;}
   *{scrollbar-width: none;}
 
+  ::-webkit-scrollbar {display: none;}
+
   .comments-menu {
-    padding-top: 4em;
+    padding-top: 5em;
     padding-bottom: 5em;
     height: 100%;
     right: -100%;

@@ -325,3 +325,20 @@ open-comments {
     transform: scale(1.1);
   }
 }
+
+
+
+
+@media (max-width: 600px) {
+#main {
+  padding-top: 7vh;
+}
+.main-title{
+  margin-bottom: 0;
+}
+
+
+/*# Comments region #*/
+.comments-description{
+}
+

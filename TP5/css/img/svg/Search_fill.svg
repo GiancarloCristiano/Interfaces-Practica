@@ -1,3 +1,19 @@
-<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M13.2828 8.64054C13.2828 11.2031 11.2052 13.2811 8.64141 13.2811C6.07765 13.2811 4 11.2031 4 8.64054C4 6.07802 6.07765 4 8.64141 4C11.2052 4 13.2828 6.07802 13.2828 8.64054ZM13.1716 16C11.8544 16.8124 10.3026 17.2811 8.64141 17.2811C3.86889 17.2811 0 13.4126 0 8.64054C0 3.8685 3.86889 0 8.64141 0C13.4139 0 17.2828 3.8685 17.2828 8.64054C17.2828 10.3023 16.8136 11.8546 16.0005 13.172L18.2429 15.4141C19.0239 16.1952 19.0239 17.4614 18.2429 18.2424C17.4618 19.0234 16.1954 19.0234 15.4143 18.2424L13.1716 16Z" fill="#F5F5F5"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2020 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="4.9818mm" height="4.9816mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 493.7 493.68"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:whitesmoke}
+   ]]>
+  </style>
+ </defs>
+ <g id="Capa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M145.42 226.55c0,67.19 54.48,121.68 121.71,121.68 67.22,0 121.7,-54.49 121.7,-121.68 0,-67.19 -54.48,-121.68 -121.7,-121.68 -67.23,0 -121.71,54.49 -121.71,121.68zm2.92 192.97c34.54,21.3 75.22,33.59 118.78,33.59 125.13,0 226.57,-101.43 226.57,-226.55 0,-125.12 -101.44,-226.55 -226.57,-226.55 -125.14,0 -226.58,101.43 -226.58,226.55 0,43.57 12.3,84.28 33.62,118.82l-58.8 58.79c-20.48,20.47 -20.48,53.68 0,74.16 20.47,20.47 53.68,20.47 74.17,0l58.81 -58.8z"/>
+ </g>
 </svg>

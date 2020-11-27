@@ -56,6 +56,10 @@
     font-size: 24px;
   }
 
+  h3 {
+    font-size: 18px;
+  }
+
   h4 {
     font-weight: var(--light-font);
     font-size: 15px;
@@ -74,4 +78,39 @@
 
   .asap{
     font-family: var(--asap-font);
+  }
+
+
+  @media (max-width: 600px) {
+    .main-title {
+      font-size: 2em;
+    }
+      h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 16px;
+      }
+      h3 {
+        font-size: 14px;
+      }
+      h4 {
+        font-size: 11px;
+      }
+      h5 {
+        font-size: 11px;
+      }
+      h6 {
+        font-size: 11px;
+      }
+      p {
+        font-size: 11px;
+      }
+
+      h4, h6{
+        overflow: scroll;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+
+
   }

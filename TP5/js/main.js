@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let closeMenu = document.querySelector("#close-menu-profile");
     let screenWidth = innerWidth;
 
+    
+    let openCommentsPlayer = document.querySelector("#open-comments-player");
     let openComments = document.querySelector("#open-comments");
     let closeComments = document.querySelector("#close-comments");
 
@@ -51,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("mySidenav").style.width = "0%";
     }
 
+    openCommentsPlayer.addEventListener("click", open);
     openComments.addEventListener("click", open);
     closeComments.addEventListener("click", close);
 

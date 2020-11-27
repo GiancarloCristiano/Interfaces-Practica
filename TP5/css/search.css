@@ -47,6 +47,25 @@ picture::before{
     border-image-width: 20px;
 } */
 
+.main-title-search{
+    padding-top: 2%;
+}
+
+#search-input{
+    border-radius: 50vw;
+    border: none;
+    height: 2.2em;
+    padding-left: 1em;
+    padding-right: 2.2em;
+}
+
+#lupita {
+    position: absolute;
+    right: 0.2em;
+    top: 0.1em;
+}
+
+
 /* Mobile------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
@@ -83,8 +102,8 @@ picture::before{
     }
      
     .player{
-        border-top-left-radius: 0.7em;
-        border-top-right-radius: 0.7em;
+        border-top-left-radius: 1.5em;
+        border-top-right-radius: 1.5em;
         /* Tiene que ser igual a la altura del de abajo */
         bottom: 2.4em;
     }
@@ -106,4 +125,47 @@ picture::before{
         text-align: center;
         line-height: 100%;
     }
+
+
+
+
+#search-input{
+    width: 330px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-right: 2.2em;
+}
+
+#lupita {
+    position: absolute;
+    right: 0.2em;
+    top: 0.5em;
+}
+
+.texto-img-grid-lista{
+    margin-left: 4vw;
+    text-align: left;
+    margin-bottom: 2vw;
+}
+.texto-img-grid-lista h4{
+    margin-top: 1vw;
+    font-size: large;
+    margin-bottom: 1vw;
+}
+.texto-img-grid-lista h6{
+    margin-top: 0vw;
+    font-size: 13px;
+    margin-bottom: 3vw;
+}
+.main-title-search{
+    margin-top: 4vh;
+    margin-bottom: -6vh;
+    font-size: 2em;
+}
+
+.info-player{
+    margin-left: 3vw;
+}
+
+
 }

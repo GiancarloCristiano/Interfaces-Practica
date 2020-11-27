@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../css/colors.css">
         <link rel="stylesheet" href="../css/texts.css">
         <link rel="stylesheet" href="../css/search.css">
+        <link rel="stylesheet" href="../css/sidenav.css" type="text/css" media="screen" charset="utf-8">
         <link rel="icon" type="image/png" href="../images/favicon.png"/> <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
         <title>Spoiler 5</title>
@@ -38,18 +39,30 @@
                                         <!-- <a href="#" class="col-1 fill-disabled" style="position: absolute; right: 0.2em; top: 0.2em;"><img class="fill-disabled" src="../css/img/svg/Search.svg"></a> -->
                                         <i class="col-1" style="position: absolute; right: 0.2em; top: 0.1em;">
                                             <svg width="19" height="19" viewBox="0 0 19 19" file="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="fill-disabled" fill-rule="evenodd" clip-rule="evenodd" d="M3.71719 8.64054C3.71719 12.3078 6.69046 15.2811 10.3586 15.2811C14.0267 15.2811 17 12.3078 17 8.64054C17 4.97326 14.0267 2 10.3586 2C6.69046 2 3.71719 4.97326 3.71719 8.64054ZM4.90188 15.3408C6.38973 16.5538 8.28922 17.2811 10.3586 17.2811C15.1311 17.2811 19 13.4126 19 8.64054C19 3.8685 15.1311 0 10.3586 0C5.58608 0 1.71719 3.8685 1.71719 8.64054C1.71719 10.6228 2.38473 12.4491 3.50729 13.907L0.585701 16.8283C0.195156 17.2188 0.195156 17.8519 0.585699 18.2424C0.976244 18.6329 1.60944 18.6329 1.99998 18.2424L4.90188 15.3408Z" fill="#F5F5F5"/>
+                                                <path class="fill-gris15" fill-rule="evenodd" clip-rule="evenodd" d="M3.71719 8.64054C3.71719 12.3078 6.69046 15.2811 10.3586 15.2811C14.0267 15.2811 17 12.3078 17 8.64054C17 4.97326 14.0267 2 10.3586 2C6.69046 2 3.71719 4.97326 3.71719 8.64054ZM4.90188 15.3408C6.38973 16.5538 8.28922 17.2811 10.3586 17.2811C15.1311 17.2811 19 13.4126 19 8.64054C19 3.8685 15.1311 0 10.3586 0C5.58608 0 1.71719 3.8685 1.71719 8.64054C1.71719 10.6228 2.38473 12.4491 3.50729 13.907L0.585701 16.8283C0.195156 17.2188 0.195156 17.8519 0.585699 18.2424C0.976244 18.6329 1.60944 18.6329 1.99998 18.2424L4.90188 15.3408Z" fill="#0F0F0F;"/>
                                             </svg>
                                         </i>
                                     </div>
                                 </li>
                                 <li style="text-align: left" class="col-3 hidden-on-mobile">
-                                    <a href="../favs.html" class="hidden-on-mobile"><img src="../css/img/svg/Favs.svg"></a>
+                                    <a href="favs.html" class="hidden-on-mobile"><img src="../css/img/svg/Favs.svg"></a>
                                 </li>
                             </ul>
                         </section>
-                        <div class="col-2 hidden-on-mobile">
-                            <a  href="#" class="hidden-on-mobile"><img src="../css/img/header/perfil.jpg" class="profile" style="float: right; margin-right: 1vw;"></a>
+                        <div class="col-2">
+                            <a href="#" ><img src="../css/img/header/perfil.jpg" class="profile "  id="open-menu-profile" style="float: right;"></a>
+                        </div>
+                        <div id="mySidenav" class="sideMenu bg-gris35">
+                            <a  class="color-gris245 closebtn" id="close-menu-profile"><img src="../css/img/svg/Arrow_right.svg" alt=""></a>
+                            <h1 style="text-align: center;">Cuenta</h1>
+                            <a href="#"><img src="../css/img/header/perfil.jpg" class="profile sidenav-icon"><span class="color-gris245 " style="font-size: larger;">Cosme Fulanito</span></a>
+                            <a class="color-gris245" href="#"><img src="../css/img/svg/Profile.svg" class="sidenav-icon">Perfil</a>
+                            <a class="color-gris245" href="#"><img src="../css/img/svg/Notification.svg" class="sidenav-icon">Notificaciones</a>
+                            <a class="color-gris245" href="#"><img src="../css/img/svg/Historial.svg" class="sidenav-icon">Historial</a>
+                            <a class="color-gris245" href="#"><img src="../css/img/svg/Plans.svg" class="sidenav-icon">Planes Premium</a>
+                            <a class="color-gris245" href="#"><img src="../css/img/svg/Config.svg" class="sidenav-icon">Ajustes</a>
+                            <a class="color-gris245" href="#"><img src="../css/img/svg/Help.svg" class="sidenav-icon">Ayuda</a>
+                            <a class="color-gris245" href="#"><img src="../css/img/svg/Log Out.svg" class="sidenav-icon">Cerrar sesión</a>
                         </div>
                     </div>
                 </div>
@@ -68,6 +81,7 @@
         <main class="bg-gris15">
             <section class="row">
                 <div class="col-9 col-s-11">
+                    <h1 class="main-title color-disabled" style="padding-top: 2%;">Búsquedas</h1>
                     <article class="">
                         <div class="row" style="margin-top: 2em;">
                             <div class="col-8">
@@ -474,53 +488,53 @@
         <section class="player bg-gris35">
             <div class="container">
                 <div class="row" >
-                    <div class="col-s-3 col-3">
-                        <div class="row">
-                            <div class="col-3 hidden-on-mobile">
+                    <div class="col-3">
+                        <div class="row" >
+                            <div class="col-3" >
                                 <img src="../css/img/covers/nuevos hits/maluma y the weeknd - hawai.jpg" class="img-container">
                             </div>
-                            <div class="col-s-10 col-6 text-player">
-                                <h4 class="col-s-12">Hawai (Remix)</h4>
-                                <h6 class="col-s-12">Maluma ft. The Weeknd</h6>
+                            <div class="col-6 text-player">
+                                <h4>Hawai (Remix)</h4>
+                                <h6>Maluma ft. The Weeknd</h6>
                             </div>
-                            <div class="col-s-3 col-3 heart-button-mini-reproductor">
+                            <div class="col-3">
                                 <a href="#"><img src="../css/img/svg/Heart.svg"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-s-12 col-4">
-                        <div class="col-12" style="text-align: center; transform: scale3d(0.8, 0.8, 0.8)">
-                            <div class="col-1 color-disabled font-light hidden-on-mobile">
+                    <div class="col-4">
+                        <div class="col-12" style="text-align: center; ">
+                            <div class="col-1 color-disabled font-light">
                                 1:50
                             </div>
-                            <div class="col-3 hidden-on-mobile">
+                            <div class="col-3">
                                 <a href="#"><img src="../css/img/svg/Dislike.svg"></a>
                             </div>
-                            <div class="col-s-3 col-1">
+                            <div class="col-1">
                                 <a href="#"><img src="../css/img/svg/Rewind.svg"></a>
                             </div>
-                            <div class="col-s-3 col-2">
+                            <div class="col-2">
                                 <a href="#"><img src="../css/img/svg/Play.svg"></a>
                             </div>
-                            <div class="col-s-2 col-1">
+                            <div class="col-1">
                                 <a href="#"><img src="../css/img/svg/Forward.svg"></a>
                             </div>
-                            <div class=" col-3 hidden-on-mobile">
+                            <div class="col-3">
                                 <a href="#"><img src="../css/img/svg/Like.svg"></a>
                             </div>
-                            <div class="col-1 color-disabled font-light hidden-on-mobile">
+                            <div class="col-1 color-disabled font-light">
                                 1:50
                             </div>
                         </div>
                         <div class="col-12" style="padding: 0.5%; ">
                          
                         </div>
-                        <div class="col-12 hidden-on-mobile">
+                        <div class="col-12">
                             <input class="progress-bar" type="range">
                         </div>
                     </div>
-                    <div class="col-s-2 col-3">
-                        <div class="col-12 hidden-on-mobile" style="text-align: center;">
+                    <div class="col-3">
+                        <div class="col-12" style="text-align: center;">
                             <div class="col-3">
                                 <a href="#"><img src="../css/img/svg/Shuffle.svg"></a>
                             </div>
@@ -531,17 +545,17 @@
                                 <a href="#"><img src="../css/img/svg/Share.svg"></a>
                             </div>
                             <div class="col-2">
-                                <a href="#"><img src="../css/img/svg/Dots.svg"></a>
+                                <a  id="open-comments" href="#"><img src="../css/img/svg/Dots.svg"></a>
                             </div>
                         </div>
                         <div class="col-12" style="padding: 2%; ">
                          
                         </div>
-                        <div class="col-s-12 col-12" style="text-align: center; ">
+                        <div class="col-12" style="text-align: center; ">
                             <div class="col-3">
-                                <a href="#"><img src="../css/img/svg/Volume_hight.svg"></a>
+                                <a href="#"><img src="../css/img/svg/Volume_high.svg"></a>
                             </div>
-                            <div class="col-7 hidden-on-mobile">
+                            <div class="col-7">
                                 <input class="progress-bar" type="range">
                             </div>
                         </div>
@@ -558,11 +572,293 @@
                     <a href="#"><img src="../css/img/svg/Search_fill.svg"></a>
                 </div>
                 <div class="col-s-4">
-                    <a href="../favs.html"><img src="../css/img/svg/Favs.svg"></a>
+                    <a href="favs.html"><img src="../css/img/svg/Favs.svg"></a>
                 </div>
             </div>
         </section>
-        <script type='text/javascript' src='js/main.js'></script>
+        <section>
+            <div id="comments" class="comments-menu">
+                <a  class="closebtn" id="close-comments">&times;</a>
+                <div class="bg-gris15">
+                    <div class="row">
+                        <div class="col-7 bg-gris15">
+                            <article class="comments-description">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="col-3 col-s-4">
+                                            <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                            <img src="css/img/covers/nuevos hits/maluma y the weeknd - hawai.jpg" class="img-container song">
+                                        </div>
+                                        <div class="col-9">
+                                            <div class="col-12" style="border-bottom: 3px solid var(--gris-35-color);">
+                                                <h1>Hawai (Remix)</h1>
+                                                <h2 class="font-light">Maluma ft. The Weeknd</h2>
+                                            </div>
+                                            <div class="col-11">
+                                                <h3>Papi Juancho</h4>
+                                                <h3 class="font-light color-disabled">3:40&emsp;2020</h3>
+                                                <h3 class="asap color-disabled"><img class="likes-count" src="css/img/svg/Like.svg"> 3m &emsp;<img class="likes-count" src="css/img/svg/Dislike.svg"> 10k &emsp;10m reproducciones</h3>
+                                                
+                                            </div>
+                                            <div class="col-1">
+                                                <a id="open-comments" href="#"><img src="css/img/svg/Dots.svg"></a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 comments-bar" >
+                                            <input class="bg-gris245 asap" type="search" placeholder="¡Comentá acá, podrás ganar importantes premios como planes premium anuales, entradas, discos y merchandising oficial!" name="" id=""> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="comments-box">
+                                <div class="row less-padding">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Exe.jpg"></a>
+                                                <h3 class="col-8 text-light text-left">Exequiel H</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">27/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Muy pegadiza y trucada como toda canción moderna. Aguante el canto limpio del folklore.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50" style="float: right;">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Gian.jpg"></a>
+                                                <h3 class="col-8 text-light text-left">Giancarlo C</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">27/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Temaiken. El negro The Weeknd es un groso.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row less-padding">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Juanpi.png"></a>
+                                                <h3 class="col-8 text-light text-left">Juanpi P</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">27/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    La va a romper este Verano en mi querido Claromecó :D
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50" style="float: right;">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Javi R.png"></a>
+                                                <h3 class="col-8 text-light text-left">Javi R</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">20/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Tuki tuki y ya tenés el remix.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row less-padding">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Javi D.jpg"></a>
+                                                <h3 class="col-8 text-light text-left">Javi D</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">20/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Esa mala práctica si se puede ver.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50" style="float: right;">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Franco.jpg"></a>
+                                                <h3 class="col-8 text-light text-left">Franco S</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">20/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Cómo se extrañan las épocas de buena música como mi amado Pink Floyd.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row less-padding">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Lucre.png"></a>
+                                                <h3 class="col-8 text-light text-left">Lucre L</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">17/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Ay yo también quiero ir a Hawai T.T
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50" style="float: right;">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Octa.png"></a>
+                                                <h3 class="col-8 text-light text-left">Octa P</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">17/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    ¡Aguante el Rock and Roll vieja!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row less-padding">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Nacho.jpg"></a>
+                                                <h3 class="col-8 text-light text-left">Nacho F</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">11/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    La compañía ideal para una noche de verano mirando las sierras y codeando.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50" style="float: right;">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Manu G.png"></a>
+                                                <h3 class="col-8 text-light text-left">Manu G</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">10/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Todo bien con Maluma, me motiva a diseñar mejor.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row less-padding">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Leo M.jpg"></a>
+                                                <h3 class="col-8 text-light text-left">Leo M</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">7/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Saquen esta porquería por favor.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50" style="float: right;">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Santi.png"></a>
+                                                <h3 class="col-8 text-light text-left">Santi DP</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">7/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Soy más de la cumbia noventosa pero me adapto.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row less-padding">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Andrelo.png"></a>
+                                                <h3 class="col-8 text-light text-left">Andrelo L</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">2/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Vas a verme llegar, vas a oír mi canción. Vas a entrar sin pedirme la llave.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50" style="float: right;">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Manu H.png"></a>
+                                                <h3 class="col-8 text-light text-left">Manu H</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">1/11/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    Aguante el rojo, no me importa nada.
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="row less-padding">
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Pocha.png"></a>
+                                                <h3 class="col-8 text-light text-left">Pocha DB</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">31/10/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    ¡Lo que va a sonar en Neco este verano 2021!
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-6 bg-gris15">
+                                        <div class="comment bg-gris50" style="float: right;">
+                                            <div class="row c">
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Caro.png"></a>
+                                                <h3 class="col-8 text-light text-left">Caro N</h3>
+                                                <h5 class="col-2 asap color-disabled text-right">27/10/20</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p class="col-11">
+                                                    ¡Fiesta! los amo :3
+                                                </p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div> 
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <span id="open-comments">&#9776;</span>      
+        </section>
+        <script type='text/javascript' src='../js/main.js'></script>
     </body>
 
 </html>

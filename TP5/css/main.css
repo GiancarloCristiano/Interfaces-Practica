@@ -110,9 +110,7 @@ main{
 .main-btns li a{
   text-decoration: none;
 }
-.main-btns li a:hover{
-  background-color: var(--turquesa-color);
-}
+
 .main-logo{
   width: 60%;
 }

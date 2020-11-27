@@ -21,6 +21,12 @@
     margin-left:0vw;
 }
 
+.hidden-on-desktop{
+    display: none;
+}
+.hidden-on-mobile{
+    display: unset;
+}
 /* picture{
     position: relative;
     height: 0;
@@ -45,7 +51,11 @@ picture::before{
 
 @media only screen and (max-width: 600px) {
     .hidden-on-mobile{
-        display: none!important;
+        display: none;
+        /* visibility: hidden; */
+    }
+    .hidden-on-desktop{
+        display: unset;
     }
 
     .filter-left, .filter-right{
@@ -84,11 +94,16 @@ picture::before{
         height: 2.4em;
         line-height: 2em;
         text-align: center;
+        z-index: 200;
     }
     .heart-button-mini-reproductor{
         position: absolute;
         right: 2%;
         transform: scale3d(0.8,0.8,0.8);
         z-index: 1;
+    }
+    .volume-button-mini-player{
+        text-align: center;
+        line-height: 100%;
     }
 }

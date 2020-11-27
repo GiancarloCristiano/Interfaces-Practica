@@ -58,6 +58,7 @@ article div{
   padding: 1%;
 }
 .player {
+  width: 100%;
   bottom: 0;
   max-height: 5.4em;
   text-decoration: none;

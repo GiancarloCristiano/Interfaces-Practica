@@ -71,9 +71,24 @@ picture::before{
     .row-search>*:nth-child(n+4){
         display: none;
     }
-         
-    .like-button-mini-reproductor{
+     
+    .player{
+        border-top-left-radius: 0.7em;
+        border-top-right-radius: 0.7em;
+        /* Tiene que ser igual a la altura del de abajo */
+        bottom: 2.4em;
+    }
+    .mini-player-mobile{
+        position: fixed; 
+        bottom: 0;
+        height: 2.4em;
+        line-height: 2em;
+        text-align: center;
+    }
+    .heart-button-mini-reproductor{
         position: absolute;
-        right: 6%;
+        right: 2%;
+        transform: scale3d(0.8,0.8,0.8);
+        z-index: 1;
     }
 }

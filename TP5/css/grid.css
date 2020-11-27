@@ -77,6 +77,7 @@
 
 @media only screen and (max-width: 600px) {
   /* For tablets: */
+  .col-s-0 {width: 0;}
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
   .col-s-3 {width: 25%;}

@@ -4,44 +4,53 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta
-        name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8">
-        <link rel="stylesheet" href="css/grid.css" type="text/css" media="screen" charset="utf-8">
-        <link rel="stylesheet" href="css/search.css">
-        <link rel="stylesheet" href="css/colors.css" type="text/css" media="screen" charset="utf-8">
-        <link rel="stylesheet" href="css/texts.css" type="text/css" media="screen" charset="utf-8">
-        <link rel="stylesheet" href="css/sidenav.css" type="text/css" media="screen" charset="utf-8">
-        <link rel="icon" type="image/png" href="images/favicon.png"/> <link rel="preconnect" href="https://fonts.gstatic.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="../css/grid.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="../css/colors.css">
+        <link rel="stylesheet" href="../css/texts.css">
+        <link rel="stylesheet" href="../css/search.css">
+        <link rel="stylesheet" href="../css/sidenav.css" type="text/css" media="screen" charset="utf-8">
+        <link rel="icon" type="image/png" href="../images/favicon.png"/> <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Asap:ital@1&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
         <title>Spoiler 5</title>
     </head>
     <body>
-        <header class="bg-gris15">
-            <nav>
+        <header class="bg-gris15" >
+            <nav class="bg-gris15">
                 <div class="container">
                     <div class="row">
-                        <div class="col-s-2 col-2">
-                            <a href="index.html">
-                                <img src="css/img/header/Logo Spoiler5_small.png" class="main-logo hidden-on-mobile">
-                                <img src="css/img/header/Logo 5_small.png" class="main-logo hidden-on-desktop">
-                            </a>
+                        <div class="col-2 hidden-on-mobile">
+                            <a href="../index.html" class="hidden-on-mobile"><img src="../css/img/header/Logo Spoiler5_small.png" class="main-logo"></a>
                         </div>
-                        <section class="main-btns col-4 hidden-on-mobile">
-                            <ul style="display: flex;  justify-content: space-between;">
-                                <li >
-                                    <a href="../index.html"><img src="../css/img/svg/Home.svg"></a>
+                        <section class="main-btns col-s-12 col-6">
+                            <ul class="row">
+                                <li style="text-align: right" class="col-3 hidden-on-mobile">
+                                    <a href="../index.html" class="hidden-on-mobile"><img src="../css/img/svg/Home.svg"></a>
                                 </li>
-                                <li >
-                                    <a href="html/search.html"><img src="css/img/svg/Search.svg"></a>
+                                <!-- Search container -->
+                                <li class="col-s-12 col-6" style="display: flex; justify-content: center;">
+                                    <!-- Search bar -->
+                                    <div class="col-s-11 col-10" style="position: relative;">
+                                        <!-- Search input -->
+                                        <input id="search-input" class="col-s-12 col-12 asap" placeholder="Busca lo que desees"
+                                        style="border-radius: 50vw; border: none; height: 2.2em; padding-left: 1em; padding-right: 2.2em;">
+                                        <!-- Icono de búsqueda -->
+                                        <!-- <a href="#" class="col-1 fill-disabled" style="position: absolute; right: 0.2em; top: 0.2em;"><img class="fill-disabled" src="../css/img/svg/Search.svg"></a> -->
+                                        <i class="col-1" style="position: absolute; right: 0.2em; top: 0.1em;">
+                                            <svg width="19" height="19" viewBox="0 0 19 19" file="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="fill-gris15" fill-rule="evenodd" clip-rule="evenodd" d="M3.71719 8.64054C3.71719 12.3078 6.69046 15.2811 10.3586 15.2811C14.0267 15.2811 17 12.3078 17 8.64054C17 4.97326 14.0267 2 10.3586 2C6.69046 2 3.71719 4.97326 3.71719 8.64054ZM4.90188 15.3408C6.38973 16.5538 8.28922 17.2811 10.3586 17.2811C15.1311 17.2811 19 13.4126 19 8.64054C19 3.8685 15.1311 0 10.3586 0C5.58608 0 1.71719 3.8685 1.71719 8.64054C1.71719 10.6228 2.38473 12.4491 3.50729 13.907L0.585701 16.8283C0.195156 17.2188 0.195156 17.8519 0.585699 18.2424C0.976244 18.6329 1.60944 18.6329 1.99998 18.2424L4.90188 15.3408Z" fill="#0F0F0F;"/>
+                                            </svg>
+                                        </i>
+                                    </div>
                                 </li>
-                                <li >
-                                    <a href="favs.html"><img src="../css/img/svg/Favs_fill.svg"></a>
+                                <li style="text-align: left" class="col-3 hidden-on-mobile">
+                                    <a href="favs.html" class="hidden-on-mobile"><img src="../css/img/svg/Favs.svg"></a>
                                 </li>
                             </ul>
                         </section>
-                        <div class="col-s-6 col-2">
-                            <a href="#" ><img src="css/img/header/perfil.jpg" class="profile "  id="open-menu-profile" style="float: right;"></a>
+                        <div class="col-2">
+                            <a href="#" ><img src="../css/img/header/perfil.jpg" class="profile "  id="open-menu-profile" style="float: right;"></a>
                         </div>
                         <div id="mySidenav" class="sideMenu bg-gris35">
                             <a  class="color-gris245 closebtn" id="close-menu-profile"><img src="../css/img/svg/Arrow_right.svg" alt=""></a>
@@ -57,15 +66,24 @@
                         </div>
                     </div>
                 </div>
-                
             </nav>
+            <div class="row">
+                <div id="filters" class="col-s-10 col-5">
+                    <!-- Iconos de cruz -->
+                    <h4 class="col-s-3 col-2 bg-gris245 color-gris15"><i></i>Canciones &times;</h4>
+                    <h4 class="col-s-3 col-2"><i></i>Playlists</h4>
+                    <h4 class="col-s-3 col-2"><i></i>Podcasts</h4>
+                    <h4 class="col-s-3 col-2 filter-left"><i></i>Albums</h4>
+                    <h4 class="col-s-3 col-2 filter-right"><i></i>Artistas</h4>
+                </div>
+            </div>
         </header>
         <main class="bg-gris15">
             <section class="row">
-                <div class="col-9 bg-gris15">
-                    <h1 class="main-title color-disabled">Tu Biblioteca</h1>
+                <div class="col-9 col-s-11">
+                    <h1 class="color-disabled" style="padding-top: 5%;">Buscando canciones que coinciden con "texto"</texto></h1>
                     <article class="">
-                        <div class="row">
+                        <div class="row" style="margin-top: 2em;">
                             <div class="col-8">
                                 <h1>Canciones</h1>
                             </div>
@@ -73,246 +91,210 @@
                                 <h3>Ver más ></h3>
                             </div>
                         </div> 
+                        <!-- Soy una fila! -->
                         <div class="row">
-                            <div class="col-12">
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/nuevos hits/maluma y the weeknd - hawai.jpg" class="img-container song">
-                                    <h4>Hawai (Remix)</h4>
-                                    <h6>Maluma ft. The Weeknd</h6>
+                            <div class="col-12 row-search">
+                                <!-- Soy un item! -->
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <picture>
+                                        <img src="../css/img/covers/nuevos hits/bad bunny, nesi & ivy queen - yo perreo sola (remix).jpg" class="img-container col-s-3">
+                                    </picture>
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4>Yo perreo sola</h4>
+                                        <h6>Bad Bunny, Nesi & Ivi queen</h6>
+                                    </div>
                                 </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/nuevos hits/alejandro sanz & tini - un beso en madrid.jpg" class="img-container song">
-                                    <h4>Un beso en Madrid</h4>
-                                    <h6>Alejandro Sanz y Tini</h6>
+                                <!-- ------------------------------------------------------ -->
+
+
+                                
+                                <div class="col-2 col-s-12 img-container">
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/bizarrap, trueno & acru - jugador del año.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Jugador del año</h4>
+                                        <h6>Bizarrap, Trueno y Acru</h6>
+                                    </div>
                                 </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/nuevos hits/karol g - bichota.jpg" class="img-container song">
-                                    <h4>Bichota</h4>
-                                    <h6>Karol G</h6>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/divididos - cabalgata deportiva.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Cabalgata deportiva</h4>
+                                        <h6>Divididos</h6>
+                                    </div>
                                 </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/nuevos hits/nicki nicole - plegarias (premios gardel 2020).jpg" class="img-container song">
-                                    <h4>Plegarias (PG '20)</h4>
-                                    <h6>Nicki Nicole</h6>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/dread mar i - todo lo que se fue.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Todo lo que se fue</h4>
+                                        <h6>Dread Mar I</h6>
+                                    </div>
                                 </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/nuevos hits/ecko y cazzu - cama vacía.jpg" class="img-container song">
-                                    <h4>Cama vacía</h4>
-                                    <h6>Ecko ft. Cazzu</h6>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/ecko y cazzu - cama vacía.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Cama vacía</h4>
+                                        <h6>Ecko y Cazzu</h6>
+                                    </div>
                                 </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/nuevos hits/bizarrap, trueno & acru - jugador del año.jpg" class="img-container song">
-                                    <h4>Jugador del año</h4>
-                                    <h6>Bizarrap, Trueno & Acru</h6>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/justin bieber & benny blanco - lonely.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Lonely</h4>
+                                        <h6>Justin Bieber & Benny Blanco</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 2%;">
+                            <div class="col-12 row-search" >
+                                <!-- Soy un item! -->
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <picture>
+                                        <img src="../css/img/covers/nuevos hits/bad bunny & jhay cortez - dakiti.jpg" class="img-container col-s-3">
+                                    </picture>
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4>Dakiti</h4>
+                                        <h6>Bad Bunny, & Jhay Cortez</h6>
+                                    </div>
+                                </div>
+                                <!-- ------------------------------------------------------ -->
+
+
+                                
+                                <div class="col-2 col-s-12 img-container">
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/alejandro sanz & tini - un beso en madrid.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4>Un beso en Madrid</h4>
+                                        <h6>Alejandro Sanz y Tini</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/karol g - bichota.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Bichota</h4>
+                                        <h6>Karol G</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/angela torres - flotando.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Flotando</h4>
+                                        <h6>Ángela Torres</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/luciano pereyra - eres perfecta.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Eres perfecta</h4>
+                                        <h6>Luciano Pereyra</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/Los Piojos - Guerras.png" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Guerras</h4>
+                                        <h6>Los Piojos</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 2%;">
+                            <div class="col-12 row-search">
+                                <!-- Soy un item! -->
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <picture>
+                                        <img src="../css/img/covers/nuevos hits/wos - mugre.jpg" class="img-container col-s-3">
+                                    </picture>
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4>Mugre</h4>
+                                        <h6>Wos</h6>
+                                    </div>
+                                </div>
+                                <!-- ------------------------------------------------------ -->
+
+
+                                
+                                <div class="col-2 col-s-12 img-container">
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/Rauw Alejandro ft. J Balvin - De Cora.png" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >De Cora</h4>
+                                        <h6>Rauw Alejandro ft. J Balvin</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/Mau y Ricky - Rifresh.png" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Rifresh</h4>
+                                        <h6>Mau y Ricky</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/nicki nicole - plegarias (premios gardel 2020).jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Plegarias (PG '20)</h4>
+                                        <h6>Nicki Nicole</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/sebastian yatra & guaynaa - mi chica ideal.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Chica ideal</h4>
+                                        <h6>Sebastián Yatra & Guaynaa</h6>
+                                    </div>
+                                </div>
+                                <div class="col-2 col-s-12 img-container" >
+                                    <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                    <img src="../css/img/covers/nuevos hits/justin bieber & benny blanco - lonely.jpg" class="img-container col-s-3">
+                                    <div 
+                                     class="col-s-6 col-12 texto-img-grid-lista">
+                                        <h4 >Hawai (Remix)</h4>
+                                        <h6>Maluma ft. The Weeknd</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    <article class="">
-                        <div class="row">
-                            <div class="col-8">
-                                <h1>Playlists</h1>
-                            </div>
-                            <div class="col-4" style="text-align: end;">
-                                <h3>Ver más ></h3>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/géneros/bachata mix.jpg" class="img-container playlist">
-                                    <h4>Bachata mix</h4>
-                                    <h6>De Spoiler 5</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/géneros/hard rock.jpg" class="img-container playlist">
-                                    <h4>Hard Rock</h4>
-                                    <h6>De Adrián Nario</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/géneros/reggaeton.png" class="img-container playlist">
-                                    <h4>Reggaeton</h4>
-                                    <h6>Tuya</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/géneros/rock clásico.jpg" class="img-container playlist">
-                                    <h4>Rock Clásico</h4>
-                                    <h6>De Sergio Vergara Tellechea</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/géneros/reggae.jpg" class="img-container playlist">
-                                    <h4>Reggae</h4>
-                                    <h6>Tuya</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/géneros/blues.jpg" class="img-container playlist">
-                                    <h4>Blues Rock Party</h4>
-                                    <h6>De Spoiler 5</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="">
-                        <div class="row">
-                            <div class="col-8">
-                                <h1>Álbums</h1>
-                            </div>
-                            <div class="col-4" style="text-align: end;">
-                                <h3>Ver más ></h3>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/albumes historicos/memphis - cosa de hombres.jpg" class="img-container album">
-                                    <h4>Cosa de hombres</h4>
-                                    <h6>Memphis La Blusera</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/albumes historicos/memphis - hoy es hoy.jpg" class="img-container album">
-                                    <h4>Hoy es hoy</h4>
-                                    <h6>Memphis La Blusera</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/albumes historicos/pink floyd - tdsotm.jpeg" class="img-container album">
-                                    <h4>The dark side of the Moon</h4>
-                                    <h6>Pink FLoyd</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/albumes historicos/queen II.jpg" class="img-container album">
-                                    <h4>Queen II</h4>
-                                    <h6>Queen</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/albumes historicos/prince - purple rain.jpg" class="img-container album">
-                                    <h4>Purple rain</h4>
-                                    <h6>Prince</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/albumes historicos/soda stereo.jpg" class="img-container album">
-                                    <h4>Soda Stereo</h4>
-                                    <h6>Soda Stereo</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="">
-                        <div class="row">
-                            <div class="col-8">
-                                <h1>Podcasts</h1>
-                            </div>
-                            <div class="col-4" style="text-align: end;">
-                                <h3>Ver más ></h3>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/podcasts/pergolini - cuentos.png" class="img-container podcast">
-                                    <h4>Cuentos narrados</h4>
-                                    <h6>Mario Pergolini</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/podcasts/rolon - palabra plena.png" class="img-container podcast">
-                                    <h4>Palabra llena</h4>
-                                    <h6>Gabriel Rolón</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/podcasts/damian kuc - historias innecesarias.png" class="img-container podcast">
-                                    <h4>Historias innecesarias</h4>
-                                    <h6>Damian Kuc</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/podcasts/bernardo stamateas.png" class="img-container podcast">
-                                    <h4>Colección</h4>
-                                    <h6>Bernardo Stamateas</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/podcasts/inglés.png" class="img-container podcast">
-                                    <h4>Aprende más inglés</h4>
-                                    <h6>Open English</h6>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/podcasts/luisito comunica.png" class="img-container podcast">
-                                    <h4>En cortinas con Luisito</h4>
-                                    <h6>Luisito Comunica</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="">
-                        <div class="row">
-                            <div class="col-8">
-                                <h1>Artistas</h1>
-                            </div>
-                            <div class="col-4" style="text-align: end;">
-                                <h3>Ver más ></h3>
-                            </div>
-                        </div> 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/artistas/jbalvin.jpg" class="img-container artist">
-                                    <h4>J Balvin</h4>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/artistas/the weeknd.jpg" class="img-container artist">
-                                    <h4>The Weeknd</h4>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/artistas/shakira.jpg" class="img-container artist">
-                                    <h4>Shakira</h4>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/artistas/bisbal.jpg" class="img-container artist">
-                                    <h4>David Bisbal</h4>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/artistas/marcela morelo.jpg" class="img-container artist">
-                                    <h4>Marcela Morelo</h4>
-                                </div>
-                                <div class="img-container col-2 col-s-4">
-                                    <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                    <img src="../css/img/covers/artistas/los nocheros.jpg" class="img-container artist">
-                                    <h4>Los Nocheros</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+  
+
                 </div>    
             </section>
             <section class="search-section"></section>
         </main>
-        <!-- <section class="player bg-gris35">
+        <section class="player bg-gris35">
             <div class="container">
                 <div class="row" >
                     <div class="col-3">
@@ -389,95 +371,17 @@
                     </div>
                 </div>
             </div>   
-        </section> -->
-        <section class="player bg-gris35">
-            <div class="container">
-                <div class="row" >
-                    <div class="col-s-3 col-3">
-                        <div class="row">
-                            <div class="col-3 hidden-on-mobile">
-                                <img src="../css/img/covers/nuevos hits/maluma y the weeknd - hawai.jpg" class="img-container">
-                            </div>
-                            <div class="col-s-10 col-6 text-player">
-                                <h4 class="col-s-12">Hawai (Remix)</h4>
-                                <h6 class="col-s-12">Maluma ft. The Weeknd</h6>
-                            </div>
-                            <div class="col-s-3 col-3 heart-button-mini-reproductor">
-                                <a href="#"><img src="../css/img/svg/Heart.svg"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-s-12 col-4">
-                        <div class="col-12" style="text-align: center; transform: scale3d(0.8, 0.8, 0.8)">
-                            <div class="col-1 color-disabled font-light hidden-on-mobile">
-                                1:50
-                            </div>
-                            <div class="col-3 hidden-on-mobile">
-                                <a href="#"><img src="../css/img/svg/Dislike.svg"></a>
-                            </div>
-                            <div class="col-s-3 col-1">
-                                <a href="#"><img src="../css/img/svg/Rewind.svg"></a>
-                            </div>
-                            <div class="col-s-3 col-2">
-                                <a href="#"><img src="../css/img/svg/Play.svg"></a>
-                            </div>
-                            <div class="col-s-2 col-1">
-                                <a href="#"><img src="../css/img/svg/Forward.svg"></a>
-                            </div>
-                            <div class=" col-3 hidden-on-mobile">
-                                <a href="#"><img src="../css/img/svg/Like.svg"></a>
-                            </div>
-                            <div class="col-1 color-disabled font-light hidden-on-mobile">
-                                1:50
-                            </div>
-                        </div>
-                        <div class="col-12" style="padding: 0.5%; ">
-                         
-                        </div>
-                        <div class="col-12 hidden-on-mobile">
-                            <input class="progress-bar" type="range">
-                        </div>
-                    </div>
-                    <div class="col-s-2 col-3">
-                        <div class="col-12 hidden-on-mobile" style="text-align: center;">
-                            <div class="col-3">
-                                <a href="#"><img src="../css/img/svg/Shuffle.svg"></a>
-                            </div>
-                            <div class="col-3">
-                                <a href="#"><img src="../css/img/svg/Repeat.svg"></a>
-                            </div>
-                            <div class="col-3">
-                                <a href="#"><img src="../css/img/svg/Share.svg"></a>
-                            </div>
-                            <div class="col-3">
-                                <a href="#"><img src="../css/img/svg/Dots.svg"></a>
-                            </div>
-                        </div>
-                        <div class="col-12" style="padding: 2%; ">
-                         
-                        </div>
-                        <div class="col-s-12 col-12 volume-button-mini-player">
-                            <div class="col-3">
-                                <a href="#"><img src="../css/img/svg/Volume_hight.svg"></a>
-                            </div>
-                            <div class="col-7 hidden-on-mobile">
-                                <input class="progress-bar" type="range">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>   
         </section>
         <section class="mini-player-mobile col-s-12 bg-gris15">
             <div class="row">
                 <div class="col-s-4">
-                    <a href="index.html"><img src="css/img/svg/Home.svg"></a>
+                    <a href="../index.html"><img src="../css/img/svg/Home.svg"></a>
                 </div>
                 <div class="col-s-4">
-                    <a href="html/search.html"><img src="css/img/svg/Search.svg"></a>
+                    <a href="#"><img src="../css/img/svg/Search_fill.svg"></a>
                 </div>
                 <div class="col-s-4">
-                    <a href="favs.html"><img src="css/img/svg/Favs_fill.svg"></a>
+                    <a href="favs.html"><img src="../css/img/svg/Favs.svg"></a>
                 </div>
             </div>
         </section>
@@ -491,8 +395,8 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="col-3 col-s-4">
-                                            <!-- <div><img class="icon" src="../css/img/buttons/3dots.svg"></img></div> -->
-                                            <img src="../css/img/covers/nuevos hits/maluma y the weeknd - hawai.jpg" class="img-container song">
+                                            <!-- <div><img class="icon" src="css/img/buttons/3dots.svg"></img></div> -->
+                                            <img src="css/img/covers/nuevos hits/maluma y the weeknd - hawai.jpg" class="img-container song">
                                         </div>
                                         <div class="col-9">
                                             <div class="col-12" style="border-bottom: 3px solid var(--gris-35-color);">
@@ -502,11 +406,11 @@
                                             <div class="col-11">
                                                 <h3>Papi Juancho</h4>
                                                 <h3 class="font-light color-disabled">3:40&emsp;2020</h3>
-                                                <h3 class="asap color-disabled"><img class="likes-count" src="../css/img/svg/Like.svg"> 3m &emsp;<img class="likes-count" src="../css/img/svg/Dislike.svg"> 10k &emsp;10m reproducciones</h3>
+                                                <h3 class="asap color-disabled"><img class="likes-count" src="css/img/svg/Like.svg"> 3m &emsp;<img class="likes-count" src="css/img/svg/Dislike.svg"> 10k &emsp;10m reproducciones</h3>
                                                 
                                             </div>
                                             <div class="col-1">
-                                                <a id="open-comments" href="#"><img src="../css/img/svg/Dots.svg"></a>
+                                                <a id="open-comments" href="#"><img src="css/img/svg/Dots.svg"></a>
                                             </div>
                                         </div>
                                         <div class="col-12 comments-bar" >
@@ -520,7 +424,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Exe.jpg"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Exe.jpg"></a>
                                                 <h3 class="col-8 text-light text-left">Exequiel H</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">27/11/20</h5>
                                             </div>
@@ -534,7 +438,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50" style="float: right;">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Gian.jpg"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Gian.jpg"></a>
                                                 <h3 class="col-8 text-light text-left">Giancarlo C</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">27/11/20</h5>
                                             </div>
@@ -550,7 +454,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Juanpi.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Juanpi.png"></a>
                                                 <h3 class="col-8 text-light text-left">Juanpi P</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">27/11/20</h5>
                                             </div>
@@ -564,7 +468,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50" style="float: right;">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Javi R.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Javi R.png"></a>
                                                 <h3 class="col-8 text-light text-left">Javi R</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">20/11/20</h5>
                                             </div>
@@ -580,7 +484,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Javi D.jpg"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Javi D.jpg"></a>
                                                 <h3 class="col-8 text-light text-left">Javi D</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">20/11/20</h5>
                                             </div>
@@ -594,7 +498,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50" style="float: right;">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Franco.jpg"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Franco.jpg"></a>
                                                 <h3 class="col-8 text-light text-left">Franco S</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">20/11/20</h5>
                                             </div>
@@ -610,7 +514,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Lucre.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Lucre.png"></a>
                                                 <h3 class="col-8 text-light text-left">Lucre L</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">17/11/20</h5>
                                             </div>
@@ -624,7 +528,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50" style="float: right;">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Octa.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Octa.png"></a>
                                                 <h3 class="col-8 text-light text-left">Octa P</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">17/11/20</h5>
                                             </div>
@@ -640,7 +544,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Nacho.jpg"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Nacho.jpg"></a>
                                                 <h3 class="col-8 text-light text-left">Nacho F</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">11/11/20</h5>
                                             </div>
@@ -654,7 +558,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50" style="float: right;">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Manu G.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Manu G.png"></a>
                                                 <h3 class="col-8 text-light text-left">Manu G</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">10/11/20</h5>
                                             </div>
@@ -670,7 +574,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Leo M.jpg"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Leo M.jpg"></a>
                                                 <h3 class="col-8 text-light text-left">Leo M</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">7/11/20</h5>
                                             </div>
@@ -684,7 +588,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50" style="float: right;">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Santi.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Santi.png"></a>
                                                 <h3 class="col-8 text-light text-left">Santi DP</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">7/11/20</h5>
                                             </div>
@@ -700,7 +604,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Andrelo.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Andrelo.png"></a>
                                                 <h3 class="col-8 text-light text-left">Andrelo L</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">2/11/20</h5>
                                             </div>
@@ -714,7 +618,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50" style="float: right;">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Manu H.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Manu H.png"></a>
                                                 <h3 class="col-8 text-light text-left">Manu H</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">1/11/20</h5>
                                             </div>
@@ -730,7 +634,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Pocha.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Pocha.png"></a>
                                                 <h3 class="col-8 text-light text-left">Pocha DB</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">31/10/20</h5>
                                             </div>
@@ -744,7 +648,7 @@
                                     <div class="col-6 bg-gris15">
                                         <div class="comment bg-gris50" style="float: right;">
                                             <div class="row c">
-                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="../css/img/pics/Caro.png"></a>
+                                                <a id="open-comments" href="#" class="col-2"><img class="comment-img" src="css/img/pics/Caro.png"></a>
                                                 <h3 class="col-8 text-light text-left">Caro N</h3>
                                                 <h5 class="col-2 asap color-disabled text-right">27/10/20</h5>
                                             </div>

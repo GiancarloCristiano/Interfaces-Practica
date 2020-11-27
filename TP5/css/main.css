@@ -19,23 +19,6 @@ article div{
   width: 15px;
   height: 15px;
 }
-
-.triangle{
-  /*float: right;*/
-  position: absolute;
-  /* left: 0; */
-  width: 1px;
-  height: 1px;
-  margin-left: 3.5vh;
-  /* margin-left: 50px; */
-  margin-top: 3.5%;
-  /* margin-top: 50px; */
-  opacity: 0.5;
-  border-bottom: 100px solid var(--gris-15-color);
-  border-left: 100px solid transparent;
-  border-bottom-right-radius: 10%;
-}
-
 .img-container{ 
   height: 90%;
   width: 90%;
@@ -52,8 +35,6 @@ article div{
   width: 60px; */
   border-radius: 10%;
 }
-
-
 
 .text-player{ 
   margin-left: 1%;

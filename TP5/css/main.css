@@ -250,3 +250,34 @@ input[type=range]:focus::-moz-range-track  {
   }
   
 /*# End region #*/
+
+
+
+#border1, #border2, #border3, #border4 {
+  position: relative;
+  z-index: 5;
+
+}
+
+.scale-down-center {
+  animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes scale-down-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+.scale-up-center {
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

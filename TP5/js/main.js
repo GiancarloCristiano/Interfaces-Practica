@@ -52,5 +52,87 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openMenu.addEventListener("click", openMenuProfile);
     closeMenu.addEventListener("click", closeMenuProfile);
+
+
+    let border1 = document.querySelector("#border1");
+    let border2 = document.querySelector("#border2");
+    let border3 = document.querySelector("#border3");
+    let border4 = document.querySelector("#border4");
+    let border5 = document.querySelector("#border5");
+   
+
+    window.addEventListener("scroll", () =>{
+        let valueY = window.scrollY;
+
+        let posicionTop1 = border1.offsetTop;
+
+        let posicionTop2 = border2.offsetTop;
+        
+        let posicionTop3 = border3.offsetTop;
+        
+        let posicionTop4 = border4.offsetTop;
+        
+        let posicionTop5 = border5.offsetTop;
+
+       
+        if (valueY < posicionTop1) {
+            border2.classList.remove("scale-up-center");
+
+            border1.classList.add("scale-up-center");
+            border2.classList.add("scale-down-center");
+            border3.classList.add("scale-down-center");
+            border4.classList.add("scale-down-center");
+            border5.classList.add("scale-down-center");
+        }else if(valueY < posicionTop2 && valueY > posicionTop1){
+            border1.classList.remove("scale-up-center");
+            border3.classList.remove("scale-up-center");
+
+            border1.classList.add("scale-down-center");
+            border2.classList.add("scale-up-center");
+            border3.classList.add("scale-down-center");
+            border4.classList.add("scale-down-center");
+            border5.classList.add("scale-down-center");
+        }else if(valueY < posicionTop3 && valueY > posicionTop2){
+            border2.classList.remove("scale-up-center");
+            border4.classList.remove("scale-up-center");
+
+            border1.classList.add("scale-down-center");
+            border2.classList.add("scale-down-center");
+            border3.classList.add("scale-up-center");
+            border4.classList.add("scale-down-center");
+            border5.classList.add("scale-down-center");
+        }else if(valueY < posicionTop4 && valueY > posicionTop3){
+            border3.classList.remove("scale-up-center");
+            border5.classList.remove("scale-up-center");
+            border1.classList.add("scale-down-center");
+            border2.classList.add("scale-down-center");
+            border3.classList.add("scale-down-center");
+            border4.classList.add("scale-up-center");
+            border5.classList.add("scale-down-center");
+
+        }else if(valueY < posicionTop5 && valueY > posicionTop4){
+            border4.classList.remove("scale-up-center");
+
+            border1.classList.add("scale-down-center");
+            border2.classList.add("scale-down-center");
+            border3.classList.add("scale-down-center");
+            border4.classList.add("scale-down-center");
+            border5.classList.add("scale-up-center");
+        }
+        
+        
+        
+       
+
+    });
+
+
+
+
+
+
+
+
+
 });
 //toggleSwitch.addEventListener('change', switchTheme, true);

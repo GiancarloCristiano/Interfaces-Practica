@@ -80,7 +80,9 @@ article div{
 .progress-bar{
   width: 100%;
 }
-
+.icons-row{
+  text-align: center;
+}
 /*#region navbar*/
 
 nav {

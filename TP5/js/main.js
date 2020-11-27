@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let openMenu = document.querySelector("#open-menu-profile");
     let closeMenu = document.querySelector("#close-menu-profile");
+    let screenWidth = innerWidth;
 
     let openComments = document.querySelector("#open-comments");
     let closeComments = document.querySelector("#close-comments");
@@ -40,7 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const openMenuProfile = () =>{
-        document.getElementById("mySidenav").style.width = "280px";
+        if (screenWidth <= 500)
+            document.getElementById("mySidenav").style.width = innerWidth+"px";
+        else
+            document.getElementById("mySidenav").style.width = "280px";
     }
     /* Close when someone clicks on the "x" symbol inside the overlay */
     const  closeMenuProfile = () => {

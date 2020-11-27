@@ -264,7 +264,7 @@ input[type=range]:focus::-moz-range-track  {
   
   .comments-menu .closebtn {
     position: absolute;
-    top: 15%;
+    top: 10%;
     right: 25%;
     font-size: 36px;
     margin-left: 50px;

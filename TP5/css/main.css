@@ -39,7 +39,8 @@ article div{
 .text-player{ 
   margin-left: 1%;
 }
-.text-player>*{
+/* .text-player>*, .texto-img-grid-lista>*{ */
+  .text-player>*, h4,h6{
   overflow:hidden;
   white-space:nowrap;
   text-overflow: ellipsis;
